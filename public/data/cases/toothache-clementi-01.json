@@ -1,0 +1,158 @@
+{
+ "id": "toothache-clementi-01",
+ "type": "medical",
+ "complaint": "Toothache",
+ "area": "Clementi",
+ "callText": "Elderly male, toothache and cold sweat",
+ "location": "Blk 3xx Clementi Ave 2, #06-xx",
+ "flags": [],
+ "reviewed": false,
+ "notesRef": "s17#acute-myocardial-infarction-ami",
+ "caller": {
+  "who": "wife",
+  "voice": "His wife, worried, in casual Singapore English. She knows only what she has seen: her husband is 63 and has had a bad toothache for about 40 minutes while resting, and now he has a cold sweat. He has high cholesterol, no heart problem and no heart medicine.",
+  "answers": {
+   "location": "Blk 3xx Clementi Ave 2, #06-xx. Sixth floor.",
+   "whatHappened": "My husband, 63. He was sitting down resting, then he say his tooth very pain. 40 minutes already. Now he got cold sweat, sweating a lot.",
+   "casualties": "Only one, my husband.",
+   "conscious": "Conscious, he can talk, but the pain very bad.",
+   "icAndMeds": "OK, I get his IC ready. He got high cholesterol, but no heart medicine.",
+   "breathing": "Yes, breathing, a bit fast."
+  }
+ },
+ "patient": {
+  "name": "Koh Ah Seng",
+  "callName": "Mr Koh",
+  "sex": "male",
+  "race": "Chinese",
+  "age": 63,
+  "ic": "S63xxxxxG",
+  "voice": "Pale and sweaty, speaks in full sentences, rubs his jaw.",
+  "chiefComplaint": "My tooth very pain, here at the jaw. Now my left arm also pain.",
+  "lines": {
+   "feelingNow": "Breathing a bit easier now. But my jaw and my arm still pain.",
+   "fall": "No, I never fall. I was sitting down the whole time.",
+   "hitHead": "No, I never hit my head.",
+   "neckPain": "No, my neck no pain.",
+   "lungHistory": "No, no asthma, no lung problem. Never had heart problem also.",
+   "verbal": "Koh Ah Seng. I'm at home, in Clementi.",
+   "motor": "OK, both arms up, like this.",
+   "severity": "7. My tooth and my jaw very pain.",
+   "position": "I sit here on the sofa like this, OK.",
+   "bpScreen": "No shunt, no fistula. Never had operation.",
+   "ic": "My IC is in my pocket, here."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Living room, tea on the table",
+   "items": [
+    "cup of tea"
+   ],
+   "hazards": [
+    "hot tea on the table beside the patient"
+   ],
+   "witnesses": "Wife (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you. My tooth very pain."
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "High cholesterol"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No abnormalities found",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "A lot of sweat",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "146/90 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "12-lead",
+    "reading": "Sinus tachycardia about 104, ST elevation in V2 to V4"
+   },
+   "hypocount": 5.9
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "7"
+  },
+  "position": {
+   "choice": "Sitting on the sofa",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 94,
+   "pr": 104,
+   "rr": 22,
+   "bp": "144/88",
+   "temp": 36.6,
+   "skin": "pale, cold, clammy",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 98,
+   "pr": 104,
+   "rr": 22,
+   "bp": "144/88",
+   "temp": 36.6,
+   "skin": "pale, cold, clammy",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15,
+   "note": "A chest pain patient gets high-flow oxygen: a non-rebreather at 10 to 15 L/min. Never withhold oxygen (notes 17)."
+  },
+  "ecg": "12-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low SpO2",
+    "high HR",
+    "ST elevation"
+   ],
+   "suspected": "AMI",
+   "plan": "load-and-go"
+  }
+ }
+}

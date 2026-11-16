@@ -1,0 +1,3711 @@
+{
+ "contentVersion": "2026-11-15.4",
+ "steps": [
+  {
+   "id": "respond-call",
+   "order": 1,
+   "name": "Respond call",
+   "timed": false,
+   "notesRef": "s01#respond-call-call-caller",
+   "canonicalLine": "FMV 123 to Ops Ctr, responding to {location} for case of {callText}.",
+   "mustHit": [
+    {
+     "id": "call-sign",
+     "label": "Call sign: \"FMV XXX to Ops Ctr\"",
+     "short": "call sign",
+     "match": [
+      [
+       "fmv"
+      ]
+     ],
+     "to": "opsCtr"
+    },
+    {
+     "id": "responding-to",
+     "label": "\"Responding to\" the location",
+     "short": "responding to",
+     "match": [
+      [
+       "respond"
+      ]
+     ],
+     "to": "opsCtr"
+    },
+    {
+     "id": "case-of",
+     "label": "\"Case of\" the call text",
+     "short": "case of",
+     "match": [
+      [
+       "case of"
+      ]
+     ],
+     "negatives": [
+      "case off"
+     ],
+     "to": "opsCtr"
+    }
+   ],
+   "replies": [
+    {
+     "role": "opsCtr",
+     "text": "Ops Ctr, roger.",
+     "on": [
+      "call-sign",
+      "responding-to",
+      "case-of"
+     ]
+    }
+   ],
+   "guidance": []
+  },
+  {
+   "id": "call-caller",
+   "order": 2,
+   "name": "Call caller",
+   "timed": false,
+   "notesRef": "s01#respond-call-call-caller",
+   "canonicalLine": "Hi, I am calling from 995 FMV. My name is EMT XXX. We are on our way to your place now. Can I confirm your address / location? May I know what happened to the patient? How many casualties are there? Is the patient conscious or unconscious? {callExtras} Please prepare patient's ID and medication for us when we arrive.",
+   "mustHit": [
+    {
+     "id": "intro-fmv-emt",
+     "label": "Intro: calling from 995 FMV, my name is EMT XXX",
+     "short": "caller intro",
+     "match": [
+      [
+       "fmv"
+      ],
+      [
+       "995"
+      ],
+      [
+       "emt"
+      ]
+     ],
+     "to": "caller"
+    },
+    {
+     "id": "confirm-location",
+     "label": "Confirm the exact address / location",
+     "short": "location",
+     "match": [
+      [
+       "address"
+      ],
+      [
+       "location"
+      ],
+      [
+       "where"
+      ]
+     ],
+     "to": "caller"
+    },
+    {
+     "id": "what-happened",
+     "label": "May I know what happened to the patient?",
+     "short": "what happened",
+     "match": [
+      [
+       "what",
+       "happen"
+      ]
+     ],
+     "local": [
+      [
+       "fall"
+      ],
+      [
+       "height"
+      ]
+     ],
+     "to": "caller"
+    },
+    {
+     "id": "casualties",
+     "label": "How many casualties are there?",
+     "short": "casualties",
+     "match": [
+      [
+       "casualt"
+      ],
+      [
+       "how many"
+      ]
+     ],
+     "to": "caller"
+    },
+    {
+     "id": "conscious",
+     "label": "Is the patient conscious or unconscious?",
+     "short": "conscious?",
+     "match": [
+      [
+       "conscious"
+      ],
+      [
+       "awake"
+      ]
+     ],
+     "local": [
+      [
+       "alert"
+      ],
+      [
+       "awake"
+      ],
+      [
+       "conscious"
+      ]
+     ],
+     "to": "caller"
+    },
+    {
+     "id": "prepare-ic-meds",
+     "label": "Please prepare the patient's IC and medication",
+     "short": "IC and meds",
+     "match": [
+      [
+       "prepare",
+       "ic"
+      ],
+      [
+       "prepare",
+       "id"
+      ],
+      [
+       "prepare",
+       "nric"
+      ],
+      [
+       "prepare",
+       "identi"
+      ],
+      [
+       "prepare",
+       "medicat"
+      ],
+      [
+       "prepare",
+       "medicine"
+      ],
+      [
+       "prepare",
+       "meds"
+      ],
+      [
+       "ready",
+       "ic"
+      ],
+      [
+       "ready",
+       "id"
+      ],
+      [
+       "ready",
+       "nric"
+      ],
+      [
+       "ready",
+       "identi"
+      ],
+      [
+       "ready",
+       "medicat"
+      ],
+      [
+       "ready",
+       "medicine"
+      ],
+      [
+       "ready",
+       "meds"
+      ],
+      [
+       "bring",
+       "ic"
+      ],
+      [
+       "bring",
+       "id"
+      ],
+      [
+       "bring",
+       "nric"
+      ],
+      [
+       "bring",
+       "identi"
+      ],
+      [
+       "bring",
+       "medicat"
+      ],
+      [
+       "bring",
+       "medicine"
+      ],
+      [
+       "bring",
+       "meds"
+      ],
+      [
+       "standby",
+       "ic"
+      ],
+      [
+       "standby",
+       "id"
+      ],
+      [
+       "standby",
+       "nric"
+      ],
+      [
+       "standby",
+       "identi"
+      ],
+      [
+       "standby",
+       "medicat"
+      ],
+      [
+       "standby",
+       "medicine"
+      ],
+      [
+       "standby",
+       "meds"
+      ]
+     ],
+     "negatives": [
+      "bag"
+     ],
+     "to": "caller"
+    },
+    {
+     "id": "ask-breathing",
+     "label": "Is the patient breathing?",
+     "short": "breathing?",
+     "match": [
+      [
+       "breath"
+      ]
+     ],
+     "when": "unconscious",
+     "to": "caller"
+    },
+    {
+     "id": "tele-cpr",
+     "label": "Not breathing: inform Ops Ctr to start tele-CPR",
+     "short": "tele-CPR",
+     "match": [
+      [
+       "cpr"
+      ]
+     ],
+     "when": "unconscious"
+    },
+    {
+     "id": "critical-injuries",
+     "label": "Any critical injuries present?",
+     "short": "critical injuries",
+     "match": [
+      [
+       "critical"
+      ],
+      [
+       "injur"
+      ]
+     ],
+     "local": [
+      [
+       "bleed"
+      ]
+     ],
+     "when": "trauma",
+     "to": "caller"
+    },
+    {
+     "id": "vehicles",
+     "label": "What vehicles are involved in the accident?",
+     "short": "vehicles",
+     "match": [
+      [
+       "vehicle"
+      ]
+     ],
+     "when": "rta",
+     "to": "caller"
+    }
+   ],
+   "replies": [
+    {
+     "role": "caller",
+     "finding": "caller.answers.location",
+     "on": [
+      "confirm-location"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.whatHappened",
+     "on": [
+      "what-happened"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.casualties",
+     "on": [
+      "casualties"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.conscious",
+     "on": [
+      "conscious"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.icAndMeds",
+     "on": [
+      "prepare-ic-meds"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.breathing",
+     "on": [
+      "ask-breathing"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.criticalInjuries",
+     "on": [
+      "critical-injuries"
+     ]
+    },
+    {
+     "role": "caller",
+     "finding": "caller.answers.vehicles",
+     "on": [
+      "vehicles"
+     ]
+    },
+    {
+     "role": "opsCtr",
+     "text": "Ops Ctr, roger. Starting tele-CPR.",
+     "on": [
+      "tele-cpr"
+     ]
+    }
+   ],
+   "guidance": [
+    "If unconscious, ask if breathing; if not, tele-CPR.",
+    "Trauma: ask about critical injuries and vehicles."
+   ]
+  },
+  {
+   "id": "preparation",
+   "order": 3,
+   "name": "Preparation",
+   "timed": false,
+   "notesRef": "s01#preparation",
+   "canonicalLine": "Crew, please don latex gloves & face mask. {say:extra-ppe} Bring the B.B.O.L.T.Z.: burn kit, blanket & canvas, O2 bag, LSU, trauma bag and Zoll.",
+   "mustHit": [
+    {
+     "id": "gloves-mask",
+     "label": "Crew don latex gloves & face mask",
+     "short": "gloves & mask",
+     "match": [
+      [
+       "glove",
+       "mask"
+      ]
+     ],
+     "to": "crew"
+    },
+    {
+     "id": "extra-ppe",
+     "label": "Extra PPE if the scene needs it: RTA vests, helmets, raincoats, PPE gowns",
+     "short": "extra PPE",
+     "match": [
+      [
+       "vest"
+      ],
+      [
+       "helmet"
+      ],
+      [
+       "raincoat"
+      ],
+      [
+       "gown"
+      ],
+      [
+       "ppe"
+      ]
+     ],
+     "when": "extraPpe",
+     "say": "Wear RTA vests, helmets, raincoats & PPE gowns for precautions.",
+     "to": "crew"
+    },
+    {
+     "id": "equipment",
+     "label": "Equipment to bring: B.B.O.L.T.Z.",
+     "short": "B.B.O.L.T.Z.",
+     "match": [],
+     "parts": [
+      {
+       "id": "burn-kit",
+       "label": "Burn kit",
+       "match": [
+        [
+         "burn"
+        ]
+       ]
+      },
+      {
+       "id": "blanket-canvas",
+       "label": "Blanket & canvas",
+       "match": [
+        [
+         "blanket"
+        ],
+        [
+         "canvas"
+        ]
+       ]
+      },
+      {
+       "id": "o2-bag",
+       "label": "O2 bag",
+       "match": [
+        [
+         "o2"
+        ],
+        [
+         "oxygen"
+        ]
+       ]
+      },
+      {
+       "id": "lsu",
+       "label": "LSU",
+       "match": [
+        [
+         "lsu"
+        ],
+        [
+         "suction"
+        ]
+       ]
+      },
+      {
+       "id": "trauma-bag",
+       "label": "Trauma bag",
+       "match": [
+        [
+         "trauma"
+        ]
+       ]
+      },
+      {
+       "id": "zoll",
+       "label": "Zoll",
+       "match": [
+        [
+         "zoll"
+        ]
+       ]
+      }
+     ],
+     "accept": [
+      {
+       "label": "\"4 in 1\" plus LSU",
+       "match": [
+        [
+         "4 in 1",
+         "lsu"
+        ],
+        [
+         "4-in-1",
+         "lsu"
+        ],
+        [
+         "four in one",
+         "lsu"
+        ],
+        [
+         "4in1",
+         "lsu"
+        ],
+        [
+         "4 in one",
+         "lsu"
+        ]
+       ]
+      }
+     ],
+     "to": "crew"
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "text": "Crew ready. You've arrived on scene.",
+     "on": [
+      "equipment"
+     ]
+    }
+   ],
+   "guidance": [
+    "\"4 in 1\" plus LSU accepted as the equipment list."
+   ]
+  },
+  {
+   "id": "scene-evaluation",
+   "order": 4,
+   "name": "Rescue scene evaluation",
+   "timed": false,
+   "notesRef": "s01#rescue-scene-evaluation",
+   "canonicalLine": "Are there any witnesses? What is the environment like? Are there any hazards / potential hazards / danger to the patient and ourselves? MOI is suspected case of {callText}.",
+   "mustHit": [
+    {
+     "id": "witnesses",
+     "label": "Are there any witnesses?",
+     "short": "witnesses",
+     "match": [
+      [
+       "witness"
+      ]
+     ]
+    },
+    {
+     "id": "environment",
+     "label": "What is the environment like?",
+     "short": "environment",
+     "match": [
+      [
+       "environment"
+      ]
+     ]
+    },
+    {
+     "id": "hazards",
+     "label": "Any hazards / potential hazards / danger to the patient and ourselves?",
+     "short": "hazards",
+     "match": [
+      [
+       "hazard"
+      ],
+      [
+       "danger"
+      ]
+     ]
+    },
+    {
+     "id": "moi",
+     "label": "MOI: \"Suspected case of XXX\"",
+     "short": "MOI",
+     "match": [
+      [
+       "moi"
+      ],
+      [
+       "mechanism",
+       "injury"
+      ],
+      [
+       "case of"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "suspected"
+     ],
+     "negatives": [
+      "case off"
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "finding": "findings.scene.description",
+     "on": [
+      "environment"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.scene.items",
+     "on": [
+      "environment"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.scene.hazards",
+     "on": [
+      "hazards"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.scene.witnesses",
+     "on": [
+      "witnesses"
+     ]
+    }
+   ],
+   "guidance": [
+    "Done before approaching.",
+    "MOI must use \"suspected\"."
+   ]
+  },
+  {
+   "id": "approach-patient",
+   "order": 5,
+   "name": "Approach patient",
+   "timed": true,
+   "startsClock": true,
+   "inOrder": true,
+   "notesRef": "s01#approach-patient",
+   "canonicalLine": "Approaching casualty from the front. If you can hear me, please do not move your head. Is there any catastrophic bleeding? {say:bleeding-control} Any hazards around the patient? Remove any hazards. Never move the patient's head.",
+   "mustHit": [
+    {
+     "id": "sound-out",
+     "label": "Sound out: approaching from the front, please do not move your head",
+     "short": "sound out",
+     "match": [
+      [
+       "approach"
+      ],
+      [
+       "move your head"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "front",
+      "move your head"
+     ]
+    },
+    {
+     "id": "catastrophic-bleeding",
+     "label": "Is there any catastrophic bleeding?",
+     "short": "catastrophic bleeding",
+     "match": [
+      [
+       "catastrophic"
+      ],
+      [
+       "bleed"
+      ]
+     ]
+    },
+    {
+     "id": "bleeding-control",
+     "label": "Arrest the bleeding: Expose & Examine, direct pressure, pressure dressing, then C.A.T.",
+     "short": "arrest the bleeding",
+     "match": [],
+     "parts": [
+      {
+       "id": "expose-examine",
+       "label": "Expose & Examine",
+       "match": [
+        [
+         "expose"
+        ],
+        [
+         "examine"
+        ]
+       ]
+      },
+      {
+       "id": "direct-pressure",
+       "label": "Direct pressure",
+       "match": [
+        [
+         "direct"
+        ]
+       ]
+      },
+      {
+       "id": "pressure-dressing",
+       "label": "Secondary pressure dressing",
+       "match": [
+        [
+         "dressing"
+        ]
+       ]
+      },
+      {
+       "id": "cat",
+       "label": "C.A.T. if still bleeding",
+       "match": [
+        [
+         "c.a.t"
+        ],
+        [
+         "tourniquet"
+        ],
+        [
+         "apply",
+         "cat"
+        ],
+        [
+         "put",
+         "cat"
+        ],
+        [
+         "use",
+         "cat"
+        ]
+       ]
+      }
+     ],
+     "ordered": true,
+     "when": "catastrophicBleeding",
+     "say": "Buddy, expose and examine. Arrest the bleeding first: direct pressure followed by secondary pressure dressing, and apply C.A.T. if still bleeding."
+    },
+    {
+     "id": "hazards-remove",
+     "label": "Any hazards around the patient? Remove them",
+     "short": "remove hazards",
+     "match": [
+      [
+       "hazard"
+      ]
+     ]
+    },
+    {
+     "id": "head-still",
+     "label": "Never move the patient's head",
+     "short": "head still",
+     "match": [
+      [
+       "never move"
+      ],
+      [
+       "not moving"
+      ],
+      [
+       "head still"
+      ]
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "finding": "findings.approach.bleeding",
+     "on": [
+      "catastrophic-bleeding"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.scene.hazards",
+     "on": [
+      "hazards-remove"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.approach.control.pressure",
+     "on": [
+      "bleeding-control.direct-pressure"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.approach.control.dressing",
+     "on": [
+      "bleeding-control.pressure-dressing"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.approach.control.cat",
+     "on": [
+      "bleeding-control.cat"
+     ]
+    }
+   ],
+   "guidance": [
+    "Timer starts here.",
+    "Order: sound out, bleeding, hazards, never move head.",
+    "Head grip belongs to Introduction, not Approach."
+   ]
+  },
+  {
+   "id": "introduction",
+   "order": 6,
+   "name": "Introduction",
+   "timed": true,
+   "notesRef": "s01#introduction",
+   "canonicalLine": "Hi Sir/Ma'am, I am EMT XXX from SCDF. My buddy will do a head grip on you, please allow him. May I know what is bothering / happening to you Sir/Ma'am?",
+   "mustHit": [
+    {
+     "id": "intro-emt-scdf",
+     "label": "Intro: I am EMT XXX from SCDF",
+     "short": "patient intro",
+     "match": [
+      [
+       "emt"
+      ],
+      [
+       "scdf"
+      ]
+     ],
+     "to": "patient"
+    },
+    {
+     "id": "head-grip",
+     "label": "My buddy will do a head grip on you, please allow him",
+     "short": "head grip",
+     "match": [
+      [
+       "grip"
+      ],
+      [
+       "hold",
+       "head"
+      ]
+     ]
+    },
+    {
+     "id": "whats-bothering",
+     "label": "May I know what is bothering / happening to you?",
+     "short": "what's bothering",
+     "match": [
+      [
+       "bother"
+      ],
+      [
+       "happen"
+      ],
+      [
+       "wrong"
+      ]
+     ],
+     "to": "patient"
+    }
+   ],
+   "replies": [
+    {
+     "role": "headBuddy",
+     "text": "Head grip on.",
+     "on": [
+      "head-grip"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.chiefComplaint",
+     "on": [
+      "whats-bothering"
+     ]
+    }
+   ],
+   "guidance": [
+    "Head grip starts here, not in step 5."
+   ]
+  },
+  {
+   "id": "loc-avpu",
+   "order": 7,
+   "name": "LOC (AVPU)",
+   "timed": true,
+   "notesRef": "s01#loc-avpu-scale",
+   "canonicalLine": "Sir/Ma'am, can you hear me? Patient is alert and responsive, LOC is A on the AVPU scale.",
+   "mustHit": [
+    {
+     "id": "get-response",
+     "label": "Get a response from the patient",
+     "short": "LOC response",
+     "match": [
+      [
+       "hear me",
+       "me"
+      ],
+      [
+       "respon"
+      ],
+      [
+       "open",
+       "eye"
+      ],
+      [
+       "open",
+       "eyes"
+      ]
+     ]
+    },
+    {
+     "id": "state-level",
+     "label": "State the level aloud: Alert, Verbal, Pain or Unresponsive",
+     "short": "AVPU level",
+     "match": [
+      [
+       "alert"
+      ],
+      [
+       "verbal"
+      ],
+      [
+       "unrespon"
+      ],
+      [
+       "avpu"
+      ],
+      [
+       "to pain"
+      ]
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "findings.loc.response",
+     "on": [
+      "get-response"
+     ]
+    }
+   ],
+   "guidance": [
+    "No response at A: go V, then P.",
+    "U: fast-check A, B, C."
+   ],
+   "branches": [
+    {
+     "if": "unconscious",
+     "note": "Fast-check A, B, C, then CPR or rescue breathing, and OPA. Later phase."
+    }
+   ]
+  },
+  {
+   "id": "delicate-spine",
+   "order": 8,
+   "name": "Delicate spine",
+   "timed": true,
+   "notesRef": "s01#delicate-spine",
+   "canonicalLine": "Sir/Ma'am, did you fall? Did you hit your head? Sir/Ma'am, please allow me to check if you have sustained any potential spinal injuries. Do you feel any pain at your neck? Palpating the back of the neck for deformities, tenderness, bruises and lacerations. {say:c-collar} {say:release-grip}",
+   "mustHit": [
+    {
+     "id": "ask-fall",
+     "label": "Did you fall? Did you hit your head?",
+     "short": "fall? hit head?",
+     "match": [
+      [
+       "fall"
+      ],
+      [
+       "fell"
+      ],
+      [
+       "hit",
+       "head"
+      ]
+     ]
+    },
+    {
+     "id": "neck-permission",
+     "label": "Ask permission: please allow me to check for spinal injuries",
+     "short": "spine permission",
+     "match": [
+      [
+       "may i",
+       "spin"
+      ],
+      [
+       "may i check",
+       "neck"
+      ],
+      [
+       "can i check",
+       "neck"
+      ],
+      [
+       "may i touch",
+       "neck"
+      ],
+      [
+       "can i touch",
+       "neck"
+      ],
+      [
+       "may i palpate",
+       "neck"
+      ],
+      [
+       "can i palpate",
+       "neck"
+      ],
+      [
+       "may i examine",
+       "neck"
+      ],
+      [
+       "can i examine",
+       "neck"
+      ],
+      [
+       "may i feel",
+       "neck"
+      ],
+      [
+       "can i feel",
+       "neck"
+      ],
+      [
+       "allow",
+       "spin"
+      ],
+      [
+       "allow",
+       "neck"
+      ],
+      [
+       "permission",
+       "spin"
+      ],
+      [
+       "permission",
+       "neck"
+      ]
+     ],
+     "local": [
+      [
+       "allow"
+      ],
+      [
+       "permission"
+      ]
+     ],
+     "negatives": [
+      "may in",
+      "may im"
+     ]
+    },
+    {
+     "id": "ask-neck-pain",
+     "label": "Do you feel any pain at your neck?",
+     "short": "neck pain?",
+     "match": [
+      [
+       "pain",
+       "neck"
+      ]
+     ]
+    },
+    {
+     "id": "palpate-dtbl",
+     "label": "Palpate the back of the neck for D.T.B.L.",
+     "short": "D.T.B.L.",
+     "match": [
+      [
+       "palpat",
+       "neck"
+      ]
+     ],
+     "parts": [
+      {
+       "id": "deformities",
+       "label": "Deformities",
+       "match": [
+        [
+         "deformit"
+        ]
+       ]
+      },
+      {
+       "id": "tenderness",
+       "label": "Tenderness",
+       "match": [
+        [
+         "tender"
+        ]
+       ]
+      },
+      {
+       "id": "bruises",
+       "label": "Bruises",
+       "match": [
+        [
+         "bruis"
+        ]
+       ]
+      },
+      {
+       "id": "lacerations",
+       "label": "Lacerations",
+       "match": [
+        [
+         "lacerat"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "release-grip",
+     "label": "\"No suspected spinal injuries, buddy remove head grip\"",
+     "short": "release head grip",
+     "match": [
+      [
+       "remove",
+       "grip"
+      ],
+      [
+       "release",
+       "grip"
+      ],
+      [
+       "no suspected spinal"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "no suspected spinal"
+     ],
+     "when": "noSpinal",
+     "say": "No suspected spinal injuries, buddy remove head grip."
+    },
+    {
+     "id": "c-collar",
+     "label": "Apply C-collar (ENSAPA): establish neutral position, measure, apply",
+     "short": "spine C-collar",
+     "match": [],
+     "parts": [
+      {
+       "id": "establish-neutral",
+       "label": "Establish neutral position",
+       "match": [
+        [
+         "neutral"
+        ]
+       ]
+      },
+      {
+       "id": "measure",
+       "label": "Measure",
+       "match": [
+        [
+         "measur"
+        ]
+       ]
+      },
+      {
+       "id": "apply",
+       "label": "Apply C-collar",
+       "match": [
+        [
+         "apply"
+        ]
+       ]
+      }
+     ],
+     "ordered": true,
+     "when": "neckPain",
+     "say": "Establish neutral position, measure & apply C-collar."
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "patient.lines.fall",
+     "on": [
+      "ask-fall"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.hitHead",
+     "on": [
+      "ask-fall"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.neckPain",
+     "on": [
+      "ask-neck-pain"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.spine.dtbl",
+     "on": [
+      "palpate-dtbl"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "text": "Head grip released.",
+     "on": [
+      "release-grip"
+     ]
+    },
+    {
+     "role": "tester",
+     "text": "C-collar on.",
+     "on": [
+      "c-collar.apply"
+     ]
+    }
+   ],
+   "guidance": [
+    "No pain: \"No suspected spinal injuries, buddy remove head grip.\"",
+    "Pain: keep grip, C-collar (ENSAPA)."
+   ]
+  },
+  {
+   "id": "airway",
+   "order": 9,
+   "name": "Airway",
+   "timed": true,
+   "notesRef": "s01#airway",
+   "canonicalLine": "Sir/Ma'am, are you still with me? Patient is conscious and airway is clear. Checking the mouth for any obstacles. {say:head-tilt-chin-lift} {say:jaw-thrust} Smelling for unusual breath smells: GTN, alcohol or fruity smell.",
+   "mustHit": [
+    {
+     "id": "check-response",
+     "label": "Ask for a response: are you still with me?",
+     "short": "airway response",
+     "match": [
+      [
+       "still with me"
+      ],
+      [
+       "you with me"
+      ],
+      [
+       "stay with me"
+      ],
+      [
+       "hear me",
+       "me"
+      ],
+      [
+       "respon"
+      ]
+     ],
+     "local": [
+      [
+       "what",
+       "happen"
+      ]
+     ]
+    },
+    {
+     "id": "airway-clear",
+     "label": "State: patient is conscious and airway is clear",
+     "short": "airway clear",
+     "match": [
+      [
+       "airway",
+       "clear"
+      ],
+      [
+       "patent"
+      ]
+     ]
+    },
+    {
+     "id": "head-tilt-chin-lift",
+     "label": "Head tilt, chin lift to check the mouth for obstacles",
+     "short": "head tilt, chin lift",
+     "match": [
+      [
+       "head tilt"
+      ],
+      [
+       "chin lift"
+      ]
+     ],
+     "when": "noSpinal",
+     "say": "Using head tilt, chin lift."
+    },
+    {
+     "id": "jaw-thrust",
+     "label": "Spinal injury: modified jaw thrust",
+     "short": "jaw thrust",
+     "match": [
+      [
+       "jaw thrust"
+      ],
+      [
+       "mjt"
+      ]
+     ],
+     "when": "spinal",
+     "say": "Using modified jaw thrust."
+    },
+    {
+     "id": "smell",
+     "label": "Smell for unusual breath smells",
+     "short": "breath smell",
+     "match": [],
+     "parts": [
+      {
+       "id": "gtn",
+       "label": "GTN (minty)",
+       "match": [
+        [
+         "gtn"
+        ],
+        [
+         "mint"
+        ]
+       ]
+      },
+      {
+       "id": "alcohol",
+       "label": "Alcohol",
+       "match": [
+        [
+         "alcohol"
+        ]
+       ]
+      },
+      {
+       "id": "fruity",
+       "label": "Fruity smell",
+       "match": [
+        [
+         "fruit"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "findings.loc.response",
+     "on": [
+      "check-response"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.airway.mouth",
+     "on": [
+      "head-tilt-chin-lift",
+      "jaw-thrust"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.airway.smell",
+     "on": [
+      "smell"
+     ]
+    }
+   ],
+   "guidance": [
+    "Spinal: modified jaw thrust.",
+    "Unconscious: OPA steps."
+   ]
+  },
+  {
+   "id": "breathing",
+   "order": 10,
+   "name": "Breathing",
+   "timed": true,
+   "notesRef": "s01#breathing",
+   "canonicalLine": "Is there chest rise & fall? What is the rate & quality of the breathing? Arm buddy, please measure the SpO2 reading on room air. Sir/Ma'am, do you have any lung problems, like any hx of asthma e.g. bronchial asthma or COPD e.g. chronic bronchitis, emphysema? {say:monitor-closely} Is there any cyanosis of lips, nasal flaring, tracheal tugging, pursed lips & use of accessory muscles? Putting on the appropriate mask and flow rate based on Guidelines.",
+   "mustHit": [
+    {
+     "id": "chest-rise-fall",
+     "label": "Look for chest rise & fall",
+     "short": "chest rise & fall",
+     "match": [
+      [
+       "rise"
+      ],
+      [
+       "chest",
+       "fall"
+      ],
+      [
+       "chest",
+       "rising"
+      ]
+     ]
+    },
+    {
+     "id": "rate-quality",
+     "label": "What is the rate & quality of the breathing?",
+     "short": "breathing rate & quality",
+     "match": [
+      [
+       "rate",
+       "breath"
+      ],
+      [
+       "quality",
+       "breath"
+      ]
+     ],
+     "local": [
+      [
+       "quality"
+      ]
+     ],
+     "negatives": [
+      "pulse"
+     ]
+    },
+    {
+     "id": "spo2",
+     "label": "Arm buddy: measure SpO2 on room air",
+     "short": "SpO2",
+     "match": [
+      [
+       "spo2"
+      ],
+      [
+       "sp02"
+      ],
+      [
+       "saturation"
+      ]
+     ],
+     "to": "armBuddy"
+    },
+    {
+     "id": "asthma-copd-history",
+     "label": "Any lung problems, like hx of asthma or COPD?",
+     "short": "asthma / COPD history",
+     "match": [
+      [
+       "asthma"
+      ],
+      [
+       "copd"
+      ],
+      [
+       "lung"
+      ]
+     ]
+    },
+    {
+     "id": "monitor-closely",
+     "label": "\"I will monitor the patient closely after giving oxygen\"",
+     "short": "monitor closely",
+     "match": [
+      [
+       "monitor"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "monitor",
+      "closely"
+     ],
+     "when": "asthmaCopd",
+     "say": "I will monitor the patient closely after giving oxygen."
+    },
+    {
+     "id": "ntucp",
+     "label": "Check N.T.U.C.P.",
+     "short": "N.T.U.C.P.",
+     "match": [],
+     "parts": [
+      {
+       "id": "nasal-flaring",
+       "label": "Nasal flaring",
+       "match": [
+        [
+         "flar"
+        ]
+       ]
+      },
+      {
+       "id": "tracheal-tugging",
+       "label": "Tracheal tugging",
+       "match": [
+        [
+         "tug"
+        ],
+        [
+         "trache"
+        ],
+        [
+         "tugging"
+        ]
+       ]
+      },
+      {
+       "id": "accessory-muscles",
+       "label": "Use of accessory muscles",
+       "match": [
+        [
+         "accessory"
+        ]
+       ]
+      },
+      {
+       "id": "cyanosis",
+       "label": "Cyanosis (of lips)",
+       "match": [
+        [
+         "cyan"
+        ]
+       ]
+      },
+      {
+       "id": "pursed-lips",
+       "label": "Pursed lips",
+       "match": [
+        [
+         "purse"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mask-flow",
+     "label": "Put on the appropriate mask and flow rate",
+     "short": "oxygen",
+     "match": [
+      [
+       "mask"
+      ],
+      [
+       "cannula"
+      ],
+      [
+       "flow"
+      ]
+     ],
+     "check": "oxygen"
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "finding": "findings.breathing.riseFall",
+     "on": [
+      "chest-rise-fall"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.breathing.rateQuality",
+     "on": [
+      "rate-quality"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.breathing.ntucp",
+     "on": [
+      "ntucp"
+     ]
+    },
+    {
+     "role": "armBuddy",
+     "vitals": [
+      "spo2"
+     ],
+     "on": [
+      "spo2"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.lungHistory",
+     "on": [
+      "asthma-copd-history"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "computed": "oxygen",
+     "on": [
+      "mask-flow"
+     ]
+    }
+   ],
+   "guidance": [
+    "If asthma / COPD: \"I will monitor closely after giving oxygen.\"",
+    "Above 95%: nasal cannula optional.",
+    "COPD: nasal cannula."
+   ]
+  },
+  {
+   "id": "circulation",
+   "order": 11,
+   "name": "Circulation",
+   "timed": true,
+   "notesRef": "s01#circulation",
+   "canonicalLine": "Checking the radial pulse. Is there pulse? What is the rate & quality of the pulse?",
+   "mustHit": [
+    {
+     "id": "pulse",
+     "label": "Check the pulse: radial (carotid if unconscious)",
+     "short": "pulse",
+     "match": [
+      [
+       "pulse"
+      ],
+      [
+       "radial"
+      ],
+      [
+       "carotid"
+      ]
+     ]
+    },
+    {
+     "id": "pulse-rate-quality",
+     "label": "What is the rate & quality of the pulse?",
+     "short": "pulse rate & quality",
+     "match": [
+      [
+       "pulse",
+       "rate"
+      ],
+      [
+       "pulse",
+       "quality"
+      ]
+     ],
+     "local": [
+      [
+       "rate"
+      ],
+      [
+       "quality"
+      ]
+     ],
+     "negatives": [
+      "breath"
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "finding": "findings.circulation.pulse",
+     "on": [
+      "pulse",
+      "pulse-rate-quality"
+     ]
+    }
+   ],
+   "guidance": []
+  },
+  {
+   "id": "rapid-body-survey",
+   "order": 12,
+   "name": "Rapid body survey",
+   "timed": true,
+   "notesRef": "s01#rapid-body-survey",
+   "canonicalLine": "Sir/Ma'am, I'm going to conduct a Rapid Body Survey to check for any life or limb threatening injuries. Please allow me. If you feel any pain or discomfort, please sound out. Head, neck, chest, abdomen, pelvis, lower extremities, upper extremities and back, with eye contact. Checking my gloves for sweat or blood. Are there any abnormalities noted? {say:distal-pulse} {say:immobilise} Checking for JVD at 45° and pedal edema. Sir/Ma'am, may I check your pockets for any medications, IC and Medic Awas tag? {say:c-collar-after-rbs}",
+   "mustHit": [
+    {
+     "id": "rbs-permission",
+     "label": "Ask permission: Rapid Body Survey for life or limb threatening injuries",
+     "short": "RBS permission",
+     "match": [
+      [
+       "allow",
+       "survey"
+      ],
+      [
+       "allow",
+       "rbs"
+      ],
+      [
+       "permission",
+       "survey"
+      ],
+      [
+       "permission",
+       "rbs"
+      ],
+      [
+       "may i",
+       "survey"
+      ],
+      [
+       "may i",
+       "rbs"
+      ],
+      [
+       "can i",
+       "survey"
+      ],
+      [
+       "can i",
+       "rbs"
+      ],
+      [
+       "conduct",
+       "survey"
+      ],
+      [
+       "conduct",
+       "rbs"
+      ],
+      [
+       "going to",
+       "survey"
+      ],
+      [
+       "going to",
+       "rbs"
+      ]
+     ],
+     "local": [
+      [
+       "allow"
+      ],
+      [
+       "permission"
+      ]
+     ],
+     "negatives": [
+      "may in",
+      "may im",
+      "can in",
+      "can im",
+      "pocket"
+     ]
+    },
+    {
+     "id": "rbs-regions",
+     "label": "RBS in order: head, neck, chest, abdomen, pelvis, lower extremities, upper extremities, back",
+     "short": "RBS",
+     "match": [],
+     "parts": [
+      {
+       "id": "head",
+       "label": "Head",
+       "match": [
+        [
+         "head"
+        ]
+       ]
+      },
+      {
+       "id": "neck",
+       "label": "Neck",
+       "match": [
+        [
+         "neck"
+        ]
+       ]
+      },
+      {
+       "id": "chest",
+       "label": "Chest",
+       "match": [
+        [
+         "chest"
+        ]
+       ]
+      },
+      {
+       "id": "abdomen",
+       "label": "Abdomen",
+       "match": [
+        [
+         "abdo"
+        ],
+        [
+         "stomach"
+        ]
+       ]
+      },
+      {
+       "id": "pelvis",
+       "label": "Pelvis",
+       "match": [
+        [
+         "pelvi"
+        ],
+        [
+         "hip"
+        ],
+        [
+         "hips"
+        ]
+       ]
+      },
+      {
+       "id": "lower-extremities",
+       "label": "Lower extremities",
+       "match": [
+        [
+         "lower extremit"
+        ],
+        [
+         "lower limb"
+        ],
+        [
+         "leg"
+        ],
+        [
+         "legs"
+        ]
+       ]
+      },
+      {
+       "id": "upper-extremities",
+       "label": "Upper extremities",
+       "match": [
+        [
+         "upper extremit"
+        ],
+        [
+         "upper limb"
+        ],
+        [
+         "arm"
+        ],
+        [
+         "arms"
+        ]
+       ]
+      },
+      {
+       "id": "back",
+       "label": "Back",
+       "match": [
+        [
+         "back"
+        ]
+       ]
+      }
+     ],
+     "ordered": true
+    },
+    {
+     "id": "eye-contact",
+     "label": "Maintain eye contact throughout",
+     "short": "eye contact",
+     "match": [
+      [
+       "eye contact"
+      ]
+     ]
+    },
+    {
+     "id": "abnormalities",
+     "label": "Are there any abnormalities noted / found?",
+     "short": "abnormalities",
+     "match": [
+      [
+       "abnormal"
+      ]
+     ]
+    },
+    {
+     "id": "jvd",
+     "label": "JVD at the neck (sit at 45°)",
+     "short": "JVD",
+     "match": [
+      [
+       "jvd"
+      ],
+      [
+       "jugular"
+      ]
+     ]
+    },
+    {
+     "id": "pedal-edema",
+     "label": "Pedal edema: press and check for pitting",
+     "short": "pedal edema",
+     "match": [
+      [
+       "edema"
+      ],
+      [
+       "oedema"
+      ],
+      [
+       "pitting"
+      ]
+     ]
+    },
+    {
+     "id": "gloves",
+     "label": "Check your hands / gloves for sweat or blood",
+     "short": "glove check",
+     "match": [
+      [
+       "glove"
+      ],
+      [
+       "hand"
+      ]
+     ],
+     "local": [
+      [
+       "sweat"
+      ],
+      [
+       "blood"
+      ]
+     ],
+     "negatives": [
+      "blood pressure",
+      "blood sugar"
+     ]
+    },
+    {
+     "id": "pocket-check",
+     "label": "Pocket check, after seeking permission",
+     "short": "pocket check",
+     "match": [],
+     "parts": [
+      {
+       "id": "medication",
+       "label": "Medications",
+       "match": [
+        [
+         "medication"
+        ],
+        [
+         "medicine"
+        ],
+        [
+         "meds"
+        ]
+       ]
+      },
+      {
+       "id": "ic",
+       "label": "IC",
+       "match": [
+        [
+         "ic"
+        ],
+        [
+         "id"
+        ],
+        [
+         "identity"
+        ],
+        [
+         "nric"
+        ]
+       ]
+      },
+      {
+       "id": "medic-alert",
+       "label": "Medic Awas tag",
+       "match": [
+        [
+         "awas"
+        ],
+        [
+         "alert"
+        ],
+        [
+         "tag"
+        ],
+        [
+         "tags"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "distal-pulse",
+     "label": "Check radial / distal pulses of injured limbs",
+     "short": "distal pulse",
+     "match": [
+      [
+       "distal"
+      ],
+      [
+       "pulse"
+      ]
+     ],
+     "when": "limbInjury",
+     "say": "Checking distal pulses of injured limbs."
+    },
+    {
+     "id": "immobilise",
+     "label": "Instruct buddy where to immobilise / stabilise",
+     "short": "immobilise",
+     "match": [
+      [
+       "immobili"
+      ],
+      [
+       "stabili"
+      ],
+      [
+       "splint"
+      ]
+     ],
+     "when": "limbInjury",
+     "say": "Buddy, immobilise the {limbWhere}."
+    },
+    {
+     "id": "c-collar-after-rbs",
+     "label": "Apply C-collar after RBS (ENSAPA): establish neutral position, measure, apply",
+     "short": "C-collar after RBS",
+     "match": [],
+     "parts": [
+      {
+       "id": "establish-neutral",
+       "label": "Establish neutral position",
+       "match": [
+        [
+         "neutral"
+        ]
+       ]
+      },
+      {
+       "id": "measure",
+       "label": "Measure",
+       "match": [
+        [
+         "measur"
+        ]
+       ]
+      },
+      {
+       "id": "apply",
+       "label": "Apply C-collar",
+       "match": [
+        [
+         "apply",
+         "collar"
+        ]
+       ]
+      }
+     ],
+     "ordered": true,
+     "when": "spinalAfterRbs",
+     "say": "Establish neutral position, measure & apply C-collar."
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "finding": "findings.rbs.findings",
+     "on": [
+      "abnormalities"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.rbs.jvd",
+     "on": [
+      "jvd"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.rbs.pedalEdema",
+     "on": [
+      "pedal-edema"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.rbs.gloves",
+     "on": [
+      "gloves"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.rbs.pockets",
+     "on": [
+      "pocket-check"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.rbs.limb.distalPulse",
+     "on": [
+      "distal-pulse"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.rbs.limb.immobilise",
+     "on": [
+      "immobilise"
+     ]
+    },
+    {
+     "role": "tester",
+     "text": "C-collar on.",
+     "on": [
+      "c-collar-after-rbs.apply"
+     ]
+    }
+   ],
+   "guidance": [
+    "JVD and pedal edema may come after asking about pain.",
+    "Pocket check is often missed: always flag it."
+   ]
+  },
+  {
+   "id": "investigation",
+   "order": 13,
+   "name": "Investigation",
+   "timed": true,
+   "notesRef": "s01#investigation-vital-signs",
+   "canonicalLine": "Auscultating point 1 right apex, point 2 left apex, point 3 right side, point 4 left side, point 5 right base and point 6 left base. Is there air entry? Is air entry equal? Are there any abnormal breath sounds? Sir/Ma'am, I am going to take your blood pressure. May I know which arm I can take the BP from? Do you have any AV shunt / fistula, or any chest operations, specifically breast cancer removal? Taking the BP on the {bpArm} arm. ECG: 12-lead if lung / heart issues, otherwise 4-lead. Checking the hypocount. {say:suspected-hypo}",
+   "mustHit": [
+    {
+     "id": "auscultation",
+     "label": "Auscultate all 6 points, with the 3 questions",
+     "short": "auscultation",
+     "match": [],
+     "parts": [
+      {
+       "id": "point-1",
+       "label": "Point 1: right apex",
+       "match": [
+        [
+         "point 1"
+        ],
+        [
+         "right",
+         "apex"
+        ],
+        [
+         "point",
+         "1 to 6"
+        ],
+        [
+         "6 point"
+        ],
+        [
+         "six point"
+        ]
+       ]
+      },
+      {
+       "id": "point-2",
+       "label": "Point 2: left apex",
+       "match": [
+        [
+         "point 2"
+        ],
+        [
+         "left",
+         "apex"
+        ],
+        [
+         "point",
+         "1 to 6"
+        ],
+        [
+         "6 point"
+        ],
+        [
+         "six point"
+        ]
+       ]
+      },
+      {
+       "id": "point-3",
+       "label": "Point 3: right side",
+       "match": [
+        [
+         "point 3"
+        ],
+        [
+         "right",
+         "side"
+        ],
+        [
+         "point",
+         "1 to 6"
+        ],
+        [
+         "6 point"
+        ],
+        [
+         "six point"
+        ]
+       ]
+      },
+      {
+       "id": "point-4",
+       "label": "Point 4: left side",
+       "match": [
+        [
+         "point 4"
+        ],
+        [
+         "left",
+         "side"
+        ],
+        [
+         "point",
+         "1 to 6"
+        ],
+        [
+         "6 point"
+        ],
+        [
+         "six point"
+        ]
+       ]
+      },
+      {
+       "id": "point-5",
+       "label": "Point 5: right base",
+       "match": [
+        [
+         "point 5"
+        ],
+        [
+         "right",
+         "base"
+        ],
+        [
+         "point",
+         "1 to 6"
+        ],
+        [
+         "6 point"
+        ],
+        [
+         "six point"
+        ]
+       ]
+      },
+      {
+       "id": "point-6",
+       "label": "Point 6: left base",
+       "match": [
+        [
+         "point 6"
+        ],
+        [
+         "left",
+         "base"
+        ],
+        [
+         "point",
+         "1 to 6"
+        ],
+        [
+         "6 point"
+        ],
+        [
+         "six point"
+        ]
+       ]
+      },
+      {
+       "id": "air-entry",
+       "label": "Is there air entry?",
+       "match": [
+        [
+         "air entry"
+        ]
+       ]
+      },
+      {
+       "id": "equal-entry",
+       "label": "Is air entry equal?",
+       "match": [
+        [
+         "equal"
+        ]
+       ]
+      },
+      {
+       "id": "abnormal-sounds",
+       "label": "Any abnormal breath sounds (wheezes / crackles)?",
+       "match": [
+        [
+         "abnormal"
+        ],
+        [
+         "wheez"
+        ],
+        [
+         "crackl"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bp-screen",
+     "label": "Before BP: any AV shunt / fistula or chest operations?",
+     "short": "BP screening",
+     "match": [
+      [
+       "which arm"
+      ],
+      [
+       "your blood pressure"
+      ],
+      [
+       "your bp"
+      ]
+     ],
+     "parts": [
+      {
+       "id": "shunt",
+       "label": "AV shunt",
+       "match": [
+        [
+         "shunt"
+        ]
+       ]
+      },
+      {
+       "id": "fistula",
+       "label": "Fistula",
+       "match": [
+        [
+         "fistula"
+        ]
+       ]
+      },
+      {
+       "id": "chest-op",
+       "label": "Chest operations (specifically breast cancer removal)",
+       "match": [
+        [
+         "chest op"
+        ],
+        [
+         "operation"
+        ],
+        [
+         "surger"
+        ],
+        [
+         "breast"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bp-arm",
+     "label": "Name the arm for BP",
+     "short": "BP arm",
+     "match": [
+      [
+       "bp on the {bparm}"
+      ],
+      [
+       "bp on her {bparm}"
+      ],
+      [
+       "bp on his {bparm}"
+      ],
+      [
+       "bp on {bparm}"
+      ],
+      [
+       "blood pressure on the {bparm}"
+      ],
+      [
+       "blood pressure on her {bparm}"
+      ],
+      [
+       "blood pressure on his {bparm}"
+      ],
+      [
+       "blood pressure on {bparm}"
+      ],
+      [
+       "bp",
+       "{bparm} arm"
+      ],
+      [
+       "blood pressure",
+       "{bparm} arm"
+      ]
+     ],
+     "local": [
+      [
+       "{bparm} arm"
+      ]
+     ],
+     "check": "arm"
+    },
+    {
+     "id": "ecg",
+     "label": "ECG type with reason: 12-lead or 4-lead",
+     "short": "ECG",
+     "match": [
+      [
+       "ecg"
+      ]
+     ],
+     "check": "ecg"
+    },
+    {
+     "id": "hypocount",
+     "label": "Hypocount",
+     "short": "hypocount",
+     "match": [
+      [
+       "hypocount"
+      ],
+      [
+       "hypo count"
+      ],
+      [
+       "glucose"
+      ],
+      [
+       "sugar"
+      ]
+     ]
+    },
+    {
+     "id": "suspected-hypo",
+     "label": "Hypocount under 4: \"suspected hypoglycaemia\"",
+     "short": "suspected hypo",
+     "match": [
+      [
+       "hypoglyc"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "suspected"
+     ],
+     "when": "hypoglycaemia",
+     "say": "Hypocount is below 4, suspected hypoglycaemia."
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "finding": "findings.investigation.auscultation",
+     "on": [
+      "auscultation"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.bpScreen",
+     "on": [
+      "bp-screen"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.investigation.bp",
+     "on": [
+      "bp-arm"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.investigation.ecg",
+     "on": [
+      "ecg"
+     ]
+    },
+    {
+     "role": "tester",
+     "finding": "findings.investigation.hypocount",
+     "on": [
+      "hypocount"
+     ]
+    }
+   ],
+   "guidance": [
+    "Screening questions count as choosing the arm, but the arm must still be named.",
+    "12-lead for chest pain, SOB, cardiac, syncope; else 4-lead.",
+    "Hypocount under 4: \"suspected hypoglycaemia\"."
+   ]
+  },
+  {
+   "id": "vital-signs",
+   "order": 14,
+   "name": "Vital signs",
+   "timed": true,
+   "notesRef": "s01#investigation-vital-signs",
+   "canonicalLine": "Sir/Ma'am, I am going to take your vital signs now. Please allow me. GCS: eye opening, verbal (what is your name, where are you now?) and motor (please raise both arms), then the GCS score. On a scale of 1 to 10, with 1 being the least and 10 being the most, how would you rate your pain / discomfort? Head buddy, please check temperature, respiratory rate, and skin colour & condition. Arm buddy, please check SpO2, pulse rate, blood pressure and capillary refill time. Buddy, please reassess vital signs every 5 mins and inform me.",
+   "mustHit": [
+    {
+     "id": "vitals-permission",
+     "label": "Ask permission to take vital signs",
+     "short": "vitals permission",
+     "match": [
+      [
+       "may i",
+       "vital"
+      ],
+      [
+       "allow",
+       "vital"
+      ],
+      [
+       "permission",
+       "vital"
+      ],
+      [
+       "going to",
+       "your vital"
+      ]
+     ],
+     "local": [
+      [
+       "allow"
+      ],
+      [
+       "permission"
+      ]
+     ],
+     "negatives": [
+      "may in",
+      "may im"
+     ]
+    },
+    {
+     "id": "gcs",
+     "label": "GCS: eyes, verbal, motor, and the score",
+     "short": "GCS",
+     "match": [],
+     "parts": [
+      {
+       "id": "eyes",
+       "label": "Eye opening",
+       "match": [
+        [
+         "eye"
+        ],
+        [
+         "eyes"
+        ],
+        [
+         "gcs",
+         "{gcse}"
+        ],
+        [
+         "{gcse}",
+         "{gcsv}"
+        ],
+        [
+         "{gcse}",
+         "{gcsm}"
+        ]
+       ]
+      },
+      {
+       "id": "verbal",
+       "label": "Verbal (person, place or time)",
+       "match": [
+        [
+         "verbal"
+        ],
+        [
+         "name"
+        ],
+        [
+         "where are you"
+        ],
+        [
+         "what day"
+        ],
+        [
+         "orient"
+        ],
+        [
+         "gcs",
+         "{gcsv}"
+        ],
+        [
+         "{gcse}",
+         "{gcsv}"
+        ],
+        [
+         "{gcsv}",
+         "{gcsm}"
+        ]
+       ]
+      },
+      {
+       "id": "motor",
+       "label": "Motor",
+       "match": [
+        [
+         "motor"
+        ],
+        [
+         "raise"
+        ],
+        [
+         "squeeze"
+        ],
+        [
+         "obey"
+        ],
+        [
+         "gcs",
+         "{gcsm}"
+        ],
+        [
+         "{gcse}",
+         "{gcsm}"
+        ],
+        [
+         "{gcsv}",
+         "{gcsm}"
+        ]
+       ]
+      },
+      {
+       "id": "score",
+       "label": "GCS score",
+       "match": [
+        [
+         "gcs",
+         "score"
+        ],
+        [
+         "{gcse}",
+         "score"
+        ],
+        [
+         "{gcsv}",
+         "score"
+        ],
+        [
+         "{gcsm}",
+         "score"
+        ],
+        [
+         "total"
+        ],
+        [
+         "gcs is"
+        ],
+        [
+         "/15"
+        ],
+        [
+         "out of 15"
+        ],
+        [
+         "gcs {gcstotal}"
+        ],
+        [
+         "gcs{gcstotal}"
+        ],
+        [
+         "gcs of {gcstotal}"
+        ],
+        [
+         "gcs: {gcstotal}"
+        ],
+        [
+         "gcs:{gcstotal}"
+        ],
+        [
+         "gcs",
+         "="
+        ],
+        [
+         "score {gcsscore}"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "severity",
+     "label": "Severity: on a scale of 1 to 10, with 1 being the least and 10 being the most",
+     "short": "severity 1–10",
+     "match": [
+      [
+       "scale"
+      ],
+      [
+       "severity"
+      ],
+      [
+       "1 to 10"
+      ],
+      [
+       "out of 10"
+      ],
+      [
+       "pain score"
+      ]
+     ]
+    },
+    {
+     "id": "head-buddy",
+     "label": "Head buddy: temperature, respiratory rate, skin colour & condition",
+     "short": "head buddy vitals",
+     "match": [],
+     "parts": [
+      {
+       "id": "temp",
+       "label": "Temperature",
+       "match": [
+        [
+         "temp"
+        ]
+       ]
+      },
+      {
+       "id": "rr",
+       "label": "Respiratory rate",
+       "match": [
+        [
+         "respiratory"
+        ],
+        [
+         "rr"
+        ],
+        [
+         "breathing rate"
+        ]
+       ]
+      },
+      {
+       "id": "skin",
+       "label": "Skin colour & condition",
+       "match": [
+        [
+         "skin"
+        ]
+       ]
+      }
+     ],
+     "to": "headBuddy"
+    },
+    {
+     "id": "arm-buddy",
+     "label": "Arm buddy: SpO2, pulse rate, blood pressure, capillary refill time",
+     "short": "arm buddy vitals",
+     "match": [],
+     "parts": [
+      {
+       "id": "spo2",
+       "label": "SpO2",
+       "match": [
+        [
+         "spo2"
+        ],
+        [
+         "sp02"
+        ],
+        [
+         "saturation"
+        ]
+       ]
+      },
+      {
+       "id": "pr",
+       "label": "Pulse rate",
+       "match": [
+        [
+         "pulse"
+        ],
+        [
+         "pr"
+        ]
+       ]
+      },
+      {
+       "id": "bp",
+       "label": "Blood pressure",
+       "match": [
+        [
+         "blood pressure"
+        ],
+        [
+         "bp"
+        ]
+       ]
+      },
+      {
+       "id": "crt",
+       "label": "Capillary refill time",
+       "match": [
+        [
+         "capillary"
+        ],
+        [
+         "refill"
+        ],
+        [
+         "crt"
+        ]
+       ]
+      }
+     ],
+     "to": "armBuddy"
+    },
+    {
+     "id": "reassess-5",
+     "label": "\"Buddy, please reassess vital signs every 5 mins and inform me\"",
+     "short": "reassess every 5 mins",
+     "match": [
+      [
+       "every 5"
+      ],
+      [
+       "every five"
+      ],
+      [
+       "reassess",
+       "5"
+      ],
+      [
+       "reassess",
+       "five"
+      ],
+      [
+       "reassess",
+       "5min"
+      ],
+      [
+       "vital",
+       "5 min"
+      ],
+      [
+       "vital",
+       "5min"
+      ],
+      [
+       "vital",
+       "five min"
+      ]
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "patient.lines.verbal",
+     "on": [
+      "gcs.verbal"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.motor",
+     "on": [
+      "gcs.motor"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.severity",
+     "on": [
+      "severity"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "vitals": [
+      "temp"
+     ],
+     "on": [
+      "head-buddy.temp"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "vitals": [
+      "rr"
+     ],
+     "on": [
+      "head-buddy.rr"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "vitals": [
+      "skin"
+     ],
+     "on": [
+      "head-buddy.skin"
+     ]
+    },
+    {
+     "role": "armBuddy",
+     "vitals": [
+      "spo2"
+     ],
+     "on": [
+      "arm-buddy.spo2"
+     ]
+    },
+    {
+     "role": "armBuddy",
+     "vitals": [
+      "pr"
+     ],
+     "on": [
+      "arm-buddy.pr"
+     ]
+    },
+    {
+     "role": "armBuddy",
+     "vitals": [
+      "bp"
+     ],
+     "on": [
+      "arm-buddy.bp"
+     ]
+    },
+    {
+     "role": "armBuddy",
+     "vitals": [
+      "crt"
+     ],
+     "on": [
+      "arm-buddy.crt"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "text": "OK, every 5 mins.",
+     "on": [
+      "reassess-5"
+     ]
+    }
+   ],
+   "guidance": [
+    "One of person / place / time is enough for verbal.",
+    "Severity is of the chief complaint (e.g. giddiness), not always \"pain\"."
+   ]
+  },
+  {
+   "id": "oxygen",
+   "order": 15,
+   "name": "Oxygen",
+   "timed": true,
+   "notesRef": "s01#oxygen",
+   "canonicalLine": "Arm buddy, please recheck the SpO2. Reassessing patient condition: maintain or titrate the oxygen mask and flow rate based on Guidelines.",
+   "mustHit": [
+    {
+     "id": "recheck-spo2",
+     "label": "Recheck SpO2 and reassess the patient's condition",
+     "short": "recheck SpO2",
+     "match": [
+      [
+       "spo2"
+      ],
+      [
+       "sp02"
+      ],
+      [
+       "saturation"
+      ]
+     ]
+    },
+    {
+     "id": "maintain-titrate",
+     "label": "Maintain or titrate the oxygen mask and flow rate",
+     "short": "oxygen",
+     "match": [
+      [
+       "maintain"
+      ],
+      [
+       "titrat"
+      ]
+     ],
+     "local": [
+      [
+       "mask"
+      ],
+      [
+       "flow"
+      ]
+     ],
+     "check": "oxygen"
+    }
+   ],
+   "replies": [
+    {
+     "role": "armBuddy",
+     "vitals": [
+      "spo2"
+     ],
+     "on": [
+      "recheck-spo2"
+     ]
+    },
+    {
+     "role": "headBuddy",
+     "computed": "oxygen",
+     "on": [
+      "maintain-titrate"
+     ]
+    }
+   ],
+   "guidance": []
+  },
+  {
+   "id": "airway-recheck",
+   "order": 16,
+   "name": "Airway recheck",
+   "timed": true,
+   "notesRef": "s01#airway-recheck",
+   "canonicalLine": "Sir/Ma'am, how are you feeling?",
+   "mustHit": [
+    {
+     "id": "how-feeling",
+     "label": "Sir/Ma'am, how are you feeling?",
+     "short": "how are you feeling",
+     "match": [
+      [
+       "how are you"
+      ]
+     ],
+     "local": [
+      [
+       "feel"
+      ],
+      [
+       "better"
+      ]
+     ],
+     "to": "patient"
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "patient.lines.feelingNow",
+     "on": [
+      "how-feeling"
+     ]
+    }
+   ],
+   "guidance": []
+  },
+  {
+   "id": "position",
+   "order": 17,
+   "name": "Position",
+   "timed": true,
+   "notesRef": "s01#position",
+   "canonicalLine": "Sir/Ma'am, which position is the most comfortable for you? If that position is not ideal: {positionAdvice}.",
+   "mustHit": [
+    {
+     "id": "ask-position",
+     "label": "Which position is the most comfortable for you?",
+     "short": "position",
+     "match": [
+      [
+       "position"
+      ],
+      [
+       "comfortable"
+      ]
+     ]
+    },
+    {
+     "id": "convince",
+     "label": "If not ideal, convince them: sitting up eases breathing; lying flat (supine) helps low BP",
+     "short": "convince",
+     "match": [
+      [
+       "easier",
+       "{posture}"
+      ],
+      [
+       "better",
+       "{posture}"
+      ],
+      [
+       "help",
+       "{posture}"
+      ],
+      [
+       "recommend",
+       "{posture}"
+      ],
+      [
+       "advise",
+       "{posture}"
+      ]
+     ],
+     "local": [
+      [
+       "{posture}",
+       "up"
+      ],
+      [
+       "{posture}",
+       "down"
+      ],
+      [
+       "{posture}",
+       "flat"
+      ],
+      [
+       "{posture} position"
+      ]
+     ],
+     "negatives": [
+      "or lie",
+      "or lying",
+      "or lay",
+      "or sit",
+      "instead of",
+      "don't sit",
+      "don't lie",
+      "do not sit",
+      "do not lie",
+      "dont sit",
+      "dont lie",
+      "down or not",
+      "up or not",
+      "flat or not",
+      "lie or not",
+      "sit or not"
+     ],
+     "when": "positionNotIdeal"
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "patient.lines.position",
+     "on": [
+      "ask-position"
+     ]
+    },
+    {
+     "role": "patient",
+     "finding": "patient.lines.convinced",
+     "on": [
+      "convince"
+     ]
+    }
+   ],
+   "guidance": [
+    "Sitting up for SOB or chest pain.",
+    "Supine (lying flat) for low BP, e.g. heavy bleeding."
+   ]
+  },
+  {
+   "id": "decision-point",
+   "order": 18,
+   "name": "Decision point",
+   "timed": true,
+   "notesRef": "s01#decision-point",
+   "canonicalLine": "Patient is unstable due to {signs}, suspected {suspected}. {decisionLine} As I am an FMV EMT, I cannot send unstable case, I will call for ambulance to convey. Meanwhile, I will continue to give my treatment and monitoring of patient every 5 mins till ambulance arrives.",
+   "mustHit": [
+    {
+     "id": "unstable-signs",
+     "label": "\"Patient is unstable due to (2 signs)\"",
+     "short": "unstable due to",
+     "match": [
+      [
+       "due to"
+      ],
+      [
+       "unstable",
+       "because"
+      ],
+      [
+       "stable",
+       "because"
+      ],
+      [
+       "is unstable"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "unstable"
+     ],
+     "negatives": [
+      "due tom",
+      "due tod"
+     ]
+    },
+    {
+     "id": "suspected",
+     "label": "\"Suspected X\"",
+     "short": "suspected",
+     "match": [
+      [
+       "suspect"
+      ],
+      [
+       "likely"
+      ]
+     ],
+     "requiredWords": [
+      "suspected"
+     ]
+    },
+    {
+     "id": "stay-and-treat",
+     "label": "Stay & Treat: \"I will Stay & Treat to see whether I can initiate any protocols\"",
+     "short": "stay & treat",
+     "match": [
+      [
+       "stay",
+       "treat"
+      ]
+     ],
+     "when": "stayAndTreat"
+    },
+    {
+     "id": "load-and-go",
+     "label": "Load & Go: \"It is a Load & Go case\"",
+     "short": "load & go",
+     "match": [
+      [
+       "load",
+       "go"
+      ]
+     ],
+     "when": "loadAndGo"
+    },
+    {
+     "id": "call-alpha",
+     "label": "FMV EMT cannot send unstable case: call for ambulance to convey",
+     "short": "call for ambulance",
+     "match": [
+      [
+       "call",
+       "ambulance"
+      ],
+      [
+       "need",
+       "ambulance"
+      ],
+      [
+       "request",
+       "ambulance"
+      ],
+      [
+       "activate",
+       "ambulance"
+      ],
+      [
+       "get",
+       "ambulance"
+      ],
+      [
+       "alpha"
+      ],
+      [
+       "convey"
+      ]
+     ]
+    },
+    {
+     "id": "monitor-5",
+     "label": "Monitor the patient every 5 mins till the ambulance arrives",
+     "short": "monitor every 5 mins",
+     "match": [
+      [
+       "monitor",
+       "every"
+      ],
+      [
+       "monitor",
+       "5"
+      ],
+      [
+       "monitor",
+       "5min"
+      ],
+      [
+       "monitor",
+       "five"
+      ],
+      [
+       "monitor",
+       "till"
+      ],
+      [
+       "monitor",
+       "until"
+      ],
+      [
+       "every 5"
+      ]
+     ],
+     "negatives": [
+      "reassess vital"
+     ]
+    }
+   ],
+   "replies": [
+    {
+     "role": "tester",
+     "text": "Accepted.",
+     "on": [
+      "unstable-signs"
+     ]
+    }
+   ],
+   "guidance": [
+    "Reasons should be signs, not the diagnosis."
+   ]
+  },
+  {
+   "id": "notification",
+   "order": 19,
+   "name": "Notification",
+   "timed": true,
+   "notesRef": "s01#notification",
+   "canonicalLine": "Sir/Ma'am, may I have your IC please? Does the name match? Does the IC number match? Does the photo match? FMV 123 to Ops Centre, standby message, over. FMV 123, requesting for Alpha for unstable case of {sex} / {race} / {age} / case of {suspected} due to {signs} / IC no. {ic} / ETA {eta} mins.",
+   "mustHit": [
+    {
+     "id": "get-ic",
+     "label": "Retrieve the patient's IC after seeking permission",
+     "short": "IC",
+     "match": [
+      [
+       "ic"
+      ],
+      [
+       "id"
+      ],
+      [
+       "identity"
+      ],
+      [
+       "nric"
+      ]
+     ],
+     "negatives": [
+      "ic no.",
+      "{ic}",
+      "match",
+      "alpha"
+     ]
+    },
+    {
+     "id": "id-check",
+     "label": "Confirm identity: name, IC number and photo match",
+     "short": "ID check",
+     "match": [],
+     "parts": [
+      {
+       "id": "name",
+       "label": "Name",
+       "match": [
+        [
+         "name"
+        ]
+       ]
+      },
+      {
+       "id": "ic-number",
+       "label": "IC number",
+       "match": [
+        [
+         "number"
+        ],
+        [
+         "ic no",
+         "no"
+        ]
+       ]
+      },
+      {
+       "id": "photo",
+       "label": "Photo",
+       "match": [
+        [
+         "photo"
+        ],
+        [
+         "picture"
+        ]
+       ]
+      }
+     ],
+     "negatives": [
+      "{ic}",
+      "may i have your ic number"
+     ]
+    },
+    {
+     "id": "standby-opener",
+     "label": "\"FMV XXX to Ops Centre, standby message, over\"",
+     "short": "standby message",
+     "match": [
+      [
+       "standby"
+      ],
+      [
+       "stand by"
+      ]
+     ],
+     "keyPhrase": true,
+     "requiredWords": [
+      "stand"
+     ],
+     "to": "opsCtr"
+    },
+    {
+     "id": "sracie",
+     "label": "Request Alpha for unstable case: sex, race, age, case, 2 signs, IC no., ETA",
+     "short": "SRACIE",
+     "match": [],
+     "parts": [
+      {
+       "id": "sex",
+       "label": "Sex",
+       "match": [
+        [
+         "male"
+        ],
+        [
+         "female"
+        ],
+        [
+         "sex"
+        ],
+        [
+         "man"
+        ],
+        [
+         "woman"
+        ],
+        [
+         "f/{raceword}"
+        ],
+        [
+         "f / {raceword}"
+        ],
+        [
+         "f, {raceword}"
+        ],
+        [
+         "f,{raceword}"
+        ],
+        [
+         "f {raceword}"
+        ],
+        [
+         "m/{raceword}"
+        ],
+        [
+         "m / {raceword}"
+        ],
+        [
+         "m, {raceword}"
+        ],
+        [
+         "m,{raceword}"
+        ],
+        [
+         "m {raceword}"
+        ],
+        [
+         "{raceword}/f"
+        ],
+        [
+         "{raceword} / f"
+        ],
+        [
+         "{raceword}, f"
+        ],
+        [
+         "{raceword},f"
+        ],
+        [
+         "{raceword} f"
+        ],
+        [
+         "{raceword}/m"
+        ],
+        [
+         "{raceword} / m"
+        ],
+        [
+         "{raceword}, m"
+        ],
+        [
+         "{raceword},m"
+        ],
+        [
+         "{raceword} m"
+        ]
+       ]
+      },
+      {
+       "id": "race",
+       "label": "Race",
+       "match": [
+        [
+         "race"
+        ],
+        [
+         "chinese"
+        ],
+        [
+         "malay"
+        ],
+        [
+         "indian"
+        ],
+        [
+         "eurasian"
+        ]
+       ]
+      },
+      {
+       "id": "age",
+       "label": "Age",
+       "match": [
+        [
+         "{age}"
+        ],
+        [
+         "{age}yo"
+        ],
+        [
+         "{age}y"
+        ],
+        [
+         "{age}yr"
+        ],
+        [
+         "{decade}"
+        ]
+       ]
+      },
+      {
+       "id": "case",
+       "label": "Case of X (suspected)",
+       "match": [
+        [
+         "case of"
+        ],
+        [
+         "suspect"
+        ]
+       ]
+      },
+      {
+       "id": "two-signs",
+       "label": "2 signs (due to …)",
+       "match": [
+        [
+         "due to"
+        ]
+       ]
+      },
+      {
+       "id": "ic-no",
+       "label": "IC no.",
+       "match": [
+        [
+         "{ic}"
+        ]
+       ]
+      },
+      {
+       "id": "eta",
+       "label": "ETA",
+       "match": [
+        [
+         "eta",
+         "{eta}"
+        ],
+        [
+         "eta",
+         "{eta}min"
+        ],
+        [
+         "eta",
+         "{eta}m"
+        ],
+        [
+         "estimated time",
+         "{eta}"
+        ],
+        [
+         "estimated time",
+         "{eta}min"
+        ],
+        [
+         "estimated time",
+         "{eta}m"
+        ]
+       ]
+      }
+     ],
+     "to": "opsCtr"
+    }
+   ],
+   "replies": [
+    {
+     "role": "patient",
+     "finding": "patient.lines.ic",
+     "on": [
+      "get-ic"
+     ]
+    },
+    {
+     "role": "tester",
+     "computed": "ic",
+     "on": [
+      "get-ic"
+     ]
+    },
+    {
+     "role": "tester",
+     "text": "Name, IC number and photo match.",
+     "on": [
+      "id-check"
+     ]
+    },
+    {
+     "role": "opsCtr",
+     "text": "Ops Centre, send over.",
+     "on": [
+      "standby-opener"
+     ]
+    },
+    {
+     "role": "tester",
+     "computed": "eta",
+     "on": [
+      "standby-opener"
+     ]
+    },
+    {
+     "role": "opsCtr",
+     "text": "Ops Centre, roger.",
+     "on": [
+      "sracie"
+     ]
+    }
+   ],
+   "guidance": [
+    "Age range (e.g. \"70s\") accepted.",
+    "ETA = time left of the 20 mins."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "scenarios": {
+    "mt-b": [
+      { "marker": "Scenario 1", "from": 147, "to": 148 },
+      { "marker": "Scenario 2", "from": 149, "to": 151 },
+      { "marker": "Scenario 3", "from": 152, "to": 155 },
+      { "marker": "Scenario 4", "from": 156, "to": 158 },
+      { "marker": "Scenario 5", "from": 161, "to": 163 },
+      { "marker": "Scenario 6", "from": 165, "to": 168 },
+      { "marker": "Scenario 7", "from": 169, "to": 171 }
+    ]
+  },
+  "imageGroups": [
+    { "bank": "mt-b", "from": 197, "to": 199, "file": "mt-b-q197.png",
+      "reason": "Depends on the ECG strip printed in the PDF. Check the crop against the PDF." }
+  ],
+  "fixes": [
+    { "id": "mt-b-q203", "find": "treament", "replace": "treatment" },
+    { "id": "mt-b-q207", "find": "asculatation", "replace": "auscultation" },
+    { "id": "mt-b-q209", "find": "dysarhythmias", "replace": "dysrhythmias" },
+    { "id": "mt-b-q212", "find": "puritus", "replace": "pruritus" },
+    { "id": "mt-b-q254", "find": "eithical", "replace": "ethical" },
+    { "id": "hmls-q004", "find": "indefinetly", "replace": "indefinitely" },
+    { "id": "hmls-q058", "find": "I/min", "replace": "L/min" },
+    { "id": "hmls-q059", "find": "I/min", "replace": "L/min" },
+    { "id": "hmls-q060", "find": "I/min", "replace": "L/min" }
+  ]
+}

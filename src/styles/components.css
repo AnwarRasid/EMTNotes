@@ -1,0 +1,919 @@
+/* Shared components and the app frame. Ported from the approved mockup (.superpowers/alts/scdf.fragment.html):
+   each .as-x class there is .x here, type sizes are rem (mockup px / 16) so the text-size setting scales them,
+   and fixed heights became min-heights. Hover lives only under (hover: hover). The phone frame, fake status
+   bar and home bar are mockup-only and not ported. */
+
+/* ---------- app frame ---------- */
+/* The tab bar's height, shared with the toast offset: border + top padding + tab + bottom padding. Focus routes have no bar. */
+.app{--tab-h:52px;--tabbar-pad:8px;--tabbar-pad-bottom:max(10px,env(safe-area-inset-bottom));--tabbar-h:calc(1px + var(--tabbar-pad) + var(--tab-h) + var(--tabbar-pad-bottom));position:relative;isolation:isolate;display:grid;grid-template-rows:1fr auto;min-height:100vh;min-height:100dvh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.app-focus{--tabbar-h:0px}
+/* Safe areas: top and sides here; the tab bar pads the bottom, and a focus screen's own key bar pads its own. */
+.app-main{position:relative;z-index:1;justify-self:center;width:100%;max-width:40rem;min-width:0;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left)}
+/* The shell moves focus to a screen's h1 (or main) for screen readers and marks only what it made focusable;
+   that programmatic focus needs no ring. Every other element keeps its ring. */
+[data-route-focus]:focus{outline:none}
+
+/* ---------- scene: the patient cabin at night (overhead lockers, a dimmed LED strip, light from outside) ---------- */
+.scene{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(180deg,rgba(18,23,25,0) 0,rgba(18,23,25,.5) 200px,var(--c-bay) 350px),
+    linear-gradient(90deg,rgba(226,240,244,0),rgba(226,240,244,.55),rgba(226,240,244,0)),
+    radial-gradient(170px 64px at 50% 0%,rgba(214,234,240,.20),rgba(214,234,240,0) 78%),
+    radial-gradient(130px 110px at 100% 14%,rgba(255,168,76,.26),rgba(255,168,76,0) 72%),
+    repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 92px,rgba(198,222,228,.09) 92px 93px,rgba(0,0,0,.22) 93px 95px),
+    repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 70px,rgba(198,222,228,.08) 70px 71px,rgba(0,0,0,.22) 71px 73px),
+    linear-gradient(180deg,#1E272A 0,#141A1C 320px);
+  background-size:100% 100%,240px 2px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+  background-position:0 0,50% 0,0 0,0 0,8px 0,0 -24px,0 0;
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,repeat,no-repeat}
+/* a run: red and blue beacons reach the cabin */
+.scene-run{
+  background-image:
+    linear-gradient(180deg,rgba(18,23,25,0) 0,rgba(18,23,25,.55) 200px,var(--c-bay) 330px),
+    linear-gradient(90deg,rgba(226,240,244,0),rgba(226,240,244,.4),rgba(226,240,244,0)),
+    radial-gradient(200px 160px at 0% 2%,rgba(208,35,43,.58),rgba(208,35,43,0) 72%),
+    radial-gradient(200px 160px at 100% 2%,rgba(52,98,255,.46),rgba(52,98,255,0) 72%),
+    repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 92px,rgba(198,222,228,.08) 92px 93px,rgba(0,0,0,.22) 93px 95px),
+    repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 70px,rgba(198,222,228,.07) 70px 71px,rgba(0,0,0,.22) 71px 73px),
+    linear-gradient(180deg,#1C2427 0,#141A1C 320px)}
+/* quiet: debrief, quiz, notes and settings */
+.scene-quiet{
+  background-image:
+    linear-gradient(180deg,rgba(18,23,25,0) 0,rgba(18,23,25,.6) 170px,var(--c-bay) 300px),
+    linear-gradient(90deg,rgba(226,240,244,0),rgba(226,240,244,.32),rgba(226,240,244,0)),
+    radial-gradient(150px 56px at 50% 0%,rgba(214,234,240,.12),rgba(214,234,240,0) 78%),
+    radial-gradient(110px 90px at 100% 12%,rgba(255,168,76,.14),rgba(255,168,76,0) 72%),
+    repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 92px,rgba(198,222,228,.07) 92px 93px,rgba(0,0,0,.2) 93px 95px),
+    repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 70px,rgba(198,222,228,.06) 70px 71px,rgba(0,0,0,.2) 71px 73px),
+    linear-gradient(180deg,#1C2427 0,#141A1C 300px)}
+
+/* ---------- shared chrome ---------- */
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ibtn{min-width:44px;min-height:44px;flex:none;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(214,234,240,.16);background:rgba(29,37,40,.72);color:var(--c-text);text-decoration:none;box-shadow:inset 0 1px 0 rgba(236,246,248,.10);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.panel{background:var(--c-panel);-webkit-backdrop-filter:blur(14px) saturate(115%);backdrop-filter:blur(14px) saturate(115%);border:1px solid rgba(214,234,240,.11);border-radius:12px;box-shadow:inset 0 1px 0 rgba(236,246,248,.10),0 12px 24px -16px rgba(0,0,0,.7)}
+/* the one key that acts: ambulance white with the reflective band along its lower edge.
+   Padding 4/14 keeps the mockup's 0/10 text centre for one line and gives a wrapped label room. */
+.primary{min-height:48px;max-width:100%;padding:4px 20px 14px;border-radius:8px;background:var(--band-key),var(--c-white);color:var(--c-ink);font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.1;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center;text-wrap:balance;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 18px -6px rgba(211,217,213,.35)}
+.btn2{min-height:48px;max-width:100%;padding:4px 16px;border-radius:8px;border:1px solid var(--c-line-2);background:rgba(27,34,37,.9);color:var(--c-text);font-family:var(--f-ui);font-weight:600;font-size:1.0625rem;line-height:1.1;display:inline-flex;align-items:center;justify-content:center;text-align:center;text-wrap:balance;text-decoration:none}
+.primary:disabled,.btn2:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--f-ui);font-size:1rem;font-weight:600;color:var(--c-text);text-decoration:underline;text-decoration-color:var(--c-text-3);text-decoration-thickness:1px;text-underline-offset:4px}
+/* a link inside running text (mockup .as-ilink): the text's own size and line, underlined in text-3 */
+.ilink{color:var(--c-text);font-weight:600;text-decoration:underline;text-decoration-color:var(--c-text-3);text-decoration-thickness:1px;text-underline-offset:3px}
+/* done, in words ("RBS done ✓"; mockup .as-ok): the spec's copy in the done green, never a chip (ruling S8) */
+.ok{color:var(--c-done)}
+/* status: a solid chip with a mark and a word, in hues the band never uses */
+.tag{display:inline-flex;align-items:center;gap:5px;min-height:26px;padding:0 8px;border-radius:4px;font-family:var(--f-ui);font-size:.875rem;line-height:1;font-weight:700;color:var(--c-ink);white-space:nowrap}
+.tag-hi{background:var(--c-missed)}
+.tag-med{background:var(--c-order)}
+.tag-ok{background:var(--c-done)}
+.bang{font-family:var(--f-fig);font-weight:800;letter-spacing:-.04em}
+
+/* press, hover and motion: press 90 ms, colour 160 ms; movement only without reduced motion */
+.ibtn,.primary,.btn2,.tab,.toast-act{transition:transform var(--t-press) var(--ease-exit),filter var(--t-press) var(--ease-exit),background-color var(--t-fast),border-color var(--t-fast),color var(--t-fast),text-decoration-color var(--t-fast)}
+.link,.ilink{transition:text-decoration-color var(--t-fast)}
+@media (hover:hover){
+  .ibtn:hover{border-color:rgba(214,234,240,.30);background-color:rgba(43,55,60,.85)}
+  .primary:hover:not(:disabled){filter:brightness(1.05)}
+  .btn2:hover:not(:disabled){border-color:var(--c-text-3);background-color:rgba(36,45,49,.92)}
+  .link:hover,.ilink:hover,.toast-act:hover{text-decoration-color:var(--c-text)}
+  .tab:not(.on):hover{color:var(--c-text);border-color:var(--c-line-2)}
+}
+/* pressed comes after hover, so a mouse press still shows it */
+.primary:active:not(:disabled){filter:brightness(.92)}
+.ibtn:active,.btn2:active:not(:disabled),.tab:active{background-color:rgba(43,55,60,.95)}
+@media (prefers-reduced-motion:no-preference){
+  .ibtn:active,.primary:active:not(:disabled),.btn2:active:not(:disabled),.tab:active,.toast-act:active{transform:scale(.97)}
+}
+
+/* more contrast: the icon keys' and panels' faint rim borders step up to the strong line token */
+@media (prefers-contrast:more){
+  .ibtn,.panel{border-color:var(--c-line-2)}
+  /* hover never drops below the strong border; it steps up to text-3, as .btn2's hover does */
+  @media (hover:hover){.ibtn:hover{border-color:var(--c-text-3)}}
+}
+
+/* ---------- brand ---------- */
+.bb{display:block;background:var(--band)}
+.appbar{flex:none;display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 14px 0 16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--f-fig);font-weight:700;font-size:1.4375rem;line-height:1;letter-spacing:.01em}
+.mark{display:flex;flex-direction:column;align-items:center;gap:3px}
+.mark svg{width:30px;height:30px}
+.mark .bb{width:30px;height:8px;border-radius:1.5px;background-size:10px 50%,10px 50%}
+.sol-rim{fill:var(--c-text)}
+.sol-star{fill:var(--c-star)}
+.sol-rod{stroke:var(--c-text);fill:none;stroke-linecap:round}
+.sol-head{fill:var(--c-text)}
+
+/* ---------- tab bar: sticks to the bottom while the page scrolls ---------- */
+.tabs{position:sticky;bottom:0;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;
+  padding:var(--tabbar-pad) max(10px,env(safe-area-inset-right),calc(50% - 20rem + 10px)) var(--tabbar-pad-bottom) max(10px,env(safe-area-inset-left),calc(50% - 20rem + 10px));
+  background:rgba(13,17,19,.94);border-top:1px solid var(--c-line)}
+/* On a very narrow phone the icon stacks over the label instead of spilling out of the tab. */
+.tab{position:relative;min-width:0;min-height:var(--tab-h);display:flex;flex-wrap:wrap;align-items:center;align-content:center;justify-content:center;gap:2px 6px;text-align:center;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;font-family:var(--f-ui);font-size:1rem;font-weight:600;color:var(--c-text-2);text-decoration:none;border:1px solid var(--c-line);border-radius:8px;background:rgba(27,34,37,.9)}
+.tab .ic{width:18px;height:18px}
+.tab.on{color:var(--c-text);font-weight:700;background:var(--c-raised);border-color:var(--c-line-2)}
+.tab.on::before{content:"";position:absolute;left:12px;right:12px;top:-1px;height:4px;border-radius:0 0 2px 2px;background:var(--c-text)}
+
+/* ---------- focus header: exit, title over a sub-line, counter ---------- */
+.mhead{flex:none;display:grid;grid-template-columns:44px 1fr auto;column-gap:12px;align-items:center;padding:8px 16px 0}
+.mhead-text{min-width:0}
+.title{font-family:var(--f-fig);font-weight:700;font-size:1.5rem;line-height:1.1;color:var(--c-text);text-wrap:balance}
+.addr{margin-top:2px;font-family:var(--f-ui);font-size:1rem;line-height:1.3;color:var(--c-text-2)}
+.mhead .addr{margin-top:1px}
+.count{font-family:var(--f-ui);font-size:.9375rem;color:var(--c-text-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.count b{font-family:var(--f-fig);font-weight:700;font-size:1.625rem;color:var(--c-text)}
+
+/* ---------- corrupt-save banner ---------- */
+.banner{margin:12px 16px 0;padding:12px 14px 14px}
+.banner-msg{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;text-wrap:balance}
+.banner-sub{margin-top:4px;font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+.banner-keys{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
+/* ---------- skeleton ---------- */
+.skeleton{display:flex;flex-direction:column;gap:8px}
+.sk-row{border-radius:10px;border:1px solid rgba(214,234,240,.06);background:rgba(226,238,240,.07)}
+@media (prefers-reduced-motion:no-preference){
+  .sk-row{animation:sk-pulse 1.6s ease-in-out infinite}
+}
+@keyframes sk-pulse{50%{opacity:.55}}
+
+/* ---------- toasts: above the tab bar; under the header on a focus screen, clear of its key bar ---------- */
+.toasts{position:fixed;z-index:20;left:0;right:0;bottom:calc(var(--tabbar-h) + 10px);display:flex;justify-content:center;padding:0 max(12px,env(safe-area-inset-right)) 0 max(12px,env(safe-area-inset-left));pointer-events:none}
+.app-focus .toasts{top:calc(env(safe-area-inset-top) + 64px);bottom:auto}
+/* a banner above the screen pushes its header down by the banner's 12px top margin and its height (--banner-h, which
+   App measures): the toasts follow, so they never cover the banner's Reload */
+.app-focus.has-banner .toasts{top:calc(env(safe-area-inset-top) + 76px + var(--banner-h,0px))}
+.toast{pointer-events:auto;display:flex;align-items:center;gap:4px;width:100%;max-width:30rem;min-height:56px;padding:6px 6px 6px 14px;border-radius:12px;border:1px solid var(--c-line-2);background:var(--c-raised);color:var(--c-text);box-shadow:inset 0 1px 0 rgba(236,246,248,.10),0 16px 32px -12px rgba(0,0,0,.75);animation:toast-in var(--t-base) var(--ease-enter) both}
+.app-focus .toast{animation-name:toast-in-top}
+.toast.toast-out{animation:toast-out var(--t-exit) var(--ease-exit) both;pointer-events:none}
+.toast-msg{flex:1;min-width:0;padding:6px 0;font-size:1rem;line-height:1.35;text-wrap:pretty}
+.toast-act{flex:none;min-height:44px;padding:0 10px;border-radius:6px;font-family:var(--f-ui);font-weight:700;font-size:1rem;color:var(--c-text);text-decoration:underline;text-decoration-color:var(--c-text-3);text-decoration-thickness:1px;text-underline-offset:4px}
+/* radius 6 inside the toast's 6px padding keeps the corners concentric with its 12 */
+.toast-x{border-radius:6px;border-color:transparent;background:none;box-shadow:none;color:var(--c-text-2)}
+@keyframes toast-in{from{opacity:0;transform:translateY(8px)}}
+@keyframes toast-in-top{from{opacity:0;transform:translateY(-8px)}}
+@keyframes toast-out{to{opacity:0}}
+/* Reduced motion (spec §9): no rise, only fades of 150 ms or less. base.css stops every other animation; these win
+   over it by specificity (both !important). */
+@media (prefers-reduced-motion:reduce){
+  .toast,.app-focus .toast{animation:toast-fade-in 150ms var(--ease-enter) both !important}
+  .toast.toast-out{animation:toast-out var(--t-exit) var(--ease-exit) both !important}
+}
+@keyframes toast-fade-in{from{opacity:0}}
+
+/* ---------- tab screens: a heading row, then panels 10px apart (mockup .as-main, .as-h1, .as-plabel, .as-sub) ---------- */
+.screen{display:flex;flex-direction:column;gap:10px;padding:4px 16px 24px}
+.screen-head{display:flex;align-items:center;gap:12px;min-height:58px}
+.h1{font-family:var(--f-fig);font-weight:700;font-size:1.875rem;line-height:1.07;letter-spacing:.003em;color:var(--c-text);text-wrap:balance}
+.plabel{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;color:var(--c-text)}
+.sub{font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+.keys{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+/* a loading screen's skeleton rows sit where its panels will */
+.screen .skeleton{gap:10px}
+/* read by screen readers, not shown */
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* ---------- quiz tab ---------- */
+.resume,.load-error{padding:12px 14px 14px}
+.resume-line{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.3;text-wrap:pretty}
+.load-error-msg{font-size:1rem;line-height:1.4;text-wrap:pretty}
+.mode{position:relative;padding:12px 14px 14px}
+.mode .sub{margin-top:3px}
+.mode-note{margin-top:10px;font-size:1rem;line-height:1.4;color:var(--c-text);text-wrap:pretty}
+.mode-replace{margin-top:8px;font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+/* a mode that opens its setup: the heading's link stretches over the card, so the whole card is one target */
+.mode-link{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center;padding-right:10px}
+.mode-link .plabel,.mode-link .sub{grid-column:1}
+.mode-go{grid-column:2;grid-row:1/span 2;color:var(--c-text-2)}
+.mode-a{color:inherit;text-decoration:none}
+.mode-a::after{content:"";position:absolute;inset:0;border-radius:12px}
+.mode-a:focus-visible{outline:none}
+.mode-a:focus-visible::after{outline:2px solid var(--c-text);outline-offset:2px}
+.mode-link{transition:background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){.mode-link:hover{border-color:rgba(214,234,240,.28)}}
+.mode-link:active{background-color:rgba(43,55,60,.9)}
+
+/* ---------- bank progress (mockup .as-quiz, .as-qrow, .as-track) ---------- */
+.bankp{padding:2px 14px 14px}
+.bankp-head{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}
+.qrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:6px;font-size:1rem;line-height:1.3}
+.qn{font-family:var(--f-ui);font-size:.9375rem;color:var(--c-text-2);white-space:nowrap}
+.qn b{font-family:var(--f-fig);font-weight:700;font-size:1.375rem;color:var(--c-text)}
+/* Spec §8: the empty track must be visible. Over the panel it is 3.4:1, and the cabin-white fill is 4.1:1 against it
+   (the mockup's 10% white track was 1.3:1, and its text-2 fill can't clear 3:1 against a track that does). */
+.track{display:flex;min-height:5px;margin-top:6px;border-radius:3px;background:#66767B;overflow:hidden}
+.track i{border-radius:3px;background:var(--c-text)}
+
+/* ---------- quiz setup: bank and length radios, topic chips ---------- */
+.setup-group{padding:12px 14px 14px}
+.setup-group fieldset{border:0;min-width:0}
+.choices{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.choices-row{flex-direction:row;flex-wrap:wrap}
+.choices-row .choice{flex:1 1 8rem}
+.choice{display:flex;align-items:center;gap:12px;min-height:48px;padding:6px 12px;border-radius:10px;border:1px solid var(--c-line);background:rgba(27,34,37,.86);font-family:var(--f-ui);font-weight:600;font-size:1.0625rem;line-height:1.2;color:var(--c-text);cursor:pointer;-webkit-user-select:none;user-select:none}
+.choice input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--c-text-2);background:transparent;cursor:pointer}
+.choice input:checked{border-color:var(--c-text);background:radial-gradient(circle,var(--c-text) 0 5px,transparent 5.5px)}
+.choice:has(input:checked){border-color:var(--c-line-2);background-color:var(--c-raised)}
+/* a choice this browser can't make (Voice without a recogniser): a dashed rim and a dim name; its sub-line, which says
+   why, keeps its contrast */
+.choice:has(input:disabled){cursor:not-allowed;border-style:dashed;color:var(--c-text-2)}
+.choice input:disabled{cursor:not-allowed;border-color:var(--c-line-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{min-height:44px;display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:8px;border:1px solid var(--c-line-2);background:rgba(27,34,37,.9);color:var(--c-text);font-family:var(--f-ui);font-weight:600;font-size:1rem;line-height:1.15;text-align:left}
+.chip .ic{width:16px;height:16px;margin-left:-2px}
+.chip-n{font-weight:500;color:var(--c-text-2)}
+/* pressed is told by the tick and the weight as well as the brighter rim, never by colour alone */
+.chip[aria-pressed="true"]{background:var(--c-raised);border-color:var(--c-text);font-weight:700}
+.chip[aria-pressed="true"] .chip-n{color:var(--c-text)}
+.setup-start{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.setup-start .primary{width:100%}
+.setup-note{font-size:1rem;line-height:1.4;color:var(--c-text-2);text-align:center;text-wrap:pretty}
+.choice,.chip{transition:transform var(--t-press) var(--ease-exit),background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){
+  .choice:hover{border-color:var(--c-line-2)}
+  .chip:not([aria-pressed="true"]):hover{border-color:var(--c-text-3);background-color:rgba(36,45,49,.92)}
+}
+.choice:active,.chip:active{background-color:rgba(43,55,60,.95)}
+@media (prefers-reduced-motion:no-preference){.chip:active{transform:scale(.97)}}
+
+/* ---------- run start: the setup's groups, a radio's sub-line under its name, and the key row at the foot ---------- */
+.rstart{gap:10px;margin-top:16px}   /* a margin: .qs-body, later in this file, sets the padding */
+.choice-text{display:flex;flex-direction:column;gap:2px;min-width:0;padding:4px 0}
+.choice-sub{font-family:var(--f-body);font-weight:400;font-size:1rem;line-height:1.3;color:var(--c-text-2);text-wrap:pretty}
+.rstart .setup-group > .sub{margin-top:6px}
+.rs-times{color:var(--c-text)}   /* readings are cabin white */
+.qkeys .setup-note{grid-column:1/-1}
+
+/* ---------- the run screen (mockup screen 2, CSS 179–223): the band, the header and clock, the mode row, the step bar
+   and the vitals rail, then the chat and the composer ---------- */
+/* The one fixed height in the app (spec §8): the viewport less the top safe area, which .app-main pads. Every row has
+   its own area, so Exam's missing step bar moves nothing, and the chat's minmax(0,1fr) keeps it scrolling inside its
+   row instead of growing the grid. */
+.run{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto auto minmax(0,1fr) auto auto;
+  grid-template-areas:"flank" "head" "mode" "steps" "vitals" "chat" "pending" "composer";
+  height:calc(100vh - env(safe-area-inset-top));height:calc(100dvh - env(safe-area-inset-top))}
+/* a Reload banner above the run takes its room out of the run's height, so the composer stays on screen and the page
+   never scrolls (ruling S14): its 12px top margin and its own height (--banner-h, which App measures) */
+.has-banner .run{height:calc(100vh - env(safe-area-inset-top) - 12px - var(--banner-h,0px));height:calc(100dvh - env(safe-area-inset-top) - 12px - var(--banner-h,0px))}
+.flank{grid-area:flank;height:10px}
+/* The title keeps its longest word whole; the clock's limit line wraps before it does ("Starts at Approach"). */
+.runhead{grid-area:head;display:grid;grid-template-columns:44px minmax(min-content,1fr) auto;column-gap:12px;align-items:start;padding:10px 16px 0}
+.runhead-text{min-width:0}
+.runhead .addr{text-wrap:balance}   /* a wrapped location breaks at a space, not inside "#07-xx" */
+/* At the largest text size a one-word complaint ("Breathlessness") can't sit whole beside the clock on a 360px phone:
+   there the title breaks, hyphenated where the phone can, rather than push the page sideways. */
+html[data-text-size="larger"] .runhead{grid-template-columns:44px minmax(0,1fr) auto}
+html[data-text-size="larger"] .runhead .title{overflow-wrap:break-word;hyphens:auto}
+.clock{text-align:right}
+.clock b{display:block;font-family:var(--f-fig);font-weight:700;font-size:2.5rem;line-height:1;color:var(--c-text);white-space:nowrap}
+.clock b.warn{color:var(--c-missed)}
+/* the limit line: plain, "RBS 2:41 ✓" in green, a limit passed in magenta (statuses, unlike the readings) */
+.rbs{display:block;margin-top:3px;font-family:var(--f-ui);font-weight:700;font-size:.9375rem;line-height:1.2;color:var(--c-text-2);text-wrap:balance}
+.rbs.done{color:var(--c-done)}
+.rbs.warn{color:var(--c-missed)}
+.moderow{grid-area:mode;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 16px 0}
+.runmode{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:0 10px;border-radius:4px;border:1px solid var(--c-line-2);background:rgba(27,34,37,.85);font-family:var(--f-ui);font-weight:700;font-size:.9375rem;line-height:1;color:var(--c-text)}
+.stepinfo{font-family:var(--f-ui);font-size:.9375rem;line-height:1.2;color:var(--c-text-2);text-align:right}
+.stepinfo b{font-family:var(--f-fig);font-size:1.1875rem;font-weight:700;color:var(--c-text)}
+.stepinfo em{font-style:normal;color:var(--c-order);font-weight:600}
+/* A segment per step. An empty one's rim is the quiz track's #66767B, 3.3:1 or more against the cabin behind it (spec
+   §8: empty segments must be visible; the mockup's line token is 1.8:1). */
+.stepbar{grid-area:steps;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:3px;margin:8px 16px 0}
+.stepbar li{position:relative;min-height:18px;border-radius:2px;background:rgba(226,238,240,.07);border:1px solid #66767B;display:grid;place-items:center;font-family:var(--f-fig);font-weight:800;font-size:.875rem;line-height:1;letter-spacing:-.04em;color:var(--c-ink)}
+.stepbar .s-done{background:var(--c-done);border-color:var(--c-done)}
+.stepbar .s-flagged{background:var(--c-order);border-color:var(--c-order)}
+/* "!!!" fits its 12px box at every text size (11px at the largest), its three dots still apart */
+.stepbar .s-missed{background:var(--c-missed);border-color:var(--c-missed);letter-spacing:-.08em}
+.stepbar .s-now{background:rgba(226,238,240,.16);border:2px solid var(--c-text)}
+/* a drill's steps outside its range: dimmed, whatever their state, since the drill fills in those before it and never
+   reaches those after */
+.stepbar .s-out{opacity:.4}
+/* Each tile has its own place (SpO2, PR, RR, BP; then Temp, Hypo across two, GCS), so Exam's tiles appear where they
+   belong and nothing moves when one arrives. The columns follow what each holds: BP's "146/86" and SpO2's device
+   beside its label are the widest. The second row's gap is a margin, so a row with no tiles adds none. */
+.vitals{grid-area:vitals;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,.85fr) minmax(0,1.6fr);column-gap:6px;
+  grid-template-areas:"spo2 pr rr bp" "temp hypo hypo gcs";margin:12px 16px 0}
+.vt-spo2{grid-area:spo2}.vt-pr{grid-area:pr}.vt-rr{grid-area:rr}.vt-bp{grid-area:bp}
+.vt-temp{grid-area:temp}.vt-hypocount{grid-area:hypo}.vt-gcs{grid-area:gcs}
+.vt-temp,.vt-hypocount,.vt-gcs{margin-top:6px}
+/* A tile is a query container, so its figure can take the tile's width (VitalsRail sets --vv-em, the figure's width in
+   em): as large as fits, up to the mockup's 2rem. */
+.vt{min-width:0;min-height:64px;padding:7px 9px 8px;border-radius:8px;border:1px solid rgba(214,234,240,.16);background:rgba(27,34,37,.82);box-shadow:inset 0 1px 0 rgba(236,246,248,.08);container-type:inline-size}
+.vl{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 4px;font-family:var(--f-ui);font-weight:700;font-size:.875rem;line-height:1;color:var(--c-text-2)}
+.vl sub{font-size:.75em;vertical-align:-.1em;line-height:0}
+/* readings are always cabin white: never a status colour, never an alarm */
+.vv{display:flex;align-items:baseline;gap:.125em;margin-top:5px;font-family:var(--f-fig);font-weight:700;font-size:2rem;font-size:min(2rem,calc(98cqi / var(--vv-em,1)));line-height:1;color:var(--c-text);white-space:nowrap}
+.vv small{font-family:var(--f-ui);font-weight:600;font-size:.4375em;color:var(--c-text-2)}
+.vt-empty{border-style:dashed;border-color:var(--c-line-2);background:rgba(18,23,25,.6);box-shadow:none}
+.vt-empty .vv,.vv-wait{color:var(--c-text-3);font-weight:600;letter-spacing:.06em}
+/* a new reading settles from "– –" into its value; reduced motion swaps it in with no fade (base.css) */
+@media (prefers-reduced-motion:no-preference){.vv-in{animation:vv-in var(--t-fast) var(--ease-enter) both}}
+@keyframes vv-in{from{opacity:0}}
+/* ---------- the chat and the composer (mockup CSS 205–223): .as-chat is .chat, .as-msg .msg, and so on ---------- */
+/* The chat is the run's only scroller. (Relative: the lines' hidden speaker prefixes are placed inside the scroller, so
+   they never lengthen the page.) Its first line takes the free space above it, so a short chat sits at the foot, by the
+   composer, as the mockup's flex-end does; flex-end itself would cut off the top of a long one. The glide to the newest
+   line is CSS: the code sets scrollTop, so reduced motion makes it a jump. */
+.chat{grid-area:chat;position:relative;min-height:0;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:9px;padding:16px 16px 12px}
+/* lines scrolled up fade out within the top padding, not cut off against the vitals tiles above */
+.chat{-webkit-mask-image:linear-gradient(to bottom,transparent 3px,#000 16px);mask-image:linear-gradient(to bottom,transparent 3px,#000 16px)}
+.chat > :first-child{margin-top:auto}
+.chat:focus-visible{outline-offset:-2px;-webkit-mask-image:none;mask-image:none}   /* the fade would hide the ring's top edge */
+@media (prefers-reduced-motion:no-preference){.chat{scroll-behavior:smooth}}
+/* a line's bubble; a long word or link breaks inside it rather than push the page sideways */
+.msg{max-width:82%;min-width:0}
+.me{align-self:flex-end;text-align:right}
+.them{align-self:flex-start}
+.bub{display:inline-block;max-width:100%;padding:9px 13px;border-radius:12px;font-size:1rem;line-height:1.35;text-align:left;color:var(--c-text);overflow-wrap:anywhere;text-wrap:pretty}
+.me .bub{background:#2F3E45;border:1px solid rgba(214,234,240,.14);border-bottom-right-radius:4px}
+.them .bub{background:rgba(27,34,37,.92);border:1px solid var(--c-line);border-bottom-left-radius:4px}
+/* a step played from the step list: a dashed bubble, and its route says "Tapped" */
+.tapped .bub{border-style:dashed;border-color:var(--c-line-2)}
+/* what the run understood, under the trainee's bubble (spec §6.2's interpretation line) */
+.route{margin-top:3px;font-family:var(--f-ui);font-size:.875rem;line-height:1.3;color:var(--c-text-3);overflow-wrap:anywhere;text-wrap:pretty}
+.who{margin-bottom:3px;font-family:var(--f-ui);font-weight:600;font-size:.875rem;line-height:1.2;color:var(--c-text-2)}
+/* a system line (the activation): a centred card */
+.syscard{align-self:center;max-width:92%;padding:8px 12px;border-radius:10px;border:1px solid var(--c-line);background:rgba(18,23,25,.72);font-family:var(--f-ui);font-size:.9375rem;line-height:1.35;color:var(--c-text-2);text-align:center;overflow-wrap:anywhere;text-wrap:pretty}
+/* A tester flag, tinted with its chip's hue: lavender for Order and Phrase, magenta for Missed and Wrong. Its header
+   wraps, so "Not what I meant" drops under the chip where the two don't fit side by side. */
+.flag{padding:10px 12px 12px;border-radius:12px;background:rgba(179,161,255,.08);border:1px solid rgba(179,161,255,.42);box-shadow:inset 3px 0 0 var(--c-order)}
+.flag[data-tone="hi"]{background:rgba(242,107,176,.08);border-color:rgba(242,107,176,.42);box-shadow:inset 3px 0 0 var(--c-missed)}
+.flag-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.flag-who{display:flex;align-items:center;gap:8px;font-family:var(--f-ui);font-weight:600;font-size:.9375rem;line-height:1.2;color:var(--c-text-2)}
+.flag > p{margin-top:6px;font-size:1rem;line-height:1.35;color:var(--c-text);text-wrap:pretty}
+/* the small Secondary keeps a 44px target (the mockup's .as-flag .as-btn2) */
+.flag .btn2{min-height:44px;padding:0 12px;font-size:1rem}
+.flag-done{min-height:44px;display:flex;align-items:center;font-family:var(--f-ui);font-weight:600;font-size:.9375rem;line-height:1.2;color:var(--c-text-2)}
+/* The smart tester's tag before a line's route (Plan 3 D15): where the credit came from, so a quiet outline in the
+   route's own type, never a solid status chip */
+.stag{display:inline-block;padding:0 5px;border:1px solid var(--c-line-2);border-radius:4px;font-weight:600;font-size:.8125rem;line-height:1.3;color:var(--c-text-2);white-space:nowrap}
+/* Lines a slow grader is still reading (the smart tester, D14): under the chat, outside its log, in their own row, so
+   the chat gives them its room. Fainter than a line said, with "Checking…" as the route; the newest stays in view. */
+.chat-pending{grid-area:pending;display:flex;flex-direction:column;justify-content:flex-end;gap:9px;max-height:32vh;max-height:32dvh;overflow:hidden;padding:0 16px 12px}
+.pending .bub{background:rgba(47,62,69,.5);border-style:dashed;border-color:var(--c-line-2);color:var(--c-text-2)}
+/* "↓ n new": over the foot of the chat, in the chat's own grid area */
+.newpill{grid-area:chat;align-self:end;justify-self:center;z-index:1;margin-bottom:12px;min-height:44px;padding:0 18px;border-radius:22px;border:1px solid var(--c-line-2);background:var(--c-raised);color:var(--c-text);font-family:var(--f-ui);font-weight:700;font-size:.9375rem;line-height:1;box-shadow:0 8px 18px -8px rgba(0,0,0,.8)}
+/* The composer: Step list (Coached and drills), the field, and the banded key in the right-hand slot: Send when typing;
+   when answering by Voice, Send as a plain square key, then Speak banded (Plan 3 Task 5, ruling D2). The keys keep
+   their widths and the field takes the rest, 160px at least: 162px at 360px with all four. The note and the voice row
+   (the words being heard, then the line to send) wrap to rows of their own above them. The bottom pads for the gesture
+   bar's safe area. */
+.composer{grid-area:composer;display:flex;flex-wrap:wrap;gap:8px;padding:10px 12px max(10px,env(safe-area-inset-bottom));background:rgba(13,17,19,.94);border-top:1px solid var(--c-line)}
+.composer-note{flex:1 0 100%;font-size:1rem;line-height:1.35;color:var(--c-text-2);text-wrap:pretty}
+/* The voice row: "Hearing: …" in two lines at most while listening, then "Your line: …" in three until Send or an
+   edit. A longer text loses its start to "…" (Composer's HearRow), so the label and the newest words stay; the
+   max-height is the measure it trims to, and clips only if a single word is wider. */
+.composer-hear{flex:1 0 100%;max-height:2.7em;overflow:hidden;font-size:1rem;line-height:1.35;color:var(--c-text);overflow-wrap:anywhere}
+.composer-hear[data-lines="3"]{max-height:4.05em}
+.hear-k{font-family:var(--f-ui);font-weight:600;color:var(--c-text-2)}
+.sq{flex:none;width:48px;min-height:48px;display:grid;place-items:center;border-radius:8px;border:1px solid var(--c-line-2);background:rgba(27,34,37,.9);color:var(--c-text)}
+.cinput{flex:1 1 160px;min-width:0;min-height:48px;padding:0 14px;border-radius:8px;border:1px solid var(--c-line-2);background:#182023;color:var(--c-text);font-family:var(--f-body);font-size:1rem;font-weight:500;-webkit-appearance:none;appearance:none}
+.cinput::placeholder{color:var(--c-text-3);opacity:1}
+.cinput:disabled,.sq:disabled{opacity:.6;cursor:not-allowed}
+/* Send when typing, Speak when answering by Voice: the banded ambulance-white key, as the Primary */
+.send,.mic{flex:none;width:54px;min-height:48px;display:grid;place-items:center;padding-bottom:10px;border-radius:8px;background:var(--band-key),var(--c-white);color:var(--c-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 18px -6px rgba(211,217,213,.35)}
+.send .ic,.mic .ic{width:22px;height:22px;stroke-width:2.2}
+.send:disabled,.mic:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+/* Speak pressed (listening): a cabin-white ring around the key and a filled mic. The band stays as it is: it is a
+   pattern, never a status. The ring (3–6px out) overlaps the focus outline (2–4px out), so focused and pressed show
+   one wider ring; the filled capsule is what tells pressed from focus. */
+.mic[aria-pressed="true"]{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 0 3px rgb(13,17,19),0 0 0 6px var(--c-text)}
+.mic[aria-pressed="true"] .ic rect{fill:currentColor}
+.sq,.send,.mic,.newpill{transition:transform var(--t-press) var(--ease-exit),filter var(--t-press) var(--ease-exit),background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){
+  .sq:hover{border-color:var(--c-text-3);background-color:rgba(43,55,60,.92)}
+  .newpill:hover{border-color:var(--c-text-3)}
+  .send:hover:not(:disabled),.mic:hover:not(:disabled){filter:brightness(1.05)}
+}
+.sq:active{background-color:rgba(43,55,60,.95)}
+.newpill:active{background-color:var(--c-line)}
+.send:active:not(:disabled),.mic:active:not(:disabled){filter:brightness(.92)}
+@media (prefers-reduced-motion:no-preference){.sq:active,.send:active:not(:disabled),.mic:active:not(:disabled),.newpill:active{transform:scale(.97)}}
+/* The step list (tap mode): docked in the composer's place, not modal. Its rows scroll inside it, half the screen at
+   most, so the header, the clock and the newest lines stay in view; the scroll never chains out to the page. */
+.stepsheet{grid-area:composer;display:flex;flex-direction:column;max-height:50vh;max-height:50dvh;min-height:0;background:rgba(13,17,19,.96);border-top:1px solid var(--c-line)}
+.ss-head{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px 8px 16px;border-bottom:1px solid var(--c-line)}
+.ss-title{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;color:var(--c-text)}
+.ss-list{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:4px;padding:8px 12px max(10px,env(safe-area-inset-bottom))}
+/* A row is one key the width of the list: its number, its name, and at its right its state ("Done", "Not in this
+   drill"), which a long name wraps beside rather than runs under. */
+.ss-key{display:flex;align-items:center;gap:12px;width:100%;min-height:48px;padding:6px 12px;border-radius:8px;border:1px solid var(--c-line-2);background:rgba(27,34,37,.9);color:var(--c-text);font-family:var(--f-ui);font-weight:600;font-size:1.0625rem;line-height:1.2;text-align:left}
+.ss-n{flex:none;min-width:1.5rem;font-family:var(--f-fig);font-weight:700;font-size:1.1875rem;line-height:1;color:var(--c-text-2)}
+.ss-name{flex:1 1 auto;min-width:0;overflow-wrap:break-word}
+.ss-key:disabled{cursor:default;border-color:var(--c-line);background:rgba(18,23,25,.6);color:var(--c-text-2)}
+.ss-out .ss-key{border-style:dashed}
+.ss-state{flex:none;max-width:45%;font-family:var(--f-ui);font-weight:600;font-size:.9375rem;line-height:1.2;color:var(--c-text-3);text-align:right}
+.ss-key{transition:transform var(--t-press) var(--ease-exit),background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){.ss-key:not(:disabled):hover{border-color:var(--c-text-3);background-color:rgba(36,45,49,.92)}}
+.ss-key:not(:disabled):active{background-color:rgba(43,55,60,.95)}
+@media (prefers-reduced-motion:no-preference){.ss-key:not(:disabled):active{transform:scale(.985)}}
+/* The Pause sheet: a modal bottom sheet over a dimmed run (the run behind is inert). Its rows run End run, the mode,
+   Restart case and Resume, so Resume sits nearest the thumb (ruling S6); the keys span the sheet. */
+.sheet-wrap{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;justify-content:flex-end}
+.scrim{position:absolute;inset:0;background:rgba(6,9,10,.62)}
+.sheet{position:relative;width:100%;max-width:40rem;margin:0 auto;max-height:calc(100dvh - env(safe-area-inset-top) - 24px);overflow-y:auto;overscroll-behavior:contain;
+  padding:18px max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+  border-radius:16px 16px 0 0;border:1px solid var(--c-line-2);border-bottom:0;background:var(--c-raised);box-shadow:inset 0 1px 0 rgba(236,246,248,.10),0 -16px 32px -12px rgba(0,0,0,.75)}
+.sheet-title{font-family:var(--f-fig);font-weight:700;font-size:1.75rem;line-height:1.1;color:var(--c-text)}
+.sheet-sub{margin-top:2px;font-size:1rem;line-height:1.4;color:var(--c-text-2)}
+.sheet-rows{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.sheet-rows .primary,.sheet-rows .btn2{width:100%;min-height:52px}
+.sheet-rows .btn2{background:rgba(22,28,31,.9)}
+/* the mode: read-only, so it is a line of text between rules, never a key */
+.sheet-mode{margin:4px 0;padding:10px 2px;border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line)}
+.sheet-mode-name{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;color:var(--c-text)}
+.sheet-mode-sub{margin-top:2px;font-size:1rem;line-height:1.35;color:var(--c-text-2)}
+.sheet-copy{margin-bottom:6px;font-family:var(--f-ui);font-weight:600;font-size:1.125rem;line-height:1.35;color:var(--c-text);text-wrap:pretty}
+@media (prefers-reduced-motion:no-preference){
+  .sheet{animation:sheet-in var(--t-screen) var(--ease-enter) both}
+  .scrim{animation:scrim-in var(--t-base) var(--ease-enter) both}
+}
+@media (prefers-reduced-motion:reduce){.scrim,.sheet{animation:scrim-in 150ms var(--ease-enter) both !important}}
+@keyframes sheet-in{from{transform:translateY(24px);opacity:0}}
+@keyframes scrim-in{from{opacity:0}}
+/* Keyboard up (Chrome shrinks the layout viewport: interactive-widget=resizes-content), a short phone or landscape: the
+   rows above the chat tighten, so the newest lines keep their room (Task 14 review). Driven by height, never by focus:
+   Back hides the keyboard but leaves the field focused, and focus lands before Chrome resizes. A phone with the keyboard
+   down is taller than 640px. No transitions: it swaps in the same frame as Chrome's resize. */
+@media (max-height:640px){
+  /* the header: one row of Pause, the complaint over its address (each one line, cut with an ellipsis), and the clock */
+  .runhead{grid-template-columns:44px minmax(0,1fr) auto;align-items:center;padding-top:6px}
+  .runhead .title,.runhead .addr{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .runhead .title{font-size:1.25rem}
+  .runhead .addr{margin-top:1px;font-size:.9375rem;line-height:1.25}
+  .clock b{font-size:1.75rem}
+  .rbs{margin-top:1px;font-size:.8125rem;white-space:nowrap}
+  /* the mode row leaves the screen but not the accessibility tree (the .vh pattern), so "Step 6 of 19, step 5
+     flagged" still reads while typing; the step bar stays */
+  .moderow{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .stepbar{margin-top:6px}
+  /* the vitals rail becomes a strip, "SpO2 86 PR 112 RR 28 BP 146/86", wrapping (never clipped) once Temp, Hypo and GCS
+     are in; an empty tile stays as "PR – –" */
+  .vitals{display:flex;flex-wrap:wrap;gap:2px 14px;margin:6px 16px 0}
+  .vitals .vt{display:flex;align-items:baseline;gap:5px;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;container-type:normal}
+  .vitals .vl > span + span{display:none}   /* SpO2's device, Temp's and Hypo's units: back with the keyboard down */
+  .vitals .vv{margin-top:0;font-size:1.125rem}
+  .vitals .vv small{font-size:.75em}
+  /* the keyboard covers the gesture bar */
+  .composer{padding-bottom:8px}
+}
+
+/* ---------- quiz session and result: a focus screen with its keys row at the foot (mockup screen 4) ---------- */
+/* At least the viewport tall, so the keys row sits at the bottom under a short question and sticks there on a long one. */
+.qs{display:flex;flex-direction:column;min-height:calc(100vh - env(safe-area-inset-top));min-height:calc(100dvh - env(safe-area-inset-top))}
+.qs-body{flex:1;display:flex;flex-direction:column;padding:0 16px 20px}
+.qs-body > .load-error,.qs-body > .skeleton{margin-top:16px}
+.qbank{margin-top:16px;font-family:var(--f-ui);font-weight:600;font-size:.9375rem;line-height:1.3;color:var(--c-text-2)}
+.passage{margin-top:10px;padding:11px 14px}
+.passage p{font-size:1rem;line-height:1.45;text-wrap:pretty}
+.qimg{display:block;max-width:100%;height:auto;margin-top:10px;border-radius:8px}
+.qreview{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:12px;margin-top:10px;padding:2px 8px 2px 12px;border-radius:10px;border:1px dashed var(--c-line-2);background:rgba(18,23,25,.6)}
+.qreview-msg{flex:1 1 12rem;padding:10px 0;font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+/* the stem is the options' legend (mockup .as-stem) */
+.opts-set{border:0;min-width:0;margin-top:6px}
+.stem{padding:0;font-family:var(--f-fig);font-weight:700;font-size:1.5625rem;line-height:1.15;color:var(--c-text);text-wrap:pretty}
+.opts{display:flex;flex-direction:column;gap:7px;margin-top:14px}
+/* One option (mockup .as-opt). Its native radio covers the row unseen, so the whole row is the radio's target, and
+   the focus ring shows on the row. */
+.opt{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;column-gap:11px;min-height:54px;padding:7px 10px 7px 9px;border-radius:10px;border:1px solid var(--c-line);background:rgba(27,34,37,.86);font-size:1rem;line-height:1.3;color:var(--c-text);cursor:pointer;-webkit-user-select:none;user-select:none}
+.opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:inherit;-webkit-appearance:none;appearance:none}
+.opt:has(input:focus-visible){outline:2px solid var(--c-text);outline-offset:2px}
+@supports not selector(:has(*)){.opt:focus-within{outline:2px solid var(--c-text);outline-offset:2px}}
+.opt:has(input:disabled){cursor:default}
+.opt-key{min-width:2rem;min-height:2rem;border-radius:6px;display:grid;place-items:center;font-family:var(--f-fig);font-weight:700;font-size:1.125rem;line-height:1;color:var(--c-text);border:1px solid var(--c-line-2)}
+.opt-text{overflow-wrap:anywhere;text-wrap:pretty}
+/* picked, before Check: a heavier rim and a filled letter, not colour alone */
+.opt-picked{border-color:var(--c-text);box-shadow:inset 0 0 0 1px var(--c-text);background-color:var(--c-raised)}
+.opt-picked .opt-key{background:var(--c-text);border-color:var(--c-text);color:var(--c-ink)}
+/* checked: the answer in green and a wrong pick in magenta, each with its word (mockup .as-opt-ok, .as-opt-bad).
+   The 2px rim is the 1px border plus a 1px inset ring, so nothing inside moves. */
+.opt-ok{border-color:var(--c-done);box-shadow:inset 0 0 0 1px var(--c-done);background-color:rgba(125,214,169,.08)}
+.opt-ok .opt-key{background:var(--c-done);border-color:var(--c-done);color:var(--c-ink)}
+.opt-bad{border-color:var(--c-missed);box-shadow:inset 0 0 0 1px var(--c-missed);background-color:rgba(242,107,176,.08)}
+.opt-bad .opt-key{background:var(--c-missed);border-color:var(--c-missed);color:var(--c-ink)}
+.badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--f-ui);font-weight:700;font-size:.9375rem;line-height:1;white-space:nowrap}
+.badge .ic{width:16px;height:16px;stroke-width:2.6}
+.badge-ok{color:var(--c-done)}
+.badge-bad{color:var(--c-missed)}
+.opt{transition:background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){.opt:not(.opt-picked):not(:has(input:disabled)):hover{border-color:var(--c-line-2)}}
+.opt:not(:has(input:disabled)):active{background-color:rgba(43,55,60,.95)}
+/* the answer's ring draws in; a wrong pick shakes once. Movement only without reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .opt-ok{animation:ring-in var(--t-base) var(--ease-enter)}
+  .shake .opt-bad{animation:opt-shake var(--t-base) var(--ease-exit)}
+}
+@keyframes ring-in{from{border-color:var(--c-line);box-shadow:inset 0 0 0 1px rgba(125,214,169,0),0 0 0 6px rgba(125,214,169,.4)}}
+@keyframes opt-shake{20%{transform:translateX(-5px)}45%{transform:translateX(4px)}70%{transform:translateX(-2px)}}
+/* the feedback: verdict, explanation, notes link (mockup .as-explain); the link's 44px target is the bottom padding */
+.explain{margin-top:12px;padding:11px 14px 2px}
+.explain > :last-child:not(.link){padding-bottom:10px}
+.verdict{display:flex;align-items:flex-start;gap:6px;font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;color:var(--c-missed);text-wrap:pretty}
+.explain-ok .verdict{color:var(--c-done)}
+/* on the first line's centre (line 1.2em), so a wrapped verdict keeps its mark at the start */
+.verdict .ic{width:18px;height:18px;margin-top:calc(.6em - 9px);stroke-width:2.6}
+.explain-text{margin-top:5px;font-size:1rem;line-height:1.4;color:var(--c-text);text-wrap:pretty}
+/* The keys row: the score beside the one key that acts (mockup .as-keys2, .as-score); a test's key takes the row.
+   Opaque, where the mockup's is 94%: options scroll under it here, and showed through it and through a disabled key. */
+.qkeys{position:sticky;bottom:0;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:8px;padding:10px 12px max(10px,env(safe-area-inset-bottom));background:rgb(13,17,19);border-top:1px solid var(--c-line)}
+.qkeys .primary,.qkeys .btn2{min-height:52px;width:100%}
+.qkeys .primary{grid-column:2}
+.qkeys-one .primary{grid-column:1/-1}
+.score{align-self:center;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:6px;padding-left:6px;font-family:var(--f-ui);font-size:1rem;line-height:1.2;color:var(--c-text-2)}
+.score b{font-family:var(--f-fig);font-weight:700;font-size:1.75rem;line-height:1;color:var(--c-text)}
+/* the result: the score, then a row per question with its chip; a wrong row opens out to Yours, Answer and why */
+.rscore{margin-top:16px;font-family:var(--f-fig);font-weight:700;font-size:1.5rem;line-height:1.1;color:var(--c-text-2)}
+.rscore b{font-size:2.5rem;color:var(--c-text)}
+.rlist{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.rrow{padding:10px 14px 12px}
+.rrow-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.rrow-head .tag{flex:none}
+.rrow-bank{padding-top:3px;font-family:var(--f-ui);font-weight:600;font-size:.9375rem;line-height:1.3;color:var(--c-text-2)}
+.rrow-stem{margin-top:4px;font-size:1rem;line-height:1.35;color:var(--c-text);text-wrap:pretty}
+.rrow-ans{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.rrow-ans div{display:grid;grid-template-columns:4.25rem minmax(0,1fr);column-gap:8px}
+.rrow-ans dt{font-family:var(--f-ui);font-weight:700;font-size:.9375rem;line-height:1.35}
+.rrow-ans dd{font-size:1rem;line-height:1.35;overflow-wrap:anywhere}
+.rr-yours dt{color:var(--c-missed)}
+.rr-answer dt{color:var(--c-done)}
+.rrow-why{margin-top:8px;font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+/* a wrong row's notes link, as the feedback's: its 44px target is the bottom padding */
+.rrow:has(> .link:last-child){padding-bottom:2px}
+
+/* ---------- notes tab: the search field, then the section list or the hits ---------- */
+/* The field: a search icon, the 16px input, and a 44px clear key inside its right edge (the native one is too small).
+   Its rim is text-3: line-2 measured 2.9:1 against the cabin scene beside it, under the 3:1 a control's edge needs. */
+.nsearch-field{position:relative}
+.nsearch-field > .ic{position:absolute;left:14px;top:50%;margin-top:-10px;color:var(--c-text-2);pointer-events:none}
+.nsearch-input{display:block;width:100%;min-height:48px;padding:11px 50px 11px 44px;border-radius:10px;border:1px solid var(--c-text-3);background:rgba(18,23,25,.9);color:var(--c-text);font-family:var(--f-body);font-weight:500;font-size:1rem;line-height:1.3;-webkit-appearance:none;appearance:none}
+.nsearch-input::placeholder{color:var(--c-text-3);opacity:1}
+.nsearch-input::-webkit-search-cancel-button,.nsearch-input::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+.nsearch-input:focus{border-color:var(--c-text)}
+.nsearch-clear{position:absolute;right:2px;top:50%;margin-top:-22px;border-color:transparent;background:none;box-shadow:none;color:var(--c-text-2)}
+.ncount{padding:0 2px;font-family:var(--f-ui);font-weight:600;font-size:1rem;line-height:1.3;color:var(--c-text-2);text-wrap:pretty}
+/* One panel of rows (the notes list here, and the PAM tab's run history, .hist). The list sits 3px inside it, so a
+   row's 9px corners run concentric with the panel's 12. */
+.nlist{display:flex;flex-direction:column;padding:3px}
+.nrow,.nhit,.hist-row{position:relative;border-radius:9px;color:var(--c-text);text-decoration:none}
+.nlist > li + li > a::before,.hist > li + li > a::before{content:"";position:absolute;top:0;left:11px;right:11px;border-top:1px solid var(--c-line)}
+/* a focused or pressed row's own shape replaces the divider above it, which would show past its rounded corners */
+.nlist > li > a:focus-visible::before,.nlist > li > a:active::before,
+.hist > li > a:focus-visible::before,.hist > li > a:active::before{display:none}
+/* A section: its number, the title over the highlight count and tags, and a chevron. Restoring the last-read row
+   keeps it clear of the tab bar. */
+.nrow{display:grid;grid-template-columns:2rem minmax(0,1fr) auto;align-items:center;column-gap:10px;min-height:60px;padding:9px 8px 10px 11px;scroll-margin:12px 0 calc(var(--tabbar-h,0px) + 12px)}
+.nrow-n{font-family:var(--f-fig);font-weight:700;font-size:1.5rem;line-height:1;color:var(--c-text-2);text-align:center}
+.nrow-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+.nrow-title{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;text-wrap:pretty}
+.nrow-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-family:var(--f-ui);font-weight:500;font-size:.9375rem;line-height:1.3;color:var(--c-text-2)}
+.nrow > .ic{color:var(--c-text-3)}
+/* "not tested" is a fact about the section, not a status: a neutral outline tag, never a solid chip or the band */
+.ntag{display:inline-flex;align-items:center;min-height:22px;padding:0 7px;border:1px solid var(--c-text-3);border-radius:4px;font-weight:600;font-size:.875rem;line-height:1;color:var(--c-text-2);white-space:nowrap}
+/* Last read: the word, a brighter number, and a cabin-white bar on the row's edge, as the current tab has on its top */
+.nlast{font-weight:700;color:var(--c-text)}
+.nrow-last .nrow-n{color:var(--c-text)}
+.nrow-last::after{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:0 2px 2px 0;background:var(--c-text)}
+/* A hit: the section over the snippet, its match marked */
+.nhit{display:flex;flex-direction:column;gap:2px;min-height:44px;padding:9px 11px 11px}
+.nhit-title{font-family:var(--f-ui);font-weight:600;font-size:.9375rem;line-height:1.3;color:var(--c-text-2)}
+.nhit-snip{font-size:1rem;line-height:1.4;color:var(--c-text);overflow-wrap:anywhere;text-wrap:pretty}
+.nhit mark{padding:0 1px;border-radius:2px;background:var(--c-hl-bg);box-shadow:inset 0 -2px 0 var(--c-hl-edge);color:var(--c-text);font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.nrow:focus-visible,.nhit:focus-visible,.hist-row:focus-visible{outline-offset:-2px}
+.nrow,.nhit,.hist-row{transition:background-color var(--t-fast)}
+@media (hover:hover){.nrow:hover,.nhit:hover,.hist-row:hover{background-color:rgba(214,234,240,.05)}}
+.nrow:active,.nhit:active,.hist-row:active{background-color:rgba(43,55,60,.9)}
+
+/* ---------- notes reader: a focus screen whose header sticks while the notes scroll under it ---------- */
+.reader{display:flex;flex-direction:column;min-height:calc(100vh - env(safe-area-inset-top));min-height:calc(100dvh - env(safe-area-inset-top))}
+/* Once it sticks, the header reaches up over the safe area, so no text shows above it. A heading or block scrolled
+   to stops under it: --rhead is its height, measured before each scroll (SectionReader). */
+.reader .mhead{position:sticky;top:0;z-index:2;margin-top:calc(0px - env(safe-area-inset-top));padding:calc(8px + env(safe-area-inset-top)) 16px 8px;background:rgba(13,17,19,.9);-webkit-backdrop-filter:blur(14px) saturate(115%);backdrop-filter:blur(14px) saturate(115%);border-bottom:1px solid var(--c-line)}
+.reader-body{flex:1;display:flex;flex-direction:column;gap:14px;padding:12px 16px max(24px,env(safe-area-inset-bottom))}
+/* The toolbar: the view switch and the text size share a row when they fit; on a phone each takes its own. */
+.rtools{display:flex;flex-wrap:wrap;gap:8px}
+.seg{flex:1 1 15rem;display:flex;gap:6px}
+.seg .chip,.tsize{flex:1 1 auto;justify-content:center;text-align:center}
+.tsize-aa{font-family:var(--f-fig);font-weight:700;font-size:1.0625rem;line-height:1;color:var(--c-text-2)}
+
+/* The notes: one reading column on the bay, not a panel (a section runs to thousands of pixels). */
+/* At most about 70 characters a line, for desktop; a phone's column is narrower anyway. In em, not ch: Barlow's
+   prose averages .43em a character against a 0 of .57em, so 68ch held 89 characters and never bit (measured). */
+.nbody{max-width:30em;font-size:1rem;line-height:1.5;color:var(--c-text);overflow-wrap:break-word}
+.nbody > :first-child{margin-top:0}
+.nbody [data-b],.nbody .nh{scroll-margin-top:calc(var(--rhead,4.5rem) + 12px)}
+.nh{margin-top:28px;font-family:var(--f-ui);font-weight:700;font-size:1.25rem;line-height:1.2;color:var(--c-text);text-wrap:balance}
+/* a group label heads a run of headings ("EMT Drugs (Must Know)"): larger, under a rule */
+.nh-group{margin-top:40px;padding-top:14px;border-top:1px solid var(--c-line-2);font-family:var(--f-fig);font-size:1.625rem;line-height:1.1;letter-spacing:.005em}
+.np{margin-top:8px;text-wrap:pretty}
+.nbody strong{font-weight:700}
+.nbody u{text-decoration-thickness:1px;text-underline-offset:3px}
+/* the trainee's highlights: the warm fill and edge of the search hits' mark, at the text's own weight */
+mark.hl{padding:0 1px;border-radius:2px;background:var(--c-hl-bg);box-shadow:inset 0 -2px 0 var(--c-hl-edge);color:var(--c-text);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* Lists: the marker in its own column, so a wrapped line keeps to the text; a depth-2 dash sits under depth-1 text. */
+.notes-list{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.nli{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:6px;text-wrap:pretty}
+.nli[data-depth="2"]{padding-left:1.375rem}
+.nli-mark{min-width:1rem;color:var(--c-text-2)}
+.nli-num{min-width:1.5rem;font-variant-numeric:tabular-nums}
+/* Boxes: the notes' boxed asides, not statuses. A remark has a rule down its edge; an added note is dashed. */
+.box{margin-top:14px;padding:10px 14px 12px;border-radius:10px;border:1px solid var(--c-line-2);background:rgba(29,37,40,.72)}
+.box-title{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.25;color:var(--c-text);text-wrap:balance}
+.box > .box-title + *{margin-top:6px}
+.box-remark{border-left:3px solid var(--c-text-3)}
+.box-remark .box-title{font-size:.875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-text-2)}
+.box-added{border-style:dashed}
+/* Tables scroll sideways inside their own region, so the page never does. Columns share the width as the table's
+   auto layout gives it: only one table (s03's verbal response, at 375px and the largest text) needs to scroll. */
+.table-scroll{margin-top:14px;overflow-x:auto;overscroll-behavior-x:contain;border:1px solid var(--c-line);border-radius:10px;background:rgba(18,23,25,.6)}
+.ntable{width:100%;border-collapse:collapse;font-size:1rem;line-height:1.35}
+.ntable th,.ntable td{padding:8px 10px;text-align:left;vertical-align:top}
+.ntable th{background:var(--c-raised);font-family:var(--f-ui);font-weight:700}
+.ntable th strong{font-weight:inherit}
+.ntable td,.ntable tr + tr > th{border-top:1px solid var(--c-line)}
+.ntable :is(th,td) + :is(th,td){border-left:1px solid var(--c-line)}
+.ntable :is(th,td) > :first-child{margin-top:0}
+.ntable .notes-list{gap:2px}
+/* Figures keep their own size up to the column's width; width and height hold their box until they load. */
+.nimg{display:block;max-width:100%;height:auto;margin:14px auto 0;border-radius:8px}
+
+/* Highlights only: each passage under its heading, with a quiet rule down its edge */
+.hlgroup + .hlgroup{margin-top:24px}
+.hlgroup > .nh{margin-top:0}
+.hl-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.hl-item{padding:1px 0 1px 12px;border-left:2px solid var(--c-line-2);text-wrap:pretty}
+.hl-num{color:var(--c-text-2)}
+.nempty{color:var(--c-text-2)}
+
+/* Cross-links: the PAM steps, each a drill link, and the questions to practise */
+.xlinks{display:flex;flex-direction:column;gap:14px;margin-top:10px;padding:12px 14px 14px}
+.xpart + .xpart{padding-top:14px;border-top:1px solid var(--c-line)}
+/* Each step a link that starts its drill: underlined as .ilink, on a 44px target (12px above and below a 20px line),
+   a dot between steps. Its number and name share one line box, so one unbroken underline reads as one link. The dot
+   ends a line rather than starting the next. */
+.xsteps{display:flex;flex-wrap:wrap;margin-top:2px}
+.xsteps > li{display:flex;align-items:center}
+.xsteps > li:not(:last-child)::after{content:"·";padding:0 8px;font-weight:700;color:var(--c-text-3)}
+.xstep{display:block;min-height:44px;padding:12px 0;font-family:var(--f-ui);font-weight:600;font-size:1rem;line-height:1.25;color:var(--c-text);text-decoration:underline;text-decoration-color:var(--c-text-3);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color var(--t-fast)}
+.xstep-n{font-family:var(--f-fig);font-weight:700;font-size:1rem;color:var(--c-text-2)}
+@media (hover:hover){.xstep:hover{text-decoration-color:var(--c-text)}}
+.xlinks .keys{margin-top:10px}
+
+/* The sections either side: previous on the left, next on the right, each a 52px target */
+.rnav{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.rnav-a{display:flex;align-items:center;gap:6px;min-height:52px;padding:8px 12px;border-radius:10px;border:1px solid var(--c-line-2);background:rgba(27,34,37,.9);font-family:var(--f-ui);font-weight:600;font-size:1rem;line-height:1.25;color:var(--c-text);text-decoration:none}
+.rnav-t{min-width:0;text-wrap:balance}
+.rnav-prev{grid-column:1}
+.rnav-next{grid-column:2;justify-content:flex-end;text-align:right}
+/* at either end, the one link takes the row, so a long title doesn't wrap in half of it */
+.rnav > :only-child{grid-column:1/-1}
+.rnav-a{transition:background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){.rnav-a:hover{border-color:var(--c-text-3);background-color:rgba(36,45,49,.92)}}
+.rnav-a:active{background-color:rgba(43,55,60,.95)}
+
+/* ---------- Today (mockup screen 1, CSS 142–172) ---------- */
+.today{padding-top:2px}
+/* The headline (mockup .as-alert): no panel, just the chip, the title in the large face, what the point was, then the
+   drill key and the notes link. The row wraps under the larger text sizes. */
+.alert{padding:2px 0 10px}
+.alert .h1{margin-top:8px}
+.alert .sub{margin-top:6px}
+.act{display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px;margin-top:12px}
+/* The last run (mockup .as-last, .as-ph, .as-line, .as-big): its head with the when, the case line, the time used
+   against the limit with Open debrief at its end, then the strip */
+.last{padding:12px 14px 8px}
+.ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.meta{font-family:var(--f-ui);font-weight:500;font-size:.9375rem;line-height:1.2;color:var(--c-text-2)}
+.last-line{margin-top:4px;font-size:1rem;line-height:1.35;color:var(--c-text);text-wrap:pretty}
+.big{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:8px;margin-top:4px}
+.big b{font-family:var(--f-fig);font-weight:700;font-size:2.875rem;line-height:1;letter-spacing:.005em;color:var(--c-text)}
+.big span{font-family:var(--f-fig);font-weight:600;font-size:1.25rem;color:var(--c-text-2)}
+.big .link{margin-left:auto;align-self:center}
+/* The run strip (mockup .as-strip and its .as-sv-*). The mockup's 315 is the panel's full width on its 375px phone,
+   so "20 min" lines up with the panel's right edge; the strip fills the panel here too, scaling its unchanged
+   viewBox, up to 360px so a desktop panel doesn't blow its labels up. */
+.strip{display:block;width:100%;max-width:360px;height:auto;margin-top:2px;overflow:visible}
+.sv-base{stroke:var(--c-text-3);stroke-width:1.5;stroke-dasharray:1 4;stroke-linecap:round;fill:none}
+.sv-limit{stroke:var(--c-text-2);stroke-width:1.25;stroke-dasharray:3 3}
+.sv-silver{fill:var(--c-band-y)}
+.sv-chev{stroke:var(--c-band-o);stroke-width:3;fill:none;stroke-linejoin:miter}
+.t-axis{font-family:var(--f-ui);font-weight:600;font-size:.875rem;fill:var(--c-text-2)}
+/* A run on the strip (mockup lines 122–140): the trace, the end line, and the fault marks in the chips' hues, magenta
+   for missed or wrong and lavender for order or phrase. The debrief replay adds the Call box, its untimed spikes, the
+   break marks and the numbered dots. A missed point's circle is filled with the panel's colour, so it reads hollow. */
+.sv-trace{stroke:var(--c-text-2);stroke-width:1.6;fill:none;stroke-linejoin:round}
+.sv-untimed{stroke:var(--c-text-3);stroke-width:1.5;fill:none;stroke-linejoin:round}
+.sv-end{stroke:var(--c-text);stroke-width:2}
+.sv-miss{stroke:var(--c-missed);stroke-width:2.2;fill:#1E2629}
+.sv-lead-hi{stroke:var(--c-missed);stroke-width:1.25}
+.sv-lead-med{stroke:var(--c-order);stroke-width:1.25}
+.sv-dot-hi{fill:var(--c-missed)}
+.sv-dot-med{fill:var(--c-order)}
+.sv-call{fill:rgba(226,238,240,.05);stroke:var(--c-line-2);stroke-width:1;stroke-dasharray:3 3}
+.sv-break{stroke:var(--c-text-3);stroke-width:1.4;fill:none}
+.sv-n{font-family:var(--f-fig);font-weight:700;font-size:.9375rem;fill:var(--c-ink)}
+.t-lab{font-family:var(--f-ui);font-weight:700;font-size:.875rem;fill:var(--c-text)}
+.t-miss{font-family:var(--f-ui);font-weight:700;font-size:.875rem;fill:var(--c-missed)}
+.t-med{font-family:var(--f-ui);font-weight:700;font-size:.875rem;fill:var(--c-order)}
+/* The run history's strip (Plan 3 ruling D11): the same viewBox at half size, with no text. Its lines keep the full
+   strip's screen weight (1.25 to 2px) rather than halving to hairlines; the chevrons and the dot scale with it. */
+.strip-mini{width:158px;height:auto}
+.strip-mini :is(.sv-trace,.sv-base,.sv-limit,.sv-end){vector-effect:non-scaling-stroke}
+/* No runs yet (mockup .as-last, .as-line), shared with the PAM tab */
+.norun{padding:12px 14px 12px}
+.norun-line{margin-top:4px;font-size:1rem;line-height:1.35;color:var(--c-text);text-wrap:pretty}
+.norun .keys{margin-top:8px;margin-bottom:2px}
+/* The PAM tab's run history (Plan 3 rulings D10 and D11): one panel of rows as the notes list's (the divider, focus,
+   hover and press rules there), each row one link with its text beside its strip, and the strip under the text below
+   390px (fix round 1, amending the brief's 360), so a case name keeps to one line at 360 and 375. The list sits 3px
+   inside the panel; its head, keys and foot line up with the rows' text, 14px in. */
+.hist-panel{padding:12px 3px 12px}
+.hist-panel > .plabel,.hist-panel > .load-error-msg,.hist-panel > .keys,.hist-foot{margin-left:11px;margin-right:11px}
+.hist-panel > .load-error-msg{margin-top:6px}
+.hist{display:flex;flex-direction:column;margin-top:4px}
+/* Show 10 more focuses the first new row: scrolled to, it stays clear of the tab bar, as a restored notes row does */
+.hist-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 10px;min-height:44px;padding:10px 8px 11px 11px;scroll-margin:12px 0 calc(var(--tabbar-h,0px) + 12px)}
+.hist-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.hist-case{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.25;text-wrap:pretty}
+.hist-meta{font-family:var(--f-ui);font-weight:500;font-size:.9375rem;line-height:1.3;color:var(--c-text-2)}
+.hist-meta > span{white-space:nowrap}
+.hist-verdict{font-family:var(--f-ui);font-weight:600;font-size:1rem;line-height:1.3;color:var(--c-text)}
+.hist-row .strip-mini{margin-top:0}
+.hist-panel > .keys{margin-top:6px}
+.hist-foot{margin-top:10px;font-size:.9375rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+@media (max-width:389.98px){.hist-row{grid-template-columns:minmax(0,1fr)}}
+/* Start here: a tick, then the item's link */
+.firstrun{padding:12px 14px 4px}
+.fr-list{display:flex;flex-direction:column;margin-top:4px}
+.fr-item{display:grid;grid-template-columns:22px minmax(0,1fr);align-items:center;column-gap:12px;min-height:52px;padding:4px 0}
+.fr-item + .fr-item{border-top:1px solid var(--c-line)}
+/* not done: an open box; done: a solid green box with the tick, its name read out either way */
+.fr-tick{width:22px;height:22px;display:grid;place-items:center;border-radius:6px;border:2px solid var(--c-text-2)}
+.fr-done .fr-tick{border-color:var(--c-done);background:var(--c-done);color:var(--c-ink)}
+.fr-tick .ic{width:15px;height:15px;stroke-width:3}
+.fr-link{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.25;color:var(--c-text);text-decoration:underline;text-decoration-color:var(--c-text-3);text-decoration-thickness:1px;text-underline-offset:4px}
+.fr-go{flex:none;color:var(--c-text-2)}
+/* the review link's note, when a quiz is open: right under the link, at its end of the head row, before the bank rows */
+.bankp .mode-replace{margin-top:-6px;margin-bottom:4px;text-align:end}
+/* Continue reading: one row, its link the whole row */
+.cont{padding:3px}
+.cont-a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:8px 8px 8px 11px;border-radius:9px;font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.25;color:var(--c-text);text-decoration:none}
+.cont-t{min-width:0;text-wrap:pretty}
+.cont-go{flex:none;color:var(--c-text-2)}
+.cont-a:focus-visible{outline-offset:-2px}
+.cont-a,.fr-link{transition:background-color var(--t-fast),text-decoration-color var(--t-fast)}
+@media (hover:hover){
+  .cont-a:hover{background-color:rgba(214,234,240,.05)}
+  .fr-link:hover{text-decoration-color:var(--c-text)}
+}
+.cont-a:active{background-color:rgba(43,55,60,.9)}
+
+/* ---------- Settings ---------- */
+.set-group{padding:12px 14px 14px}
+.set-line{margin-top:6px;font-size:1rem;line-height:1.4;color:var(--c-text)}
+.set-sub{margin-top:4px;font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+.set-group h2[tabindex]:focus:not(:focus-visible){outline:none}
+/* Haptics: the whole row is the switch. On shows by the word, the knob's side and the fill, never the fill alone. */
+.switch-row{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;margin-top:10px;padding:6px 12px;border-radius:10px;border:1px solid var(--c-line);background:rgba(27,34,37,.86);text-align:left;-webkit-user-select:none;user-select:none}
+.switch-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.switch-label{font-family:var(--f-ui);font-weight:600;font-size:1.0625rem;line-height:1.2;color:var(--c-text)}
+.switch-sub{font-size:.9375rem;line-height:1.3;color:var(--c-text-2)}
+.switch-state{flex:none;font-family:var(--f-ui);font-weight:700;font-size:.9375rem;color:var(--c-text-2)}
+.switch-row[aria-checked="true"] .switch-state{color:var(--c-text)}
+.switch{flex:none;position:relative;width:46px;height:28px;border-radius:14px;border:2px solid var(--c-text-2)}
+.switch i{position:absolute;top:4px;left:4px;width:16px;height:16px;border-radius:50%;background:var(--c-text-2)}
+.switch-row[aria-checked="true"] .switch{border-color:var(--c-text);background:var(--c-text)}
+.switch-row[aria-checked="true"] .switch i{transform:translateX(18px);background:var(--c-ink)}
+@media (prefers-reduced-motion:no-preference){.switch i{transition:transform var(--t-fast) var(--ease-enter),background-color var(--t-fast)}}
+.switch-row{transition:background-color var(--t-fast),border-color var(--t-fast)}
+@media (hover:hover){.switch-row:hover{border-color:var(--c-line-2)}}
+.switch-row:active{background-color:rgba(43,55,60,.95)}
+/* Reset: the label over a 16px field, its rim at text-3 for 3:1, as the notes search field's */
+.set-label{display:block;margin-top:12px;font-family:var(--f-ui);font-weight:600;font-size:1rem;line-height:1.3;color:var(--c-text)}
+.set-input{display:block;width:100%;min-height:48px;margin-top:6px;padding:11px 14px;border-radius:10px;border:1px solid var(--c-text-3);background:rgba(18,23,25,.9);color:var(--c-text);font-family:var(--f-body);font-weight:600;font-size:1rem;line-height:1.3;letter-spacing:.06em;-webkit-appearance:none;appearance:none}
+.set-input:focus{border-color:var(--c-text)}
+/* The smart tester (Plan 3 Task 9): the saved key's line and the usage line in cabin white, focusable for the keys that
+   go or turn off; the switch dashed and dimmed until a key is saved; the model as Run start's radios; what it sends
+   set apart under a rule. */
+.smart-line{margin-top:12px;font-size:1rem;line-height:1.4;color:var(--c-text);text-wrap:pretty}
+.smart-line:focus:not(:focus-visible){outline:none}
+.smart-models{min-width:0;margin:12px 0 0;padding:0;border:0}
+.smart-models .set-label{margin-top:0;padding:0}
+.smart-about{margin-top:16px;padding-top:12px;border-top:1px solid var(--c-line)}
+.switch-row:disabled{cursor:not-allowed;border-style:dashed;background:rgba(18,23,25,.6)}
+.switch-row:disabled .switch-label,.switch-row:disabled .switch-state{color:var(--c-text-2)}
+.switch-row:disabled .switch{border-color:var(--c-line-2)}
+.switch-row:disabled .switch i{background:var(--c-line-2)}
+@media (hover:hover){.switch-row:disabled:hover{border-color:var(--c-line)}}
+.switch-row:disabled:active{background-color:rgba(18,23,25,.6)}
+
+/* ---------- the debrief (mockup screen 3, CSS 225–247): the band over the verdict, the replay, the figures, the fix
+   list, then what went well, the case record and the transcript, over the key bar ---------- */
+.dbody{padding-bottom:24px}
+.vband{height:8px;margin-top:12px;border-radius:2px}
+.fixh{margin-top:10px;font-size:2.5rem;line-height:1}
+.dsub{margin-top:4px}
+.replay{margin-top:12px;padding:10px 14px 4px}
+/* A small label over a standalone number and its limit (the figures are set the way 995 is). The limit wraps under its
+   number rather than push the page sideways at the largest text size. */
+.figs{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,.8fr);margin-top:12px;border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line)}
+.figs-one{grid-template-columns:minmax(0,1fr)}
+.figs > div{min-width:0;padding:8px 0 8px 12px;border-left:1px solid var(--c-line)}
+.figs > div:first-child{padding-left:2px;border-left:0}
+.fl{font-family:var(--f-ui);font-weight:600;font-size:.875rem;line-height:1.2;color:var(--c-text-2)}
+.fv{display:flex;flex-wrap:wrap;align-items:baseline;margin-top:3px;font-family:var(--f-fig);font-weight:700;font-size:1.875rem;line-height:1;color:var(--c-text);white-space:nowrap}
+.fv small{font-family:var(--f-fig);font-weight:600;font-size:1.0625rem;color:var(--c-text-3)}
+/* A fault: its marker's number (magenta for missed or wrong, lavender for order or phrase), then the chip, the label,
+   the detail with its step and notes link, and the small key. */
+.fixes{margin-top:2px}
+.fix{display:grid;grid-template-columns:34px minmax(0,1fr);padding:9px 0 7px;border-bottom:1px solid var(--c-line)}
+.fix:last-child{border-bottom:0}
+.num{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-fig);font-weight:700;font-size:1rem;line-height:1;color:var(--c-ink)}
+.num-hi{background:var(--c-missed)}
+.num-med{background:var(--c-order)}
+.fix-b{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.fix-t{margin-top:5px;font-weight:600;font-size:1rem;line-height:1.3;color:var(--c-text);text-wrap:pretty}
+.fix-s{margin-top:2px;font-size:1rem;line-height:1.3;color:var(--c-text-2);overflow-wrap:break-word;text-wrap:pretty}
+/* the small Secondary keeps a 44px target (ruling T17), as the run's flag key does */
+.fix .btn2{min-height:44px;margin-top:6px;padding:0 12px;font-size:1rem}
+/* A long oxygen note, folded: "Why this oxygen" is a 44px target, its arrow turning as it opens; the note sits on a
+   quiet rule, as a remark does in the notes. */
+.why{align-self:stretch;margin-top:2px}
+.why > summary,.transcript > summary{display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;font-family:var(--f-ui);color:var(--c-text)}
+.why > summary::-webkit-details-marker,.transcript > summary::-webkit-details-marker{display:none}
+.why > summary::before,.transcript > summary::before{content:"";flex:none;width:0;height:0;border-style:solid;border-width:5px 0 5px 7px;border-color:transparent transparent transparent var(--c-text-2);transition:transform var(--t-fast) var(--ease-enter)}
+.why[open] > summary::before,.transcript[open] > summary::before{transform:rotate(90deg)}
+.why > summary{width:max-content;max-width:100%;min-height:44px;font-weight:600;font-size:1rem;text-decoration:underline;text-decoration-color:var(--c-text-3);text-decoration-thickness:1px;text-underline-offset:4px}
+.why > p{margin:0 0 4px;padding:8px 12px;border-left:3px solid var(--c-text-3);border-radius:0 8px 8px 0;background:rgba(18,23,25,.6);font-size:1rem;line-height:1.4;color:var(--c-text);text-wrap:pretty}
+@media (hover:hover){.why > summary:hover{text-decoration-color:var(--c-text)}}
+.dnote{margin-top:12px;font-size:1rem;line-height:1.4;color:var(--c-text-2);text-wrap:pretty}
+.dsec{margin-top:18px}
+.dh3{font-family:var(--f-ui);font-weight:700;font-size:1.0625rem;line-height:1.2;color:var(--c-text)}
+.fixes-off{margin-top:4px}
+/* went well: a green ✓ before each line, for the eye only */
+.well{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.well li{display:grid;grid-template-columns:18px minmax(0,1fr);column-gap:8px;font-size:1rem;line-height:1.35;color:var(--c-text);text-wrap:pretty}
+.well li::before{content:"✓";content:"✓" / "";font-weight:700;color:var(--c-done)}
+/* The case record: the findings as label and value rows, as on the paper form; the vitals table scrolls inside its own
+   region with the time held at its left; the standby call's lines; and the SRACIE slots. */
+.crec{margin-top:18px;padding:12px 14px 14px}
+.crec-dl{display:flex;flex-direction:column;margin-top:6px}
+.crec-dl > div{display:grid;grid-template-columns:6.25rem minmax(0,1fr);column-gap:10px;padding:7px 0;border-top:1px solid var(--c-line)}
+.crec-dl > div:first-child{border-top:0}
+.crec-dl dt{font-family:var(--f-ui);font-weight:700;font-size:.9375rem;line-height:1.35;color:var(--c-text-2)}
+.crec-dl dd{font-size:1rem;line-height:1.35;color:var(--c-text);overflow-wrap:anywhere;text-wrap:pretty}
+.crec-h3{margin-top:14px;font-family:var(--f-ui);font-weight:700;font-size:1rem;line-height:1.2;color:var(--c-text)}
+.crec-none{margin-top:4px;font-size:1rem;line-height:1.4;color:var(--c-text-2)}
+/* A shade at the right edge while more of the table lies to the right (final review, parked 9): the shade stays with the
+   region (scroll), and a cover in the region's own colour as the debrief paints it (#151b1d, the table-scroll tint over
+   the panel) sits at the content's end (local), so it slides over the shade as the table reaches its end, and hides it
+   when the table fits. */
+.crec-vitals{margin-top:8px;
+  background:linear-gradient(to left,var(--c-table-cover) 14px,transparent 22px) right / 22px 100% no-repeat local,
+    linear-gradient(to left,rgba(0,0,0,.8),rgba(0,0,0,0)) right / 14px 100% no-repeat scroll,rgba(18,23,25,.6)}
+.vtable{border-collapse:separate;border-spacing:0;font-size:.9375rem;line-height:1.3;white-space:nowrap}
+/* Tight columns, and readings that may wrap at their spaces (a unit under its figure, "pale, warm, sweaty" over three
+   lines), so the eight columns fit a 390px phone; narrower, the region scrolls with Time held at the left (Task 20). */
+.vtable th,.vtable td{padding:7px 3px;text-align:left;vertical-align:top}
+.vtable tr > :first-child{padding-left:6px}
+.vtable tr > :last-child{padding-right:6px}
+.vtable td{white-space:normal}
+.vtable .vu{font-size:.75em}
+.vtable thead th{background:var(--c-raised);font-family:var(--f-ui);font-weight:700;color:var(--c-text)}
+.vtable td{color:var(--c-text)}
+.vtable tbody > tr > *{border-top:1px solid var(--c-line)}
+.vtable th[scope="row"]{position:sticky;left:0;z-index:1;background:var(--c-table-sticky);font-family:var(--f-ui);font-weight:600;color:var(--c-text-2)}
+.vtable thead th:first-child{position:sticky;left:0;z-index:1}
+.vtable sub{font-size:.75em;vertical-align:-.1em;line-height:0}
+.sb-lines{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.sb-lines li{font-size:1rem;line-height:1.4;color:var(--c-text);overflow-wrap:anywhere;text-wrap:pretty}
+.sb-lines b{font-family:var(--f-ui);font-weight:700;color:var(--c-text-2)}
+/* covered: the done fill with an ink letter; not covered: dashed like an empty tile, its rim #66767B for 3:1 */
+.sracie{display:flex;gap:6px;margin-top:10px}
+.sracie li{flex:1 1 0;max-width:44px;min-height:40px;display:grid;place-items:center;border-radius:6px;border:1px dashed #66767B;background:rgba(18,23,25,.6);font-family:var(--f-fig);font-weight:700;font-size:1.25rem;line-height:1;color:var(--c-text-2)}
+.sracie .sr-on{border:1px solid var(--c-done);background:var(--c-done);color:var(--c-ink)}
+/* The transcript, folded: a 52px summary row; each line its time, then who over what was said. A long line (a tapped
+   step's canonical line runs to 593 characters) wraps inside its column. */
+.transcript{margin-top:18px;border-top:1px solid var(--c-line)}
+.transcript > summary{min-height:52px;font-weight:700;font-size:1.0625rem}
+.tlines{display:flex;flex-direction:column;gap:10px;padding:2px 0 8px}
+.tlines li{display:grid;grid-template-columns:3.25rem minmax(0,1fr);column-gap:8px}
+.transcript-untimed .tlines li{grid-template-columns:minmax(0,1fr)}
+.tl-time{font-family:var(--f-ui);font-weight:600;font-size:.875rem;line-height:1.3;color:var(--c-text-3)}
+.tl-line{min-width:0}
+.tl-who{display:block;font-family:var(--f-ui);font-weight:700;font-size:.875rem;line-height:1.3;color:var(--c-text-2)}
+.tl-text{display:block;margin-top:1px;font-size:1rem;line-height:1.4;color:var(--c-text);overflow-wrap:anywhere;text-wrap:pretty}
+.dgone{margin-top:16px;padding:12px 14px 4px}
+.dgone-msg{font-size:1rem;line-height:1.4;color:var(--c-text);text-wrap:pretty}
+/* The reveal, fresh from a run (spec §9): the replay's trace draws over --t-reveal (its path is 1 long, pathLength),
+   then the figures fade in, then each fix row and what follows them, all by 1.1 s. Before its first frame (reveal
+   alone) all that is held back; a tap anywhere (reveal-skip) zeroes every delay and duration; reduced motion (base.css)
+   drops the animations, so it all shows at once. */
+.reveal .replay .sv-trace{stroke-dasharray:1 2}
+.reveal:not(.reveal-go) .replay .sv-trace{stroke-dashoffset:1}
+.reveal:not(.reveal-go) :is(.figs,ol.fixes > .fix,.drest){opacity:0}
+.reveal-go .replay .sv-trace{animation:trace-draw var(--t-reveal) ease-in-out both}
+.reveal-go .figs{animation:dfade var(--t-fast) var(--ease-enter) var(--t-reveal) both}
+.reveal-go :is(ol.fixes > .fix,.drest){animation:dfade var(--t-fast) var(--ease-enter) var(--fix-d,760ms) both}
+.reveal-skip :is(.replay .sv-trace,.figs,ol.fixes > .fix,.drest){animation-delay:0s !important;animation-duration:0s !important}
+@keyframes trace-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes dfade{from{opacity:0}}

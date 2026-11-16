@@ -1,0 +1,66 @@
+# Deploys EMTNotes to GitHub Pages. Manual only: it runs when someone presses "Run workflow", never by itself.
+#
+# Before the first deploy:
+#   1. Get the user's go-ahead. Nothing is deployed until they give it.
+#   2. The user chose a public GitHub repo (2026-11-15), named EMTNotes (2026-11-16). Everything in it is public.
+#      - A public repo shows everything in it to anyone, including sources/: the trainee's own notes (with the
+#        scanned original sheets) and the question bank PDFs.
+#      - Pages from a private repo needs a paid GitHub plan.
+#   3. Publish the snapshot commit that tools/publish_history.py builds in a temporary clone (docs/publishing.md),
+#      never this repo's own history.
+#   4. In the repo, set Settings > Pages > Source to "GitHub Actions".
+#   5. In the Actions tab, open Deploy and press "Run workflow".
+#
+# The site is unlisted: index.html has noindex, robots.txt disallows everything, and nothing links to it.
+# Vite base './' plus hash routing (#/quiz) means any Pages subpath works, such as /<repo>/.
+
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+# Least privilege: the workflow can only read the repo. Only the deploy job gets publish rights (below), so npm ci
+# in the build job never holds a Pages or OIDC token.
+permissions:
+  contents: read
+
+# One deploy at a time. A deploy already running finishes rather than being cancelled.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # No token left in .git/config for later steps: npm ci runs packages' install scripts.
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # Unit tests and the build only. Playwright stays local because its screenshot baselines are Windows-specific.
+      # Python and pytest are for the importers, and the build doesn't need them.
+      - run: npx vitest run
+      - run: npm run build
+        env:
+          # vite.config.ts stamps the build machine's local date (Settings shows it); make that Singapore's.
+          TZ: Asia/Singapore
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    # The environment has no url, to keep the site's address off the run page and the repo's Deployments list.
+    environment: github-pages
+    # The minimum deploy-pages needs: pages to publish, id-token to prove where the deploy comes from.
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/deploy-pages@v5

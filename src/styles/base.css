@@ -1,0 +1,58 @@
+/* Document-wide base styles. Loads after tokens.css, so its :root overrides win. Dim theme only. */
+
+/* Reset, from the mockup, rescoped to the document */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+a { color: inherit; }
+ol, ul { list-style: none; }
+svg { display: block; }
+
+html {
+  font-size: calc(100% * var(--text-scale));
+  -webkit-tap-highlight-color: transparent;
+}
+html[data-text-size="large"] { --text-scale: 1.125; }
+html[data-text-size="larger"] { --text-scale: 1.25; }
+
+/* No pull-to-refresh while a focus screen is up (Run start, the run, the debrief, the quiz and the reader): in a Chrome
+   tab a downward drag on the run header or the vitals rail would otherwise reload the page mid-run. The tabs keep the
+   browser's default (final review M5). The root element's value is the viewport's; body's is set too, for a browser
+   that takes the viewport's from body. */
+:root:has(.app-focus), :root:has(.app-focus) body { overscroll-behavior-y: none; }
+
+body {
+  min-height: 100dvh;
+  font-family: var(--f-body);
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--c-text);
+  background: var(--c-bay);
+}
+
+:focus-visible { outline: 2px solid var(--c-text); outline-offset: 2px; }
+
+/* Tabular numerals for counters, timers and scores */
+.tn { font-variant-numeric: tabular-nums; }
+
+/* Reduced motion drops movement and keeps fades of 150 ms or less (spec §9). Every animation stops here; the opacity-only
+   toast fades come back in components.css. Nothing waits either: every delay is 0, so a staged reveal (the debrief's)
+   shows at once. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-property: opacity !important;
+    transition-duration: 150ms !important;
+    transition-delay: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --c-text-2: #EEF1EC;
+    --c-text-3: #EEF1EC;
+    --c-line: #56676E;
+    --c-panel: #1D2528;
+  }
+}

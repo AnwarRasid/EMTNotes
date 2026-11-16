@@ -1,0 +1,164 @@
+{
+ "id": "asthma-tampines-01",
+ "type": "medical",
+ "complaint": "Breathlessness",
+ "area": "Tampines",
+ "callText": "Young female, breathlessness",
+ "location": "Blk 8xx Tampines St 81, #03-xx",
+ "flags": [
+  "asthmaCopd"
+ ],
+ "reviewed": false,
+ "notesRef": "s05#4-asthma-copd-in-respiratory-distress-stay-treat",
+ "caller": {
+  "who": "flatmate",
+  "voice": "Her flatmate, panicking and talking fast, in casual Singapore English. She knows only what she has seen: her flatmate is 24 and became breathless suddenly while clearing the dusty storeroom (the flat is under renovation), with a wheezing sound. She has had asthma since young, and her inhaler is empty.",
+  "answers": {
+   "location": "Blk 8xx Tampines St 81, #03-xx. Third floor.",
+   "whatHappened": "My flatmate, 24. Our flat renovating, she was clearing the storeroom, very dusty. Then suddenly she cannot breathe, got wheezing sound. She got asthma since young, but her inhaler empty already.",
+   "casualties": "Only one, my flatmate.",
+   "conscious": "Conscious, she can talk, but very breathless.",
+   "icAndMeds": "OK, I get her IC ready. Her inhaler empty already, but I keep it for you.",
+   "breathing": "Yes, breathing, but very fast, and got wheezing sound."
+  }
+ },
+ "patient": {
+  "name": "Goh Hui Min",
+  "callName": "Ms Goh",
+  "sex": "female",
+  "race": "Chinese",
+  "age": 24,
+  "ic": "T02xxxxxH",
+  "voice": "Breathless and wheezy. Speaks in full sentences, but stops for breath after each one.",
+  "chiefComplaint": "I suddenly can't breathe. It started when I was clearing the storeroom.",
+  "lines": {
+   "feelingNow": "A bit better with the oxygen. Still wheezy, still a bit breathless.",
+   "fall": "No, I didn't fall.",
+   "hitHead": "No, I didn't hit my head.",
+   "neckPain": "No, my neck is fine, no pain.",
+   "lungHistory": "Yes, I've had asthma since young. My inhaler is empty.",
+   "verbal": "Goh Hui Min. I'm at home, in Tampines.",
+   "motor": "OK, both arms up, like this.",
+   "severity": "7. I really can't catch my breath.",
+   "position": "I'll stay sitting like this, leaning forward on the chair. It's easier.",
+   "bpScreen": "No shunt, no fistula. Never had any operation.",
+   "ic": "My IC is in my pocket, here."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Flat under renovation, dusty storeroom",
+   "items": [
+    "empty inhaler",
+    "broom"
+   ],
+   "hazards": [
+    "renovation tools on the floor beside the patient"
+   ],
+   "witnesses": "Flatmate (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you."
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": [
+    "use of accessory muscles",
+    "nasal flaring"
+   ]
+  },
+  "history": {
+   "asthmaCopd": "Asthma since young",
+   "other": "No other illness"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No abnormalities found",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "Slight sweat",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, expiratory wheeze both sides",
+   "bp": "128/80 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "12-lead",
+    "reading": "Sinus tachycardia about 118"
+   },
+   "hypocount": 5.6
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "7"
+  },
+  "position": {
+   "choice": "Sitting, leaning forward on a chair",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 91,
+   "pr": 118,
+   "rr": 28,
+   "bp": "126/78",
+   "temp": 36.7,
+   "skin": "pink, warm, sweaty",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 96,
+   "pr": 118,
+   "rr": 28,
+   "bp": "126/78",
+   "temp": 36.7,
+   "skin": "pink, warm, sweaty",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "nebuliser-mask",
+   "flowMin": 6,
+   "flowMax": 8,
+   "note": "Asthma in respiratory distress gets salbutamol through a nebuliser mask at 6–8 L/min: salbutamol 2 ml with N/S 0.9% 2 ml, one dose only (notes 5, protocol 4; notes 16, Asthma: 'Management: inhaler or nebuliser'). Her asthma history means the 'no history of asthma or COPD' contraindication does not apply. Her SpO2 is 91%, under 95%, so she needs oxygen, with the device picked by her condition (notes 11). No signs of impending respiratory failure here: she speaks in full sentences, air entry is equal, she is alert and oriented, there is no cyanosis, and RR is 28."
+  },
+  "ecg": "12-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low SpO2",
+    "high RR",
+    "high HR"
+   ],
+   "suspected": "asthma",
+   "plan": "stay-and-treat"
+  }
+ }
+}

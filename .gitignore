@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.superpowers/
+.taste-skill/
+test-results/
+playwright-report/
+coverage/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Source PDFs, the notes docx and scans stay on this PC only (user, 2026-11-13)
+sources/

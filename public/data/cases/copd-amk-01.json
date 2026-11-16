@@ -1,0 +1,164 @@
+{
+ "id": "copd-amk-01",
+ "type": "medical",
+ "complaint": "Breathlessness",
+ "area": "Ang Mo Kio",
+ "callText": "Elderly female, breathlessness",
+ "location": "Blk 2xx Ang Mo Kio Ave 3, #07-xx",
+ "flags": [
+  "asthmaCopd"
+ ],
+ "reviewed": false,
+ "notesRef": "s05#4-asthma-copd-in-respiratory-distress-stay-treat",
+ "caller": {
+  "who": "son",
+  "voice": "Her son, worried and talking fast, in casual Singapore English. He knows only what he has seen: his mother is 72, breathless since morning and getting worse, coughing, leaning forward, and has a long-term lung problem.",
+  "answers": {
+   "location": "Blk 2xx Ang Mo Kio Ave 3, #07-xx. Seventh floor ah.",
+   "whatHappened": "My mother lah, 72 already. Since morning she breathless, now getting worse. Keep coughing, sitting there leaning forward. She got long-term lung problem one.",
+   "casualties": "Only one, my mother.",
+   "conscious": "Conscious, she can talk, but very breathless.",
+   "icAndMeds": "OK, I get her IC and her medicine ready for you.",
+   "breathing": "Yes, breathing, but quite fast."
+  }
+ },
+ "patient": {
+  "name": "Tan Ah Mui",
+  "callName": "Mdm Tan",
+  "sex": "female",
+  "race": "Chinese",
+  "age": 72,
+  "ic": "S54xxxxxA",
+  "voice": "Breathless. Speaks in short, broken lines, a few words at a time, stopping to breathe and cough.",
+  "chiefComplaint": "So breathless... since morning... getting worse.",
+  "lines": {
+   "feelingNow": "A bit... better. Still... breathless.",
+   "fall": "No... never fall.",
+   "hitHead": "No... head OK.",
+   "neckPain": "No... neck... no pain.",
+   "lungHistory": "Yes... COPD... long time already.",
+   "verbal": "Tan Ah Mui... At home... Ang Mo Kio.",
+   "motor": "OK... both arms... up.",
+   "severity": "7... maybe 8.",
+   "position": "Sitting... leaning forward... like this.",
+   "bpScreen": "No... no shunt. No operation.",
+   "ic": "IC... in my pocket... here."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Cramped living room, fan on",
+   "items": [
+    "two inhalers",
+    "tissues"
+   ],
+   "hazards": [
+    "two inhalers on the table beside the patient"
+   ],
+   "witnesses": "Son (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes... I can hear... you."
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": [
+    "use of accessory muscles",
+    "pursed lips"
+   ]
+  },
+  "history": {
+   "asthmaCopd": "COPD",
+   "other": "Smoked for 40 years, stopped 5 years ago"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No abnormalities found",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "Slight sweat",
+   "pockets": [
+    "inhaler",
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal but reduced, expiratory wheeze on both sides",
+   "bp": "148/88 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "12-lead",
+    "reading": "Sinus tachycardia about 112, no ST changes"
+   },
+   "hypocount": 6.8
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "7 to 8"
+  },
+  "position": {
+   "choice": "Sitting, leaning forward",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 86,
+   "pr": 112,
+   "rr": 28,
+   "bp": "146/86",
+   "temp": 37.2,
+   "skin": "pale, warm, sweaty",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 90,
+   "pr": 112,
+   "rr": 28,
+   "bp": "146/86",
+   "temp": 37.2,
+   "skin": "pale, warm, sweaty",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "nasal-cannula",
+   "flowMin": 2,
+   "flowMax": 4,
+   "note": "COPD gets low-flow oxygen: nasal cannula 2–4 L/min, target SpO2 88–92% (notes 16; notes 11, exception 3: COPD → nasal cannula). Notes 11's exception 1 (impending respiratory failure → BVM) ranks above exception 3, but it isn't met here: she speaks a few words at a time and air entry is reduced, yet RR 28 is under 30, she is alert and oriented, and SpO2 rises to 90% on the cannula."
+  },
+  "ecg": "12-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low SpO2",
+    "high RR"
+   ],
+   "suspected": "COPD",
+   "plan": "stay-and-treat"
+  }
+ }
+}

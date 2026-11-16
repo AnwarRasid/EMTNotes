@@ -1,0 +1,164 @@
+{
+ "id": "hypo-hougang-01",
+ "type": "medical",
+ "complaint": "Giddiness",
+ "area": "Hougang",
+ "callText": "Elderly male, giddiness",
+ "location": "Blk 4xx Hougang Ave 8, #11-xx",
+ "flags": [
+  "hypoglycaemia"
+ ],
+ "reviewed": false,
+ "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+ "caller": {
+  "who": "wife",
+  "voice": "His wife, anxious, in casual Singapore English. She knows only what she has seen: her husband is 68, giddy, sweating and confused; he is diabetic, took his medicine and skipped dinner.",
+  "answers": {
+   "location": "Blk 4xx Hougang Ave 8, #11-xx. Eleventh floor.",
+   "whatHappened": "My husband, 68 years old. He very giddy, sweating, talking also confused. He got diabetes, took his medicine already, but skip dinner.",
+   "casualties": "Only him, one person.",
+   "conscious": "Conscious, but very blur, confused.",
+   "icAndMeds": "OK, I take out his IC and his medicine for you.",
+   "breathing": "Yes, he's breathing."
+  }
+ },
+ "patient": {
+  "name": "Lim Boon Huat",
+  "callName": "Mr Lim",
+  "sex": "male",
+  "race": "Chinese",
+  "age": 68,
+  "ic": "S58xxxxxB",
+  "voice": "Slow and confused. Answers in short, slow lines and loses track of the question.",
+  "chiefComplaint": "Giddy... very giddy.",
+  "lines": {
+   "feelingNow": "Still... giddy. What happened ah?",
+   "fall": "Fall ah? No... never fall.",
+   "hitHead": "Head? No... never hit.",
+   "neckPain": "Neck... no pain.",
+   "lungHistory": "No... no asthma.",
+   "verbal": "Lim... Lim Boon Huat. Here is... clinic, is it?",
+   "motor": "Raise arm ah? OK... like this.",
+   "severity": "Giddy ah? 6... maybe 7.",
+   "position": "Sitting here... on the sofa... OK.",
+   "bpScreen": "Shunt ah? No... no shunt. No operation.",
+   "ic": "My IC... in the pocket... here."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Tidy living room",
+   "items": [
+    "pill organiser",
+    "glass of water",
+    "TV remote"
+   ],
+   "hazards": [
+    "pill organiser on the table beside the patient",
+    "glass of water on the table beside the patient"
+   ],
+   "witnesses": "Wife (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes... can hear. Sorry... who are you ah?"
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "Diabetes, high BP"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No abnormalities found",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "A lot of sweat",
+   "pockets": [
+    "diabetes medication",
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "138/84 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "4-lead",
+    "reading": "Sinus tachycardia about 108"
+   },
+   "hypocount": 2.6
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "severity": "6 to 7"
+  },
+  "position": {
+   "choice": "Sitting on sofa",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 97,
+   "pr": 108,
+   "rr": 24,
+   "bp": "136/82",
+   "temp": 36.6,
+   "skin": "pale, cold, clammy",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 98,
+   "pr": 108,
+   "rr": 24,
+   "bp": "136/82",
+   "temp": 36.6,
+   "skin": "pale, cold, clammy",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "nasal-cannula",
+   "flowMin": 2,
+   "flowMax": 4,
+   "optional": true
+  },
+  "ecg": "4-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low blood sugar",
+    "high HR",
+    "low GCS"
+   ],
+   "suspected": "hypoglycaemia",
+   "plan": "stay-and-treat"
+  }
+ }
+}

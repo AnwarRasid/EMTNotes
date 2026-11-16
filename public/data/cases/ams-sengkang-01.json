@@ -1,0 +1,159 @@
+{
+ "id": "ams-sengkang-01",
+ "type": "medical",
+ "complaint": "Confusion",
+ "area": "Sengkang",
+ "callText": "Elderly female, confused since this morning",
+ "location": "Blk 2xx Compassvale St, #08-xx",
+ "flags": [],
+ "reviewed": false,
+ "notesRef": "s05#1-altered-mental-state-load-go",
+ "caller": {
+  "who": "son",
+  "voice": "Her son, worried, in casual Singapore English. He knows only what he has seen: his mother is 79 and has been confused since this morning, asking the same questions again and not knowing where she is. She did not fall and did not hit her head. She has high BP and takes her medicine.",
+  "answers": {
+   "location": "Blk 2xx Compassvale St, #08-xx. Eighth floor.",
+   "whatHappened": "My mother, 79 already. This morning I found her very confused. She keep asking the same thing, don't know where she is. She never fall, never hit her head. She got high BP, she take her medicine.",
+   "casualties": "Only one, my mother.",
+   "conscious": "Conscious, she can talk, but very confused.",
+   "icAndMeds": "OK, I get her IC and her BP medicine ready for you.",
+   "breathing": "Yes, she's breathing."
+  }
+ },
+ "patient": {
+  "name": "Siti binte Hassan",
+  "callName": "Mdm Siti",
+  "sex": "female",
+  "race": "Malay",
+  "age": 79,
+  "ic": "S47xxxxxE",
+  "voice": "Speaks in full sentences, slowly, but loses track of where she is and repeats questions.",
+  "chiefComplaint": "Nothing bothering me... Where is this ah? Why so many people here?",
+  "lines": {
+   "feelingNow": "I'm OK. Why so many people here ah? Where is this?",
+   "fall": "No, I never fall.",
+   "hitHead": "No, I never hit my head.",
+   "neckPain": "No, my neck no pain.",
+   "lungHistory": "No asthma, no lung problem. Only high blood pressure.",
+   "verbal": "Siti binte Hassan. I'm at the market now, right?",
+   "motor": "OK, both arms up, like this.",
+   "severity": "Pain ah? Not so much... 3.",
+   "position": "I sit here on the bed, OK.",
+   "bpScreen": "No shunt, no fistula. Never had operation.",
+   "ic": "My IC... in my pocket, here."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Bedroom, fan on",
+   "items": [
+    "BP medicine box",
+    "glass of water"
+   ],
+   "hazards": [
+    "BP medicine box on the bedside table beside the patient"
+   ],
+   "witnesses": "Son (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you... who are you ah?"
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "High BP"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No abnormalities found",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "No blood or sweat",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "176/98 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "4-lead",
+    "reading": "Sinus tachycardia about 106"
+   },
+   "hypocount": 6.1
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "severity": "3"
+  },
+  "position": {
+   "choice": "Sitting on the bed",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 96,
+   "pr": 106,
+   "rr": 22,
+   "bp": "174/96",
+   "temp": 36.8,
+   "skin": "warm, dry",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 97,
+   "pr": 106,
+   "rr": 22,
+   "bp": "174/96",
+   "temp": 36.8,
+   "skin": "warm, dry",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "nasal-cannula",
+   "flowMin": 2,
+   "flowMax": 4,
+   "optional": true
+  },
+  "ecg": "4-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low GCS",
+    "high HR",
+    "high RR"
+   ],
+   "suspected": "altered mental state",
+   "plan": "load-and-go"
+  }
+ }
+}

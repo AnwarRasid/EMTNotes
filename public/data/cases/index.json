@@ -1,0 +1,81 @@
+{
+ "cases": [
+  {
+   "id": "copd-amk-01",
+   "file": "cases/copd-amk-01.json",
+   "type": "medical",
+   "complaint": "Breathlessness",
+   "area": "Ang Mo Kio"
+  },
+  {
+   "id": "hypo-hougang-01",
+   "file": "cases/hypo-hougang-01.json",
+   "type": "medical",
+   "complaint": "Giddiness",
+   "area": "Hougang"
+  },
+  {
+   "id": "chestpain-bedok-01",
+   "file": "cases/chestpain-bedok-01.json",
+   "type": "medical",
+   "complaint": "Chest pain",
+   "area": "Bedok"
+  },
+  {
+   "id": "ccf-jurong-01",
+   "file": "cases/ccf-jurong-01.json",
+   "type": "medical",
+   "complaint": "Breathlessness",
+   "area": "Jurong West"
+  },
+  {
+   "id": "asthma-tampines-01",
+   "file": "cases/asthma-tampines-01.json",
+   "type": "medical",
+   "complaint": "Breathlessness",
+   "area": "Tampines"
+  },
+  {
+   "id": "bleed-woodlands-01",
+   "file": "cases/bleed-woodlands-01.json",
+   "type": "trauma",
+   "complaint": "Bleeding",
+   "area": "Woodlands"
+  },
+  {
+   "id": "fall-yishun-01",
+   "file": "cases/fall-yishun-01.json",
+   "type": "trauma",
+   "complaint": "Fall",
+   "area": "Yishun"
+  },
+  {
+   "id": "rta-toapayoh-01",
+   "file": "cases/rta-toapayoh-01.json",
+   "type": "trauma",
+   "complaint": "Road accident",
+   "area": "Toa Payoh"
+  },
+  {
+   "id": "ams-sengkang-01",
+   "file": "cases/ams-sengkang-01.json",
+   "type": "medical",
+   "complaint": "Confusion",
+   "area": "Sengkang"
+  },
+  {
+   "id": "toothache-clementi-01",
+   "file": "cases/toothache-clementi-01.json",
+   "type": "medical",
+   "complaint": "Toothache",
+   "area": "Clementi"
+  },
+  {
+   "id": "legbleed-punggol-01",
+   "file": "cases/legbleed-punggol-01.json",
+   "type": "trauma",
+   "complaint": "Bleeding",
+   "area": "Punggol"
+  }
+ ]
+}

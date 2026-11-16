@@ -1,0 +1,166 @@
+{
+ "id": "bleed-woodlands-01",
+ "type": "trauma",
+ "complaint": "Bleeding",
+ "area": "Woodlands",
+ "callText": "Adult male, deep cut, heavy bleeding",
+ "location": "Blk 7xx Woodlands Dr 50, #02-xx",
+ "flags": [],
+ "reviewed": false,
+ "notesRef": "s05#2-arresting-haemorrhage-load-go",
+ "caller": {
+  "who": "wife",
+  "voice": "His wife, frightened and talking fast, in casual Singapore English. She knows only what she has seen: her husband is 45 and cut his right forearm on a broken glass jug in the kitchen. The cut is deep, and the bleeding has soaked through the towel.",
+  "answers": {
+   "location": "Blk 7xx Woodlands Dr 50, #02-xx. Second floor.",
+   "whatHappened": "My husband, 45. In the kitchen the glass jug broke, he cut his right arm, here, the forearm. Very deep, the blood keep coming out.",
+   "casualties": "Only one, my husband.",
+   "conscious": "Conscious, he can talk, but he look very pale.",
+   "icAndMeds": "OK, I get his IC ready. He don't take any medicine.",
+   "breathing": "Yes, he's breathing.",
+   "criticalInjuries": "Got a lot of blood from his arm, the towel all soaked already."
+  }
+ },
+ "patient": {
+  "name": "Suresh s/o Muthu",
+  "callName": "Mr Suresh",
+  "sex": "male",
+  "race": "Indian",
+  "age": 45,
+  "ic": "S81xxxxxF",
+  "voice": "Pale, shaken and in pain. Speaks in full sentences, a little breathless, and keeps looking at his arm.",
+  "chiefComplaint": "I cut my arm on the broken jug. The blood won't stop.",
+  "lines": {
+   "feelingNow": "A bit better. Still feel weak, and my arm very pain.",
+   "fall": "No, I never fall. I sat down here myself after I cut my arm.",
+   "hitHead": "No, I never hit my head.",
+   "neckPain": "No, my neck no pain.",
+   "lungHistory": "No, no asthma, no lung problem.",
+   "verbal": "Suresh s/o Muthu. I'm at home, in Woodlands.",
+   "motor": "OK, like this. The right arm very pain, but I can move it.",
+   "severity": "8. My arm very pain.",
+   "position": "I'm OK sitting here against the cabinet. Just let me sit.",
+   "bpScreen": "No shunt, no fistula. Never had operation. Use my left arm, the right one is cut.",
+   "ic": "My IC is in my pocket, here.",
+   "convinced": "OK, I lie down flat."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Kitchen, blood on the floor",
+   "items": [
+    "broken glass",
+    "soaked towel"
+   ],
+   "hazards": [
+    "broken glass on the floor beside the patient"
+   ],
+   "witnesses": "Wife (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": true,
+   "bleeding": "Yes: heavy bleeding from a deep cut on the right forearm, soaking through the towel.",
+   "control": {
+    "pressure": "Still bleeding.",
+    "dressing": "Blood soaking through the dressing.",
+    "cat": "Bleeding has stopped."
+   }
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you."
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "No other illness"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and weak"
+  },
+  "rbs": {
+   "findings": "Deep cut on the right forearm, bleeding controlled; no other injuries",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "A lot of blood",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "88/56 mmHg",
+   "bpArm": "left",
+   "bpArmRestricted": true,
+   "ecg": {
+    "type": "4-lead",
+    "reading": "Sinus tachycardia about 124"
+   },
+   "hypocount": 5.8
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "8"
+  },
+  "position": {
+   "choice": "Sitting up against the cabinet",
+   "ideal": false,
+   "toward": "supine"
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 94,
+   "pr": 124,
+   "rr": 24,
+   "bp": "86/54",
+   "temp": 36.2,
+   "skin": "pale, cold, clammy",
+   "crt": "over 2 s"
+  },
+  "afterO2": {
+   "spo2": 99,
+   "pr": 124,
+   "rr": 24,
+   "bp": "86/54",
+   "temp": 36.2,
+   "skin": "pale, cold, clammy",
+   "crt": "over 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15
+  },
+  "ecg": "4-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low BP",
+    "high HR"
+   ],
+   "suspected": "arresting haemorrhage",
+   "plan": "load-and-go"
+  }
+ }
+}

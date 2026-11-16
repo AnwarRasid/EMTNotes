@@ -1,0 +1,172 @@
+{
+ "id": "rta-toapayoh-01",
+ "type": "trauma",
+ "complaint": "Road accident",
+ "area": "Toa Payoh",
+ "callText": "Motorcyclist down after a collision with a car",
+ "location": "Lorong 6 Toa Payoh, bus stop near Toa Payoh Central",
+ "flags": [
+  "rta",
+  "extraPpe",
+  "limbInjury",
+  "spinalAfterRbs"
+ ],
+ "reviewed": false,
+ "notesRef": "s01#immobilization",
+ "caller": {
+  "who": "passer-by",
+  "voice": "A passer-by, shaken, in casual Singapore English. He doesn't know the rider. He knows only what he has seen: a motorbike and a car collided, the rider fell off and is lying on the road, his leg looks broken with a little blood, and he has taken his helmet off.",
+  "answers": {
+   "location": "Lorong 6 Toa Payoh, the bus stop near Toa Payoh Central.",
+   "whatHappened": "One motorbike and one car collide. The rider fell off his bike, now lying on the road. Young guy, maybe early 30s. He took off his helmet already.",
+   "casualties": "Only one, the motorbike rider.",
+   "conscious": "Conscious, he can talk.",
+   "icAndMeds": "I don't know him leh, his wallet maybe in his bag.",
+   "breathing": "Yes, he's breathing.",
+   "criticalInjuries": "His leg look broken, a bit of blood only.",
+   "vehicles": "One motorbike, one car."
+  }
+ },
+ "patient": {
+  "name": "Faizal bin Rahim",
+  "callName": "Encik Faizal",
+  "sex": "male",
+  "race": "Malay",
+  "age": 31,
+  "ic": "S95xxxxxK",
+  "voice": "In pain and shaken. Speaks in full sentences, a little breathless, and winces when he moves.",
+  "chiefComplaint": "My right leg, very pain. I fell off my bike.",
+  "lines": {
+   "feelingNow": "Breathing OK now. My leg still very pain.",
+   "fall": "Yes, I fell off the bike.",
+   "hitHead": "No, I had my helmet on. I took it off after.",
+   "neckPain": "No, my neck no pain.",
+   "lungHistory": "No, no asthma, no lung problem.",
+   "verbal": "Faizal bin Rahim. I'm at Toa Payoh, at the bus stop.",
+   "motor": "OK, both arms up, like this.",
+   "severity": "9. My leg very, very pain.",
+   "position": "Just let me lie here. Don't move my leg.",
+   "bpScreen": "No shunt, no fistula. Never had operation.",
+   "ic": "My IC is in my wallet, in my pocket."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Roadside, traffic still passing",
+   "items": [
+    "helmet",
+    "bag"
+   ],
+   "hazards": [
+    "traffic on the road beside the patient",
+    "petrol leaking from the motorbike"
+   ],
+   "witnesses": "Passer-by (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you."
+  },
+  "spine": {
+   "fall": "Yes, fell off the bike",
+   "hitHead": "No, I had my helmet on",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "No other illness"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "Deformity and swelling of the right lower leg; pain at the upper back when pressed",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "Slight blood",
+   "pockets": [
+    "wallet",
+    "IC"
+   ],
+   "limb": {
+    "injury": "Right lower leg, deformed and swollen",
+    "where": "right leg",
+    "distalPulse": "Distal pulse present in the right foot.",
+    "immobilise": "Buddy splints the right leg as instructed."
+   }
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "130/84 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "4-lead",
+    "reading": "Sinus tachycardia about 112"
+   },
+   "hypocount": 6.0
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "9"
+  },
+  "position": {
+   "choice": "Lying on the road",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 95,
+   "pr": 112,
+   "rr": 24,
+   "bp": "128/82",
+   "temp": 36.9,
+   "skin": "pale, sweaty",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 99,
+   "pr": 112,
+   "rr": 24,
+   "bp": "128/82",
+   "temp": 36.9,
+   "skin": "pale, sweaty",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15
+  },
+  "ecg": "4-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "leg deformity",
+    "high HR"
+   ],
+   "suspected": "fracture of the right leg",
+   "plan": "load-and-go"
+  }
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "id": "ccf-jurong-01",
+ "type": "medical",
+ "complaint": "Breathlessness",
+ "area": "Jurong West",
+ "callText": "Elderly female, breathlessness",
+ "location": "Blk 6xx Jurong West St 61, #09-xx",
+ "flags": [],
+ "reviewed": false,
+ "notesRef": "s05#5-congestive-cardiac-failure-ccf-stay-treat",
+ "caller": {
+  "who": "daughter",
+  "voice": "Her daughter, worried, in casual Singapore English. She knows only what she has seen: her mother is 76, has been breathless for two days and is worse lying down, sleeps on three pillows, and her legs are swollen. She has heart failure and kidney failure, goes for dialysis three times a week, and is on GTN.",
+  "answers": {
+   "location": "Blk 6xx Jurong West St 61, #09-xx. Ninth floor.",
+   "whatHappened": "My mother, 76 already. Two days she breathless, lie down even worse. At night must sleep on three pillows. Her legs also swollen. She got heart failure and kidney failure, go dialysis three times a week.",
+   "casualties": "Only one, my mother.",
+   "conscious": "Conscious, she can talk, but very breathless.",
+   "icAndMeds": "OK, I get her IC and her medicine box ready for you.",
+   "breathing": "Yes, breathing, but very fast."
+  }
+ },
+ "patient": {
+  "name": "Kamala d/o Raman",
+  "callName": "Mdm Kamala",
+  "sex": "female",
+  "race": "Indian",
+  "age": 76,
+  "ic": "S50xxxxxC",
+  "voice": "Breathless and tired. Speaks slowly in full sentences, stopping for breath between them.",
+  "chiefComplaint": "Two days I cannot breathe properly. When I lie down, worse.",
+  "lines": {
+   "feelingNow": "A bit better with the oxygen. Still breathless, but not so bad.",
+   "fall": "No, I never fall.",
+   "hitHead": "No, I never hit my head.",
+   "neckPain": "No, no pain at my neck.",
+   "lungHistory": "No asthma, no lung problem. My heart is weak, the doctor say heart failure.",
+   "verbal": "Kamala d/o Raman. I'm at home, in Jurong West.",
+   "motor": "OK, both arms up. Like this.",
+   "severity": "7. Very hard to breathe.",
+   "position": "I sit at the edge of the bed like this. If I lie down, I cannot breathe.",
+   "bpScreen": "Not my left arm, that one has my dialysis fistula. Use the right arm. No chest operation.",
+   "ic": "My IC is in my pocket, here."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Bedroom, pillows stacked on the bed",
+   "items": [
+    "medication box",
+    "GTN spray",
+    "three pillows"
+   ],
+   "hazards": [
+    "medication box on the bed beside the patient"
+   ],
+   "witnesses": "Daughter (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you. Very hard to breathe."
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": [
+    "use of accessory muscles"
+   ]
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "Heart failure, kidney failure on dialysis, high BP"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No injuries; both lower legs swollen",
+   "jvd": true,
+   "pedalEdema": true,
+   "gloves": "Slight sweat",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, crackles at both bases",
+   "bp": "178/96 mmHg",
+   "bpArm": "right",
+   "bpArmRestricted": true,
+   "ecg": {
+    "type": "12-lead",
+    "reading": "Sinus tachycardia about 116, no ST elevation"
+   },
+   "hypocount": 7.4
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "7"
+  },
+  "position": {
+   "choice": "Sitting at the edge of the bed",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 88,
+   "pr": 116,
+   "rr": 28,
+   "bp": "176/94",
+   "temp": 36.9,
+   "skin": "pale, sweaty",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 94,
+   "pr": 116,
+   "rr": 28,
+   "bp": "176/94",
+   "temp": 36.9,
+   "skin": "pale, sweaty",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15
+  },
+  "ecg": "12-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low SpO2",
+    "high RR",
+    "high BP"
+   ],
+   "suspected": "CCF",
+   "plan": "stay-and-treat"
+  }
+ }
+}

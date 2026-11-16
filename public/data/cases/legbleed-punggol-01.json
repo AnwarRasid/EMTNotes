@@ -1,0 +1,173 @@
+{
+ "id": "legbleed-punggol-01",
+ "type": "trauma",
+ "complaint": "Bleeding",
+ "area": "Punggol",
+ "callText": "Adult male, fall with a deep leg wound, heavy bleeding",
+ "location": "Blk 6xx Punggol Field, void deck",
+ "flags": [
+  "limbInjury"
+ ],
+ "reviewed": false,
+ "notesRef": "s05#2-arresting-haemorrhage-load-go",
+ "caller": {
+  "who": "co-worker",
+  "voice": "His co-worker, frightened and talking fast, in casual Singapore English. He knows only what he has seen: his co-worker is 38 and fell about 2 m from the painting platform at the void deck, landing on his left leg on the edge of a metal paint tray. The cut is deep, the blood keeps coming out, and the leg looks bent. He didn't hit his head.",
+  "answers": {
+   "location": "Blk 6xx Punggol Field, at the void deck. Ground floor, near the lift lobby.",
+   "whatHappened": "My co-worker, 38. We painting at the void deck, he fall down from the platform, about 2 metres. He land on his left leg, on the metal paint tray. Got a very deep cut, the blood keep coming out. His head never hit.",
+   "casualties": "Only one, my co-worker.",
+   "conscious": "Conscious, he can talk, but he look very pale.",
+   "icAndMeds": "OK, I get his IC ready. His medicine I don't know leh.",
+   "breathing": "Yes, he's breathing.",
+   "criticalInjuries": "His leg got a big cut, the blood keep coming out, and the leg look bent."
+  }
+ },
+ "patient": {
+  "name": "Lee Wei Jie",
+  "callName": "Mr Lee",
+  "sex": "male",
+  "race": "Chinese",
+  "age": 38,
+  "ic": "S88xxxxxH",
+  "voice": "In pain and frightened, pale, speaks in full sentences.",
+  "chiefComplaint": "I fell from the platform. My left leg very pain, the blood won't stop.",
+  "lines": {
+   "feelingNow": "A bit better. Still feel weak, and my leg very pain.",
+   "fall": "Yes, I fell from the platform, about 2 metres. I landed on my left leg.",
+   "hitHead": "No, I never hit my head.",
+   "neckPain": "No, my neck no pain.",
+   "lungHistory": "No, no asthma, no lung problem.",
+   "verbal": "Lee Wei Jie. I'm at the void deck, in Punggol.",
+   "motor": "OK, both arms up, like this.",
+   "severity": "9. My leg very, very pain.",
+   "position": "Let me sit here against the pillar. Don't move my leg.",
+   "bpScreen": "No shunt, no fistula. Never had operation.",
+   "ic": "My IC is in my pocket, here.",
+   "convinced": "OK... I lie down flat."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Void deck, blood on the floor",
+   "items": [
+    "ladder",
+    "paint tray"
+   ],
+   "hazards": [
+    "fallen ladder beside the patient"
+   ],
+   "witnesses": "Co-worker (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": true,
+   "bleeding": "Yes: heavy bleeding from a deep cut on the left lower leg.",
+   "control": {
+    "pressure": "Still bleeding.",
+    "dressing": "Blood soaking through the dressing.",
+    "cat": "Bleeding has stopped."
+   }
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you."
+  },
+  "spine": {
+   "fall": "Yes, from the platform",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "No other illness"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and weak"
+  },
+  "rbs": {
+   "findings": "Deep cut and deformity of the left lower leg, bleeding controlled; no other injuries",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "A lot of blood",
+   "pockets": [
+    "IC"
+   ],
+   "limb": {
+    "injury": "Left lower leg, deformed, with a deep cut",
+    "where": "left leg",
+    "distalPulse": "Distal pulse present in the left foot.",
+    "immobilise": "Buddy splints the left leg as instructed."
+   }
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "86/56 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "4-lead",
+    "reading": "Sinus tachycardia about 118"
+   },
+   "hypocount": 6.2
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "9"
+  },
+  "position": {
+   "choice": "Sitting on the floor against the pillar",
+   "ideal": false,
+   "toward": "supine"
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 95,
+   "pr": 118,
+   "rr": 24,
+   "bp": "84/54",
+   "temp": 36.4,
+   "skin": "pale, cold, clammy",
+   "crt": "over 2 s"
+  },
+  "afterO2": {
+   "spo2": 99,
+   "pr": 118,
+   "rr": 24,
+   "bp": "84/54",
+   "temp": 36.4,
+   "skin": "pale, cold, clammy",
+   "crt": "over 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15
+  },
+  "ecg": "4-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low BP",
+    "high HR"
+   ],
+   "suspected": "arresting haemorrhage",
+   "plan": "load-and-go"
+  }
+ }
+}

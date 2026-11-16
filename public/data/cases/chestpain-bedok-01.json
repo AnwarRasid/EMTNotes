@@ -1,0 +1,160 @@
+{
+ "id": "chestpain-bedok-01",
+ "type": "medical",
+ "complaint": "Chest pain",
+ "area": "Bedok",
+ "callText": "Middle-aged male, chest pain",
+ "location": "Blk 1xx Bedok North Rd, #05-xx",
+ "flags": [],
+ "reviewed": false,
+ "notesRef": "s05#6-chest-pain-stay-treat",
+ "caller": {
+  "who": "wife",
+  "voice": "His wife, worried, in casual Singapore English. She knows only what she has seen: her husband is 58 and has had heavy, squeezing chest pain for about 30 minutes while watching TV, going to his left arm and jaw, and he is sweating a lot. He has a heart problem, and took one spray of his GTN before the crew came.",
+  "answers": {
+   "location": "Blk 1xx Bedok North Rd, #05-xx. Fifth floor.",
+   "whatHappened": "My husband, 58. He was watching TV, then got chest pain. He say very heavy, like something squeezing. Half an hour already. The pain go to his left arm and his jaw, and he sweating a lot. He got heart problem, he took one spray of his GTN already.",
+   "casualties": "Only one, my husband.",
+   "conscious": "Conscious, he can talk, but the pain very bad.",
+   "icAndMeds": "OK, I get his IC and his heart medicine ready for you.",
+   "breathing": "Yes, breathing, a bit fast."
+  }
+ },
+ "patient": {
+  "name": "Ahmad bin Salleh",
+  "callName": "Encik Ahmad",
+  "sex": "male",
+  "race": "Malay",
+  "age": 58,
+  "ic": "S68xxxxxD",
+  "voice": "Worried and in pain. Speaks in full sentences, a little breathless, and stops when the pain squeezes.",
+  "chiefComplaint": "My chest very heavy, like something squeezing. Half an hour already. The pain go to my left arm and my jaw.",
+  "lines": {
+   "feelingNow": "Breathing a bit easier now. But the chest pain still the same, still heavy.",
+   "fall": "No, I never fall. I was on the sofa the whole time.",
+   "hitHead": "No, I never hit my head.",
+   "neckPain": "No, my neck no pain.",
+   "lungHistory": "No, no asthma, no lung problem. Only my heart problem.",
+   "verbal": "Ahmad bin Salleh. I'm at home, in Bedok.",
+   "motor": "OK, both arms up, like this.",
+   "severity": "8. Very heavy, the pain.",
+   "position": "Let me lie flat on the sofa like this. I want to lie down.",
+   "bpScreen": "No shunt, no fistula. Never had any chest operation.",
+   "ic": "My IC is in my pocket, here.",
+   "convinced": "OK, I sit up. Yes, easier to breathe like this."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Living room, TV on",
+   "items": [
+    "GTN spray",
+    "glass of water"
+   ],
+   "hazards": [
+    "GTN spray on the side table beside the patient"
+   ],
+   "witnesses": "Wife (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you. My chest very pain."
+  },
+  "spine": {
+   "fall": "No",
+   "hitHead": "No",
+   "dtbl": "No deformities, tenderness, bruises or lacerations",
+   "neckPain": false
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "Minty smell (GTN)"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "Angina, high BP, high cholesterol"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "No abnormalities found",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "A lot of sweat",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "150/94 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "12-lead",
+    "reading": "Sinus tachycardia about 104, ST elevation in II, III and aVF"
+   },
+   "hypocount": 6.2
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "8"
+  },
+  "position": {
+   "choice": "Lying flat on the sofa",
+   "ideal": false,
+   "toward": "sit-up"
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 93,
+   "pr": 104,
+   "rr": 24,
+   "bp": "148/92",
+   "temp": 36.8,
+   "skin": "pale, cold, clammy",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 98,
+   "pr": 104,
+   "rr": 24,
+   "bp": "148/92",
+   "temp": 36.8,
+   "skin": "pale, cold, clammy",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15
+  },
+  "ecg": "12-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "low SpO2",
+    "high HR",
+    "ST elevation"
+   ],
+   "suspected": "AMI",
+   "plan": "stay-and-treat"
+  }
+ }
+}

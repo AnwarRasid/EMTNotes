@@ -1,0 +1,157 @@
+{
+ "id": "fall-yishun-01",
+ "type": "trauma",
+ "complaint": "Fall",
+ "area": "Yishun",
+ "callText": "Elderly male, fall from ladder",
+ "location": "Blk 3xx Yishun Ring Rd, #10-xx",
+ "flags": [],
+ "reviewed": false,
+ "notesRef": "s01#delicate-spine",
+ "caller": {
+  "who": "son",
+  "voice": "His son, worried, in casual Singapore English. He knows only what he has seen: his father is 67, fell about 2 m from a ladder while changing a light, landed on his back and hit his head, and says his neck is very painful.",
+  "answers": {
+   "location": "Blk 3xx Yishun Ring Rd, #10-xx. Tenth floor.",
+   "whatHappened": "My father, 67. He climb the ladder to change the light, then fall down, about 2 metres. He land on his back, his head also hit the floor.",
+   "casualties": "Only one, my father.",
+   "conscious": "Conscious, he can talk. He still lying on the floor.",
+   "icAndMeds": "OK, I get his IC ready. He don't take any medicine.",
+   "breathing": "Yes, he's breathing.",
+   "criticalInjuries": "No blood, but he say his neck very pain."
+  }
+ },
+ "patient": {
+  "name": "Ong Kok Leong",
+  "callName": "Mr Ong",
+  "sex": "male",
+  "race": "Chinese",
+  "age": 67,
+  "ic": "S59xxxxxJ",
+  "voice": "In pain and afraid to move. Speaks in full sentences, a little breathless, and keeps his head still.",
+  "chiefComplaint": "I fell from the ladder. My neck very pain, the back of my head also.",
+  "lines": {
+   "feelingNow": "Breathing OK. My neck still pain.",
+   "fall": "Yes, I fell from the ladder, about 2 metres. Landed on my back.",
+   "hitHead": "Yes, the back of my head hit the floor.",
+   "neckPain": "Yes, very pain at the back of my neck.",
+   "lungHistory": "No, no asthma, no lung problem.",
+   "verbal": "Ong Kok Leong. I'm at home, in Yishun.",
+   "motor": "OK, both arms up, like this.",
+   "severity": "7. My neck very pain.",
+   "position": "I'll stay lying here. I'm scared to move my neck.",
+   "bpScreen": "No shunt, no fistula. Never had operation.",
+   "ic": "My IC is in my pocket."
+  }
+ },
+ "findings": {
+  "scene": {
+   "description": "Kitchen, ladder on the floor",
+   "items": [
+    "ladder lying on its side"
+   ],
+   "hazards": [
+    "fallen ladder beside the patient"
+   ],
+   "witnesses": "Son (the caller)"
+  },
+  "approach": {
+   "catastrophicBleeding": false,
+   "bleeding": "No catastrophic bleeding."
+  },
+  "loc": {
+   "avpu": "A",
+   "response": "Yes, I can hear you. I'm not moving."
+  },
+  "spine": {
+   "fall": "Yes, from the ladder",
+   "hitHead": "Yes, the back of my head",
+   "dtbl": "Tenderness at the back of the neck; no deformities, bruises or lacerations",
+   "neckPain": true
+  },
+  "airway": {
+   "mouth": "Clear, no obstacles",
+   "smell": "No unusual breath smell"
+  },
+  "breathing": {
+   "riseFall": "Chest rise and fall present",
+   "rateQuality": "fast and shallow",
+   "ntucp": []
+  },
+  "history": {
+   "asthmaCopd": "No asthma or COPD",
+   "other": "No other illness"
+  },
+  "circulation": {
+   "pulse": "Radial pulse present, fast and strong"
+  },
+  "rbs": {
+   "findings": "Bruise at the back of the head; tenderness at the neck; no other injuries",
+   "jvd": false,
+   "pedalEdema": false,
+   "gloves": "No blood or sweat",
+   "pockets": [
+    "IC"
+   ]
+  },
+  "investigation": {
+   "auscultation": "Air entry equal, breath sounds clear",
+   "bp": "142/86 mmHg",
+   "bpArm": "left",
+   "ecg": {
+    "type": "4-lead",
+    "reading": "Sinus tachycardia about 104"
+   },
+   "hypocount": 6.4
+  },
+  "vitals": {
+   "gcs": {
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "severity": "7"
+  },
+  "position": {
+   "choice": "Lying on his back on the floor",
+   "ideal": true
+  }
+ },
+ "vitals": {
+  "roomAir": {
+   "spo2": 96,
+   "pr": 104,
+   "rr": 22,
+   "bp": "140/84",
+   "temp": 36.6,
+   "skin": "warm, dry",
+   "crt": "under 2 s"
+  },
+  "afterO2": {
+   "spo2": 99,
+   "pr": 104,
+   "rr": 22,
+   "bp": "140/84",
+   "temp": 36.6,
+   "skin": "warm, dry",
+   "crt": "under 2 s"
+  }
+ },
+ "expected": {
+  "oxygen": {
+   "device": "non-rebreather",
+   "flowMin": 10,
+   "flowMax": 15
+  },
+  "ecg": "4-lead",
+  "decision": {
+   "stable": false,
+   "signs": [
+    "neck tenderness",
+    "high HR"
+   ],
+   "suspected": "spinal injury",
+   "plan": "load-and-go"
+  }
+ }
+}

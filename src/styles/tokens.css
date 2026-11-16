@@ -1,0 +1,42 @@
+/* Design tokens. Values come from the approved SCDF mockup (.superpowers/alts/scdf.fragment.html). */
+:root {
+  --c-page: #1E1F21;
+  --c-bay: #121719;
+  --c-panel: rgba(29,37,40,.82);
+  --c-raised: #2B373C;
+  --c-line: #36444A;
+  --c-line-2: #56676E;
+  --c-text: #EEF1EC;
+  --c-text-2: #B6C2C4;
+  --c-text-3: #94A3A6;
+  --c-band-o: #E2711F;
+  --c-band-y: #E3BC2B;
+  --c-star: #3381D4;
+  --c-white: #C8CFCB;
+  --c-missed: #F26BB0;
+  --c-order: #B3A1FF;
+  --c-done: #7DD6A9;
+  --c-ink: #0E1416;
+  --c-hl-bg: rgba(240,214,120,.20);
+  --c-hl-edge: rgba(240,214,120,.60);
+  /* The debrief's vitals table, opaque as painted over its panel: the scroll region's tint (the cover that hides its
+     edge shade) and the sticky Time column's */
+  --c-table-cover: #151b1d;
+  --c-table-sticky: #171e20;
+  --text-scale: 1;
+  --f-ui: 'Barlow Semi Condensed','Barlow',system-ui,sans-serif;
+  --f-body: 'Barlow',system-ui,sans-serif;
+  --f-fig: 'Barlow Condensed','Barlow',system-ui,sans-serif;
+  --t-press: 90ms;
+  --t-fast: 160ms;
+  --t-base: 220ms;
+  --t-exit: 140ms;
+  --t-screen: 280ms;
+  --t-reveal: 700ms;
+  --t-stagger: 60ms;
+  --ease-enter: cubic-bezier(.22,1,.36,1);
+  --ease-exit: cubic-bezier(.4,0,1,1);
+  --band: linear-gradient(90deg,var(--c-band-y) 50%,var(--c-band-o) 50%) 0 0/16px 50% repeat-x,linear-gradient(90deg,var(--c-band-o) 50%,var(--c-band-y) 50%) 0 100%/16px 50% repeat-x;
+  --band-key: linear-gradient(90deg,var(--c-band-y) 50%,var(--c-band-o) 50%) 0 calc(100% - 5px)/16px 5px repeat-x,linear-gradient(90deg,var(--c-band-o) 50%,var(--c-band-y) 50%) 0 100%/16px 5px repeat-x;
+  --chevrons: repeating-linear-gradient(135deg,var(--c-band-o) 0 3px,var(--c-band-y) 3px 6px);
+}
