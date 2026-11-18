@@ -57,6 +57,9 @@ export type RawQuestionsDoc = v.InferOutput<typeof RawQuestionsDocSchema>;
 
 // ---- overrides.json (hand-written, Tasks 9-11) ----------------------------------------------------------
 
+/** A course document an explanation was checked against: a lesson deck by its code, or a named course file. */
+export const COURSE_SOURCE = /^(MED \d{3,4}|EMS Drugs|Linear EMT Protocol|56th EMT PAM|Loading Command|Unloading Command)$/;
+
 export const OverrideEntrySchema = v.strictObject({
   srcHash: SrcHashSchema,
   topic: TopicSchema,
@@ -64,6 +67,7 @@ export const OverrideEntrySchema = v.strictObject({
   notesRef: v.nullable(NotesRefSchema),
   generated: v.boolean(),
   review: v.optional(v.string()),
+  slides: v.optional(v.array(v.pipe(v.string(), v.regex(COURSE_SOURCE)))),
 });
 export type OverrideEntry = v.InferOutput<typeof OverrideEntrySchema>;
 

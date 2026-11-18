@@ -70,9 +70,18 @@ describe('override merge', () => {
       options: [{ id: 'a', text: 'Falling blood pressure' }, { id: 'b', text: 'Anxiety' }],
       answer: 'a', image: null, topic: 'shock',
       explanation: 'Blood pressure falls late, once compensation fails.',
-      notesRef: 's07#signs-of-shock', generated: true,
+      notesRef: 's07#signs-of-shock', generated: true, slides: [],
       review: ['The bank printed the letter A on two options.', 'The question depends on an image.'],
     });
+  });
+
+  test("an override's course sources are merged in, in order", () => {
+    const entry = { ...OVERRIDE_1, slides: ['MED 403', 'MED 402'] };
+    expect(byId(mergeQuestions(rawDoc(), overrides({ 'mt-b-q115': entry })), 'mt-b-q115').slides).toEqual(['MED 403', 'MED 402']);
+  });
+
+  test('a question with no override has no course sources', () => {
+    expect(byId(mergeQuestions(rawDoc(), overrides({})), 'mt-b-q115').slides).toEqual([]);
   });
 
   test('the override topic wins over the raw topic, and the raw topic wins over the default', () => {

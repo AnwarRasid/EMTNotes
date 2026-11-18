@@ -25,6 +25,12 @@ export function NotesLink({ q, notes }: { q: Question; notes: NotesDoc | null })
   return q.notesRef ? <TextLink href={notesRefHref(q.notesRef)}>{notesRefLabel(notes, q.notesRef)}</TextLink> : null;
 }
 
+/** The course decks or files behind the explanation: "Source: MED 805, EMS Drugs". Nothing when none covers it, so
+ *  a line that rests on no course material never looks as if it does. Feedback and the result's wrong rows both show it. */
+export function SourceLine({ q }: { q: Question }): JSX.Element | null {
+  return q.slides.length > 0 ? <p class="explain-src">Source: {q.slides.join(', ')}</p> : null;
+}
+
 export function Feedback({ q, order, record, notes }:
   { q: Question; order: string[]; record: AnswerRecord; notes: NotesDoc | null }): JSX.Element {
   const yours = nameOf(q, order, record.picked);
@@ -36,6 +42,7 @@ export function Feedback({ q, order, record, notes }:
     <Panel as="div" class={record.right ? 'explain explain-ok' : 'explain'}>
       <p class="verdict"><Icon name={record.right ? 'check' : 'cross'} />{verdict}</p>
       {q.explanation && <p class="explain-text">{q.explanation}</p>}
+      <SourceLine q={q} />
       <NotesLink q={q} notes={notes} />
     </Panel>
   );

@@ -30,7 +30,7 @@ function question(id: string, extra: Partial<Question> = {}): Question {
   return {
     id, bank: 'mt-b', number: Number(id.slice(-3)), passage: null, stem: `Stem of ${id}`, options: opts(FLOWS),
     answer: 'b', image: null, topic: 'respiratory', explanation: `Why ${id} is what it is.`, notesRef: 's11#oxygen-masks',
-    generated: true, review: [], ...extra,
+    generated: true, slides: [], review: [], ...extra,
   };
 }
 
@@ -632,6 +632,17 @@ describe('Feedback', () => {
     render(<Feedback q={Q1} order={['a', 'b', 'c', 'd']} record={record(Q1, 'z', false)} notes={null} />);
     expect(screen.getByText('Wrong: you picked an answer that has since changed. The answer is B.')).toBeTruthy();
   });
+
+  it('names the course sources the explanation was checked against', () => {
+    const q = question('mt-b-q903', { slides: ['MED 805', 'EMS Drugs'] });
+    render(<Feedback q={q} order={['a', 'b', 'c', 'd']} record={record(q, 'b', true)} notes={null} />);
+    expect(screen.getByText('Source: MED 805, EMS Drugs')).toBeTruthy();
+  });
+
+  it('claims no source when the explanation was not found in the course material', () => {
+    render(<Feedback q={Q1} order={['a', 'b', 'c', 'd']} record={record(Q1, 'b', true)} notes={null} />);
+    expect(screen.queryByText(/^Source:/)).toBeNull();
+  });
 });
 
 describe('OptionList', () => {
@@ -677,6 +688,15 @@ describe('result screen', () => {
 
     expect([...container.querySelectorAll('.primary')].map((k) => k.textContent)).toEqual(['Practise 20 more']);
     expect(key('Done').className).toBe('btn2');
+  });
+
+  it('a wrong row names the course sources under its explanation', () => {
+    const cited = { ...Q1, slides: ['MED 301'] };
+    primeContent('questions', [cited, Q2]);
+    const store = makeStore({ quizLast: finished('practice', [record(cited, 'a', false), record(Q2, 'd', true)]) });
+    open(store, '#/quiz/result');
+    const [wrong] = screen.getAllByRole('listitem') as [HTMLElement, HTMLElement];
+    expect(within(wrong).getByText('Source: MED 301')).toBeTruthy();
   });
 
   it('Practise 20 more starts a practice over the same bank and topic', () => {

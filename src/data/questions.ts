@@ -14,6 +14,8 @@ export interface Question {
   explanation: string | null;
   notesRef: string | null;
   generated: boolean;
+  /** The course decks or files the explanation was checked against. Empty when none covers it. */
+  slides: string[];
   /** Why the question is under review, in display order. Empty when it isn't. */
   review: string[];
 }
@@ -74,6 +76,7 @@ export function mergeQuestions(raw: RawQuestionsDoc, overrides: OverridesDoc): Q
       explanation: o?.explanation ?? null,
       notesRef: o?.notesRef ?? null,
       generated: o?.generated ?? false,
+      slides: o?.slides ?? [],
       review,
     });
   }

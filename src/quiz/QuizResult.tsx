@@ -14,7 +14,7 @@ import { Primary, Secondary } from '../ui/Keys';
 import { Skeleton, useDelayedFlag } from '../ui/Skeleton';
 import { StatusChip } from '../ui/StatusChip';
 import { clearedCount, score } from './engine';
-import { NotesLink } from './Feedback';
+import { NotesLink, SourceLine } from './Feedback';
 import { QuestionsError } from './QuizTab';
 import { ALL_QUESTIONS, filterLabel, startQuiz, withinHold } from './useQuiz';
 
@@ -116,6 +116,7 @@ function ResultRow({ q, record, notes }: { q: Question; record: AnswerRecord; no
             <div class="rr-answer"><dt>Answer</dt><dd>{textOf(q, q.answer)}</dd></div>
           </dl>
           {q.explanation && <p class="rrow-why">{q.explanation}</p>}
+          <SourceLine q={q} />
           <NotesLink q={q} notes={notes} />
         </>
       )}

@@ -513,6 +513,7 @@ html[data-text-size="larger"] .runhead .title{overflow-wrap:break-word;hyphens:a
 /* on the first line's centre (line 1.2em), so a wrapped verdict keeps its mark at the start */
 .verdict .ic{width:18px;height:18px;margin-top:calc(.6em - 9px);stroke-width:2.6}
 .explain-text{margin-top:5px;font-size:1rem;line-height:1.4;color:var(--c-text);text-wrap:pretty}
+.explain-src{margin-top:5px;font-size:.875rem;line-height:1.4;color:var(--c-text-2)}
 /* The keys row: the score beside the one key that acts (mockup .as-keys2, .as-score); a test's key takes the row.
    Opaque, where the mockup's is 94%: options scroll under it here, and showed through it and through a disabled key. */
 .qkeys{position:sticky;bottom:0;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:8px;padding:10px 12px max(10px,env(safe-area-inset-bottom));background:rgb(13,17,19);border-top:1px solid var(--c-line)}

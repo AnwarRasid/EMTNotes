@@ -4,6 +4,9 @@
    "explanation": "Detection and decontamination are two of the four pillars of hazmat response. Diagnosing is not one of them.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 804"
+   ],
    "srcHash": "1c7f1ac45c9a",
    "topic": "hmls"
   },
@@ -18,6 +21,10 @@
    "explanation": "Seizures, drowsiness and collapse in many people at once point to a nerve agent such as sarin. Mustard blisters, mace irritates and LPG is a fuel gas.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803",
+    "MED 802"
+   ],
    "srcHash": "9fcf306410fc",
    "topic": "hmls"
   },
@@ -39,6 +46,9 @@
    "explanation": "Remove the casualty, decontaminate and give high-flow oxygen; your notes give cyanide poisoning an NRM. Diazepam is a seizure drug, not a cyanide treatment.",
    "generated": true,
    "notesRef": "s11#cyanide-poisoning",
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "1e9864623836",
    "topic": "hmls"
   },
@@ -46,6 +56,11 @@
    "explanation": "Cyanide stops cells using oxygen, causing giddiness, breathlessness and cherry-red skin. Excessive secretions point to a nerve agent instead.",
    "generated": true,
    "notesRef": "s11#cyanide-poisoning",
+   "slides": [
+    "MED 806",
+    "MED 803",
+    "MED 802"
+   ],
    "srcHash": "90bc154a5fa3",
    "topic": "hmls"
   },
@@ -53,6 +68,9 @@
    "explanation": "Heat builds fast in a sealed suit, so drink plenty, skip the suit when unwell and limit your time in it, even if casualties remain.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 808"
+   ],
    "srcHash": "b8c4c62d3e42",
    "topic": "hmls"
   },
@@ -60,6 +78,9 @@
    "explanation": "Chemical warfare agents include nerve, blister, blood and pulmonary (choking) agents. There is no cardiovascular agent class.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "757050729433",
    "topic": "hmls"
   },
@@ -67,6 +88,9 @@
    "explanation": "Mustard is a blister agent: it blisters the skin and damages the airways, causing a productive cough and breathlessness. Fever is not a typical sign.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "198659a699ff",
    "topic": "hmls"
   },
@@ -74,6 +98,9 @@
    "explanation": "Sarin is a nerve agent, as are soman and VX. Chlorine is a choking agent and cyanide is a blood agent.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "5b971a8b7d2a",
    "topic": "hmls"
   },
@@ -81,6 +108,10 @@
    "explanation": "Atropine and pralidoxime are the nerve agent antidote, as in your notes' double auto-injector pen. Mustard care is removal, decontamination, oxygen and IV therapy.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 807",
+    "MED 803"
+   ],
    "srcHash": "6a92edb4318b",
    "topic": "hmls"
   },
@@ -88,6 +119,9 @@
    "explanation": "Phosgene is a choking (pulmonary) agent: it causes coughing, breathlessness and watery eyes. Blisters come from blister agents such as mustard.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "f3d16a7b8ced",
    "topic": "hmls"
   },
@@ -123,6 +157,11 @@
    "explanation": "The bank scales antidote doses to severity: 1 for mild, 2 for moderate, 3 for severe. Moderate VX exposure takes 2 doses of atropine and pralidoxime.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 807",
+    "MED 810",
+    "MED 803"
+   ],
    "srcHash": "c274908f0c20",
    "topic": "hmls"
   },
@@ -130,6 +169,11 @@
    "explanation": "The bank scales antidote doses to severity: 1 for mild, 2 for moderate, 3 for severe. Mild soman exposure takes 1 dose of atropine and pralidoxime.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 807",
+    "MED 810",
+    "MED 803"
+   ],
    "srcHash": "b5a463a43d11",
    "topic": "hmls"
   },
@@ -137,6 +181,11 @@
    "explanation": "The bank scales antidote doses to severity: 1 for mild, 2 for moderate, 3 for severe. Severe soman exposure takes 3 doses of atropine and pralidoxime.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 810",
+    "MED 807",
+    "MED 803"
+   ],
    "srcHash": "a7546df45acd",
    "topic": "hmls"
   },
@@ -144,6 +193,10 @@
    "explanation": "Nerve agents overstimulate glands and muscles: runny nose, vomiting, diarrhoea and growing breathlessness. Fever is not a nerve agent sign.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 810",
+    "MED 803"
+   ],
    "srcHash": "f550b120c62b",
    "topic": "hmls"
   },
@@ -151,6 +204,10 @@
    "explanation": "Mild exposure brings a runny nose, salivation, nausea and vomiting. Seizures mean a severe exposure.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 810",
+    "MED 803"
+   ],
    "srcHash": "a7cf2b959d46",
    "topic": "hmls"
   },
@@ -158,6 +215,9 @@
    "explanation": "Severe exposure brings seizures, unconsciousness and severe breathlessness. Chest pain is not part of that picture.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 810"
+   ],
    "srcHash": "db3c29e9b7dd",
    "topic": "hmls"
   },
@@ -165,6 +225,10 @@
    "explanation": "Lewisite care is immediate decontamination, high-flow oxygen and its antidote, British Anti-Lewisite (BAL). Your notes keep diazepam for ongoing seizures.",
    "generated": true,
    "notesRef": "s12#diazepam",
+   "slides": [
+    "MED 803",
+    "MED 807"
+   ],
    "srcHash": "02e0ae012ad0",
    "topic": "hmls"
   },
@@ -172,6 +236,10 @@
    "explanation": "British Anti-Lewisite (BAL) is the specific antidote for lewisite, an arsenic-based blister agent. Atropine and pralidoxime are for nerve agents.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803",
+    "MED 807"
+   ],
    "srcHash": "e10eab6b0e21",
    "topic": "hmls"
   },
@@ -179,6 +247,10 @@
    "explanation": "Your notes: inject the atropine and pralidoxime pen into the mid vastus lateralis, the outer aspect of the thigh, and hold it for 10 s.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 810",
+    "MED 608"
+   ],
    "srcHash": "596f6a4aa589",
    "topic": "hmls"
   },
@@ -186,6 +258,10 @@
    "explanation": "Your notes: both auto-injector pens go into the mid vastus lateralis, the outer aspect of the thigh, held there for 10 s.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 810",
+    "MED 608"
+   ],
    "srcHash": "ddbd43417335",
    "topic": "hmls"
   },
@@ -193,6 +269,9 @@
    "explanation": "Clear debris and clothing, wash with plenty of water or saline and dress the wound. Atropine and oxime are injected, as your notes' auto-injectors show, not used to flush.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 809"
+   ],
    "srcHash": "e6b8efc15ed8",
    "topic": "hmls"
   },
@@ -200,6 +279,10 @@
    "explanation": "Casualty care means decontamination, first aid and antidotes. Setting up the hot, warm and cold zones is scene control, not casualty management.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 804",
+    "MED 807"
+   ],
    "srcHash": "47409285d4dd",
    "topic": "hmls"
   },
@@ -207,6 +290,10 @@
    "explanation": "Your notes: the single auto-injector pen holds diazepam for ongoing seizures. The double pen of atropine and pralidoxime treats the nerve agent itself.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 807",
+    "MED 810"
+   ],
    "srcHash": "d320d5f03316",
    "topic": "hmls"
   },
@@ -214,6 +301,10 @@
    "explanation": "An unusual smell, a gas cloud or many people with the same symptoms all suggest a chemical release. Rain clouds are just weather.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 805",
+    "MED 801"
+   ],
    "srcHash": "625d277ae355",
    "topic": "hmls"
   },
@@ -221,6 +312,10 @@
    "explanation": "Hazmat scenes are split into hot, warm and cold zones. There is no wind zone, though wind direction still matters for where you stand.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 807",
+    "MED 804"
+   ],
    "srcHash": "b9aeddd9d6c5",
    "topic": "hmls"
   },
@@ -228,6 +323,10 @@
    "explanation": "Chemical agents mainly enter through the skin and by being breathed in, which is why the suit and the face mask are both needed.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803",
+    "MED 801"
+   ],
    "srcHash": "fc8b5bfe7bb5",
    "topic": "hmls"
   },
@@ -235,6 +334,9 @@
    "explanation": "Nerve agents cause dim vision from tiny pupils, drooling, cramps, vomiting and diarrhoea. A rash is not a nerve agent sign.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "6847e55572b9",
    "topic": "hmls"
   },
@@ -242,6 +344,9 @@
    "explanation": "Early decontamination removes the agent, limits how much is absorbed and cuts staff exposure. It does nothing for hydration.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 807"
+   ],
    "srcHash": "a034305c90fa",
    "topic": "hmls"
   },
@@ -249,6 +354,10 @@
    "explanation": "The First Aid Point is set up in the cold zone, as far as possible from the point of release, so casualties are treated away from the agent.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 804",
+    "MED 807"
+   ],
    "srcHash": "b199a498e6e5",
    "topic": "hmls"
   },
@@ -256,6 +365,11 @@
    "explanation": "No one works in the warm zone without PPE: contamination is still possible there, so the suit and face mask stay on and time there is limited.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 805",
+    "MED 804",
+    "MED 808"
+   ],
    "srcHash": "e4fd245121cd",
    "topic": "hmls"
   },
@@ -263,6 +377,9 @@
    "explanation": "Nerve agents block the enzyme that switches nerve signals off, so glands, muscles and the nervous system are overstimulated. The reproductive system isn't a target.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "f49ed4ca2361",
    "topic": "hmls"
   },
@@ -270,6 +387,10 @@
    "explanation": "Your notes: the double auto-injector pen of atropine (2 mg) and pralidoxime (600 mg) is the antidote for nerve agents.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 810",
+    "MED 803"
+   ],
    "srcHash": "9efabfdb44cc",
    "topic": "hmls"
   },
@@ -277,6 +398,9 @@
    "explanation": "Vesicants are blister agents such as mustard and lewisite, one of the chemical warfare classes. Clotting, skin and binding agents are not classes.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803"
+   ],
    "srcHash": "76f92549a4c1",
    "topic": "hmls"
   },
@@ -284,6 +408,10 @@
    "explanation": "Sarin is a nerve agent, so its antidotes are atropine and pralidoxime, the double auto-injector pen in your notes.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 803",
+    "MED 810"
+   ],
    "srcHash": "1c4a58acbf58",
    "topic": "hmls"
   },
@@ -291,6 +419,10 @@
    "explanation": "Mustard blisters the skin and irritates the airways, causing sore throat and cough. Constipation is not a sign of mustard exposure.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803",
+    "MED 807"
+   ],
    "srcHash": "5bd7d441d1a1",
    "topic": "hmls"
   },
@@ -298,6 +430,10 @@
    "explanation": "Seizures and collapse in many people at once point to a nerve agent such as soman. Lewisite and mustard are blister agents, and mace is an irritant.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803",
+    "MED 802"
+   ],
    "srcHash": "e846b1aa40d0",
    "topic": "hmls"
   },
@@ -319,6 +455,10 @@
    "explanation": "First responders protect themselves, keep the public out and inform the control room. Going into the hot zone to find the agent only adds a casualty.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 805",
+    "MED 807"
+   ],
    "srcHash": "00b9e3b8c07b",
    "topic": "hmls"
   },
@@ -326,6 +466,9 @@
    "explanation": "Record the dose on the medical treatment card and drop the used injector in a sharps box. Your notes: document right after giving any medication.",
    "generated": true,
    "notesRef": "s12#6-rights-of-medication-administration",
+   "slides": [
+    "MED 810"
+   ],
    "srcHash": "8516689d8580",
    "topic": "hmls"
   },
@@ -333,6 +476,10 @@
    "explanation": "Breathlessness, cough and cramps without collapse is a moderate exposure, so P2. Severe breathlessness would make it P1; mild eye and nose signs, P3.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 810",
+    "MED 807"
+   ],
    "srcHash": "2f7902ad45c0",
    "topic": "hmls"
   },
@@ -340,6 +487,10 @@
    "explanation": "Severe breathlessness makes this casualty critical, so P1. Milder breathlessness with cramps would be P2.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 807",
+    "MED 810"
+   ],
    "srcHash": "25f38aca0ecf",
    "topic": "hmls"
   },
@@ -347,6 +498,9 @@
    "explanation": "With no breathing and no carotid pulse, the casualty is P0, the dead category in mass casualty triage.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 807"
+   ],
    "srcHash": "1f98d8fd002f",
    "topic": "hmls"
   },
@@ -354,6 +508,10 @@
    "explanation": "Blurred vision and a runny nose alone are mild signs, so the casualty is P3, the least urgent group.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 807",
+    "MED 810"
+   ],
    "srcHash": "3c7ea1d27681",
    "topic": "hmls"
   },
@@ -368,6 +526,9 @@
    "explanation": "Your notes: press the auto-injector into the outer thigh and hold it for 10 s so the full dose goes in.",
    "generated": true,
    "notesRef": "s12#auto-injectors",
+   "slides": [
+    "MED 810"
+   ],
    "srcHash": "31ecaed7b434",
    "topic": "hmls"
   },
@@ -375,6 +536,10 @@
    "explanation": "The four pillars are early protection, early detection, early decontamination and early HMLS.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 804",
+    "MED 807"
+   ],
    "srcHash": "a20ecb371e6c",
    "topic": "hmls"
   },
@@ -382,6 +547,10 @@
    "explanation": "Seizures, drowsiness and collapse in many people at once point to a nerve agent such as sarin. Lewisite and mustard are blister agents; mace irritates.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 803",
+    "MED 802"
+   ],
    "srcHash": "63b8cac15139",
    "topic": "hmls"
   },
@@ -389,6 +558,9 @@
    "explanation": "Record how many auto-injectors were given, when and where, so the next team knows the dose. Your notes: document right after giving any medication.",
    "generated": true,
    "notesRef": "s12#6-rights-of-medication-administration",
+   "slides": [
+    "MED 810"
+   ],
    "srcHash": "93caa5f28f07",
    "topic": "hmls"
   },
@@ -396,6 +568,9 @@
    "explanation": "Any casualty given auto-injectors needs the number, time and site on the medical treatment card. Your notes: document right after giving any medication.",
    "generated": true,
    "notesRef": "s12#6-rights-of-medication-administration",
+   "slides": [
+    "MED 810"
+   ],
    "srcHash": "8fd188e1fe5a",
    "topic": "hmls"
   },
@@ -431,6 +606,10 @@
    "explanation": "Late rising pressure in the skull slows the pulse, makes breathing deep or erratic and pushes BP up. Your notes link a wide pulse pressure (over 60) to head injury.",
    "generated": true,
    "notesRef": "s15#blood-pressure",
+   "slides": [
+    "MED 406",
+    "MED 306"
+   ],
    "srcHash": "10b33332df57",
    "topic": "neuro"
   },
@@ -438,6 +617,11 @@
    "explanation": "Rising pressure inside the skull presses on the nerve that controls one pupil, so one dilated pupil is an early sign. Your head and face check looks for equal, reactive pupils.",
    "generated": true,
    "notesRef": "s06#step-3-head-and-face",
+   "slides": [
+    "MED 306",
+    "MED 406",
+    "56th EMT PAM"
+   ],
    "srcHash": "7aa29253128f",
    "topic": "neuro"
   },
@@ -445,6 +629,9 @@
    "explanation": "Palpation is examining by touch, as when you palpate the skull, chest and abdomen in the head-to-toe exam. Palpitation is a pounding heartbeat; auscultation is listening.",
    "generated": true,
    "notesRef": "s06",
+   "slides": [
+    "MED 1005"
+   ],
    "srcHash": "7c1ba3b5cb6c",
    "topic": "assessment"
   },
@@ -452,6 +639,9 @@
    "explanation": "With a complete obstruction no air moves, so the patient cannot cough, speak or breathe. Wheezing, whispering or a hard exhale mean some air still gets through.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 517"
+   ],
    "srcHash": "45e2352e0d9e",
    "topic": "airway"
   },
@@ -459,6 +649,9 @@
    "explanation": "In a pneumothorax air collects in the chest and the lung collapses, so breath sounds fade or vanish on that side. Your notes list decreased breath sounds on the affected side.",
    "generated": true,
    "notesRef": "s16#spontaneous-pneumothorax-not-tested",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "7e45ca9640c6",
    "topic": "respiratory"
   },
@@ -473,6 +666,9 @@
    "explanation": "DCAP-BTLS: deformities, contusions, abrasions, punctures, burns, tenderness, lacerations, swelling. Your notes' DTBL neck check uses T for tenderness too.",
    "generated": true,
    "notesRef": "s01#delicate-spine",
+   "slides": [
+    "MED 1005"
+   ],
    "srcHash": "afe103c60bbd",
    "topic": "assessment"
   },
@@ -480,6 +676,9 @@
    "explanation": "In a tension pneumothorax trapped air builds pressure: breath sounds fade on that side, the lung gets harder to inflate, and pressure on the heart backs blood into the neck veins.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 408"
+   ],
    "srcHash": "898e0e20cbca",
    "topic": "trauma"
   },
@@ -487,6 +686,10 @@
    "explanation": "Switch the LSU on first, but apply suction only once the catheter is in place at the measured depth, never while inserting it. Keep each suction under 10 seconds.",
    "generated": true,
    "notesRef": "s13#lsu-portable-suction-unit",
+   "slides": [
+    "MED 502",
+    "56th EMT PAM"
+   ],
    "srcHash": "977a2c293739",
    "topic": "airway"
   },
@@ -501,6 +704,11 @@
    "explanation": "A smoke-filled room with no burns points to carbon monoxide: haemoglobin binds CO instead of oxygen, so the brain is starved of oxygen and she loses consciousness.",
    "generated": true,
    "notesRef": "s11#carbon-monoxide-poisoning",
+   "slides": [
+    "MED 405",
+    "MED 313",
+    "MED 802"
+   ],
    "srcHash": "90b606bb5a78",
    "topic": "respiratory"
   },
@@ -522,6 +730,9 @@
    "explanation": "CO starves the tissues of oxygen, so patients turn drowsy and confused, not hyperactive. Cyanosis, cherry-red skin and chest pain can all occur.",
    "generated": true,
    "notesRef": "s11#carbon-monoxide-poisoning",
+   "slides": [
+    "MED 313"
+   ],
    "srcHash": "1ac3be7120c0",
    "topic": "respiratory"
   },
@@ -529,6 +740,9 @@
    "explanation": "CO comes from fuel burning without enough air, such as engine exhaust, fires and poorly vented heaters. A well-ventilated heater is the safe case.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 313"
+   ],
    "srcHash": "6793ec8f3251",
    "topic": "respiratory"
   },
@@ -536,6 +750,9 @@
    "explanation": "A constricting band left on blocks the vein, so check it is off first. Your notes put 'Tourniquet removed?' first when troubleshooting slow or no flow.",
    "generated": true,
    "notesRef": "s18#troubleshooting-slow-no-flow",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "ff06b1251361",
    "topic": "iv"
   },
@@ -550,6 +767,9 @@
    "explanation": "Stable angina comes on with exertion or stress, when the heart needs more oxygen than narrowed arteries can deliver. Your notes: it eases with rest or GTN.",
    "generated": true,
    "notesRef": "s17#angina-vs-ami",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "4d0db349b828",
    "topic": "cardiac"
   },
@@ -557,6 +777,9 @@
    "explanation": "When the left side fails, fluid backs up into the lungs (pulmonary edema). Your notes list wheezing among the signs of pulmonary edema.",
    "generated": true,
    "notesRef": "s16#pulmonary-edema",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "a311a151cdfa",
    "topic": "cardiac"
   },
@@ -578,6 +801,9 @@
    "explanation": "The tissue keeps burning until the source is stopped, so stopping the burning process comes first. Sizing the burn and dressing it follow.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "8a39587d4096",
    "topic": "burns"
   },
@@ -585,6 +811,9 @@
    "explanation": "Blisters mean a partial-thickness (second-degree) burn. A first-degree burn is red without blisters; a third-degree burn goes through the full skin.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "5abb8104f49f",
    "topic": "burns"
   },
@@ -592,6 +821,9 @@
    "explanation": "Rule of nines for an adult: a whole arm, front and back, is 9% and a whole leg is 18%, so one arm plus one leg is 27%.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "323b075da5f5",
    "topic": "burns"
   },
@@ -599,6 +831,11 @@
    "explanation": "Beta agonists such as salbutamol act on beta 2 receptors to relax airway muscle and reverse bronchospasm. Your notes list anaphylaxis as an indication.",
    "generated": true,
    "notesRef": "s12#salbutamol-albuterol-short-acting-beta-agonist-saba",
+   "slides": [
+    "MED 604",
+    "MED 602",
+    "MED 308"
+   ],
    "srcHash": "f026fb5a9d83",
    "topic": "drugs"
   },
@@ -620,6 +857,11 @@
    "explanation": "An odd smell, many sick people and a missing first crew point to a hazmat incident. Your scene evaluation asks about hazards to the patient and to yourselves.",
    "generated": true,
    "notesRef": "s01#rescue-scene-evaluation",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001",
+    "MED 804"
+   ],
    "srcHash": "52229d8c2cbe",
    "topic": "ops"
   },
@@ -627,6 +869,10 @@
    "explanation": "Even decontaminated patients can carry traces of the agent and body fluids, so take universal precautions and wear protective equipment before treating.",
    "generated": true,
    "notesRef": "s01#preparation",
+   "slides": [
+    "MED 804",
+    "MED 1001"
+   ],
    "srcHash": "bfa8df7bc737",
    "topic": "ops"
   },
@@ -641,6 +887,10 @@
    "explanation": "A high-speed crash with a distended, tender abdomen and a fast pulse suggests internal organ injury and bleeding. He wore no seat belt, so it isn't a belt injury.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1005",
+    "MED 409"
+   ],
    "srcHash": "92e7be650c30",
    "topic": "trauma"
   },
@@ -648,6 +898,10 @@
    "explanation": "Battle's sign is bruising behind the ear from a basilar skull fracture. Your head and face check looks for it alongside raccoon eyes.",
    "generated": true,
    "notesRef": "s06#step-3-head-and-face",
+   "slides": [
+    "MED 406",
+    "56th EMT PAM"
+   ],
    "srcHash": "07c230ab91c3",
    "topic": "trauma"
   },
@@ -655,6 +909,10 @@
    "explanation": "Eyes open to pain 2, incomprehensible sounds 2, withdraws from pain 4: GCS 2 + 2 + 4 = 8.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "e6eb2d872059",
    "topic": "assessment"
   },
@@ -669,6 +927,9 @@
    "explanation": "In emphysema the alveoli are stretched and destroyed. Your notes: they lose elasticity and trap air, leaving less surface for gas exchange.",
    "generated": true,
    "notesRef": "s16#copd-chronic-obstructive-pulmonary-disease-tested",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "b66bb0d4e51a",
    "topic": "respiratory"
   },
@@ -690,6 +951,9 @@
    "explanation": "JVD and pedal edema with clear lungs fit right-sided failure: blood backs up into the veins, not the lungs. Left-sided failure would bring crackles.",
    "generated": true,
    "notesRef": "s17#heart-failure",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "7524bc4bbd49",
    "topic": "cardiac"
   },
@@ -701,9 +965,12 @@
    "topic": "trauma"
   },
   "mt-a-q040": {
-   "explanation": "Keep the part cool but not frozen: seal it in a plastic bag and put the bag in cold water. Ice or liquid touching the tissue directly damages it.",
+   "explanation": "Wrap the part in saline-wet gauze, seal it in a clean plastic bag, then put that bag into a second bag of ice or cold water. Ice must never touch the part directly.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "bd56f84f5f0c",
    "topic": "trauma"
   },
@@ -711,6 +978,10 @@
    "explanation": "Exercise burns sugar, and little food means none is replaced. Your notes list insulin overdose, missed meals, excessive exercise, alcohol and vomiting as triggers.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 304",
+    "56th EMT PAM"
+   ],
    "srcHash": "a3d406d5a7d6",
    "topic": "diabetic"
   },
@@ -718,6 +989,10 @@
    "explanation": "Eyes open to voice 3, confused 4, localises pain 5: GCS 3 + 4 + 5 = 12.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "d70de0f7ceed",
    "topic": "assessment"
   },
@@ -725,6 +1000,10 @@
    "explanation": "Needlestick injuries are the main way healthcare workers catch HIV at work. Your notes: needles go straight into the sharps box and are never recapped.",
    "generated": true,
    "notesRef": "s18#after-inserting",
+   "slides": [
+    "MED 514",
+    "MED 503"
+   ],
    "srcHash": "b8d44ed2bda4",
    "topic": "ops"
   },
@@ -732,6 +1011,10 @@
    "explanation": "Bruising behind the ears (Battle's sign) and around the eyes (raccoon eyes) are classic signs of a basilar skull fracture, both in your head and face check.",
    "generated": true,
    "notesRef": "s06#step-3-head-and-face",
+   "slides": [
+    "MED 406",
+    "56th EMT PAM"
+   ],
    "srcHash": "30bd8557d54f",
    "topic": "trauma"
   },
@@ -739,6 +1022,9 @@
    "explanation": "Rule of nines: the head is 9% and the back of the trunk is 18%, split 9% upper and 9% lower, so head plus upper back is 18%.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "0ccd9259c808",
    "topic": "burns"
   },
@@ -746,6 +1032,9 @@
    "explanation": "A full-thickness (third-degree) burn destroys the nerve endings, so the skin can look pearly white, leathery or charred and feel almost painless.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "154b5ca16a9d",
    "topic": "burns"
   },
@@ -753,6 +1042,10 @@
    "explanation": "Eyes open to pain 2, incomprehensible speech 2, withdraws from pain 4: GCS 2 + 2 + 4 = 8.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "6da597f377c4",
    "topic": "assessment"
   },
@@ -760,6 +1053,10 @@
    "explanation": "Kussmaul breathing is deep, rapid breathing: the body blows off CO2 to offset the acid that builds up in diabetic ketoacidosis.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 304",
+    "MED 1007"
+   ],
    "srcHash": "781a2791657b",
    "topic": "diabetic"
   },
@@ -767,6 +1064,9 @@
    "explanation": "Chest pain brought on by exertion and relieved by rest and GTN is stable angina. Your notes: AMI pain is not relieved by rest or GTN.",
    "generated": true,
    "notesRef": "s17#angina-vs-ami",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "84b0686a6fe9",
    "topic": "cardiac"
   },
@@ -774,6 +1074,10 @@
    "explanation": "Trauma means a possible spinal injury, so open the airway with a jaw thrust that keeps the head still. Your notes keep head tilt chin lift for no spinal injury.",
    "generated": true,
    "notesRef": "s01#airway",
+   "slides": [
+    "MED 303",
+    "56th EMT PAM"
+   ],
    "srcHash": "7f429935ec38",
    "topic": "airway"
   },
@@ -781,6 +1085,10 @@
    "explanation": "Kussmaul respiration is breathing that is both faster and deeper than normal, as the body tries to blow off acid in diabetic ketoacidosis.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 304",
+    "MED 1007"
+   ],
    "srcHash": "0524588d960b",
    "topic": "assessment"
   },
@@ -788,6 +1096,11 @@
    "explanation": "If a limb might be broken, treat it as a fracture and immobilise it to prevent further injury, checking pulses before and after, as your notes say.",
    "generated": true,
    "notesRef": "s01#immobilization",
+   "slides": [
+    "MED 509",
+    "MED 404",
+    "56th EMT PAM"
+   ],
    "srcHash": "92196a6a67af",
    "topic": "trauma"
   },
@@ -796,6 +1109,10 @@
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
    "review": "Traumatic amputations are usually prime tourniquet cases, so this key rests only on the idea that torn vessels bleed more than severed ones.",
+   "slides": [
+    "MED 402",
+    "56th EMT PAM"
+   ],
    "srcHash": "87b1314fd057",
    "topic": "trauma"
   },
@@ -803,6 +1120,11 @@
    "explanation": "Salbutamol acts on beta 2 receptors to relax airway muscle and reverse bronchospasm. Raising BP and heart rate is adrenaline's job in your notes.",
    "generated": true,
    "notesRef": "s12#salbutamol-albuterol-short-acting-beta-agonist-saba",
+   "slides": [
+    "MED 602",
+    "MED 604",
+    "MED 308"
+   ],
    "srcHash": "4ac550c63a10",
    "topic": "drugs"
   },
@@ -810,6 +1132,9 @@
    "explanation": "A high-velocity bullet opens a temporary cavity as it passes, stretching and tearing tissue well beyond its own track.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 411"
+   ],
    "srcHash": "1e01ce175d4c",
    "topic": "trauma"
   },
@@ -817,6 +1142,10 @@
    "explanation": "A flail segment needs neighbouring ribs each broken in two or more places. Crepitus at many points over four ribs fits; your chest check feels for crepitus and looks for paradoxical motion.",
    "generated": true,
    "notesRef": "s06#step-5-chest",
+   "slides": [
+    "MED 408",
+    "56th EMT PAM"
+   ],
    "srcHash": "8e8cba65c94a",
    "topic": "trauma"
   },
@@ -831,6 +1160,9 @@
    "explanation": "COPD has two main types, emphysema and chronic bronchitis, both mostly from smoking. Chronic bronchitis brings a daily cough with excess mucus.",
    "generated": true,
    "notesRef": "s16#copd-chronic-obstructive-pulmonary-disease-tested",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "9f0363daa8d1",
    "topic": "respiratory"
   },
@@ -838,6 +1170,10 @@
    "explanation": "Skin signs (flushing, itching, hives) with breathing trouble and low BP mean anaphylaxis, a whole-body allergic reaction. Your notes: you may give the patient's own EpiPen.",
    "generated": true,
    "notesRef": "s12#epipen-contains-epinephrine-patient-s-own-only",
+   "slides": [
+    "MED 308",
+    "MED 1007"
+   ],
    "srcHash": "57fd30682e8a",
    "topic": "shock"
   },
@@ -845,6 +1181,9 @@
    "explanation": "Hunger is an early warning as blood sugar starts to fall; drowsiness comes later. Your notes' list of signs adds nervousness, trembling and cold clammy skin.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 304"
+   ],
    "srcHash": "95623e35b3db",
    "topic": "diabetic"
   },
@@ -852,6 +1191,9 @@
    "explanation": "Crash energy rises with the square of speed, so doubling the speed gives four times the energy. Speed at impact matters most for injury.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 411"
+   ],
    "srcHash": "1179814d417b",
    "topic": "trauma"
   },
@@ -859,6 +1201,9 @@
    "explanation": "Exposed bowel must be kept moist and clean, so it gets an occlusive dressing that stops it drying out and limits contamination.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "e3d098e8db1f",
    "topic": "trauma"
   },
@@ -866,6 +1211,10 @@
    "explanation": "Pulse 68 and regular breathing are normal, and BP 128/86 is close to your notes' range. Altered mental status is never normal and may explain the fall.",
    "generated": true,
    "notesRef": "s15#blood-pressure",
+   "slides": [
+    "MED 1001",
+    "56th EMT PAM"
+   ],
    "srcHash": "b863bd9a1f84",
    "topic": "assessment"
   },
@@ -873,6 +1222,10 @@
    "explanation": "One rescuer steadies the limb and checks distal pulse, movement and sensation while the other splints. Your notes check limb pulses before and after immobilising.",
    "generated": true,
    "notesRef": "s01#immobilization",
+   "slides": [
+    "56th EMT PAM",
+    "MED 404"
+   ],
    "srcHash": "59d6ee7d3619",
    "topic": "trauma"
   },
@@ -887,6 +1240,10 @@
    "explanation": "BP 132/74 meets your chest pain protocol (SBP 90 or more) for GTN 0.4 mg. Atropine needs HR 50 or less with shock signs. EMTs also need him to be on GTN already.",
    "generated": true,
    "notesRef": "s05#6-chest-pain-stay-treat",
+   "slides": [
+    "MED 1007",
+    "MED 605"
+   ],
    "srcHash": "5ef0e5b3f9cb",
    "topic": "cardiac"
   },
@@ -894,6 +1251,9 @@
    "explanation": "Back and flank pain, low BP and weak femoral pulses suggest a leaking aortic aneurysm. Treat the blood loss and, as your notes say, transport without delay.",
    "generated": true,
    "notesRef": "s17#thoracic-abdominal-aneurysm",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "2f91bf61f4c5",
    "topic": "cardiac"
   },
@@ -901,6 +1261,9 @@
    "explanation": "Your notes: hyperventilation syndrome often comes from panic or anxiety. Fast, deep breathing blows off too much CO2, causing dizziness and tingling hands.",
    "generated": true,
    "notesRef": "s16#hyperventilation-syndrome-tested",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "270ad399fbfa",
    "topic": "respiratory"
   },
@@ -915,13 +1278,19 @@
    "explanation": "When the left ventricle fails, blood backs up into the lungs and fluid leaks into the alveoli. Your notes: left heart failure leads to pulmonary edema.",
    "generated": true,
    "notesRef": "s17#heart-failure",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "3c4a4b9c0c05",
    "topic": "cardiac"
   },
   "mt-a-q071": {
-   "explanation": "A car strikes a small child higher up, at the abdomen and chest, and the child is often thrown and lands head first, injuring the face and head.",
+   "explanation": "A small child tends to face the car, so injuries are frontal: above the knees or pelvis first, then the upper abdomen or chest. Thrown backwards, the head and neck hyperflex, putting the head and face at risk.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 411"
+   ],
    "srcHash": "07a67ca1a9c7",
    "topic": "trauma"
   },
@@ -944,6 +1313,11 @@
    "explanation": "A flail segment moves in against the rest of the chest wall when the patient breathes in, so the chest moves unevenly. Your chest check looks for paradoxical motion.",
    "generated": true,
    "notesRef": "s06#step-5-chest",
+   "slides": [
+    "MED 408",
+    "MED 1005",
+    "56th EMT PAM"
+   ],
    "srcHash": "81aa77b2085f",
    "topic": "trauma"
   },
@@ -951,13 +1325,22 @@
    "explanation": "A high-pitched, musical sound on breathing out is a wheeze from narrowed lower airways. Your notes: stridor is heard on breathing in, from the upper airway.",
    "generated": true,
    "notesRef": "s07#3-questions-to-ask",
+   "slides": [
+    "MED 302",
+    "MED 405",
+    "MED 802"
+   ],
    "srcHash": "e193f236950c",
    "topic": "respiratory"
   },
   "mt-a-q076": {
-   "explanation": "In compensated shock the body still holds BP near normal by raising the pulse and narrowing skin vessels, so skin is cool and capillary refill slow. Falling BP comes later.",
+   "explanation": "This stays the answer for this quiz: cool skin and slow capillary refill fit compensated shock. The slides differ on confusion and drowsiness, which they list as late signs of decompensated shock.",
    "generated": true,
    "notesRef": null,
+   "review": "The official answer includes lethargy and confusion, but MED 403 lists confusion and drowsiness as late signs of decompensated shock.",
+   "slides": [
+    "MED 403"
+   ],
    "srcHash": "423361a670bf",
    "topic": "shock"
   },
@@ -965,6 +1348,10 @@
    "explanation": "Eyes open to pain 2, no verbal response 1, withdraws from pain 4: GCS 2 + 1 + 4 = 7.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "9bd55b10abec",
    "topic": "assessment"
   },
@@ -972,6 +1359,9 @@
    "explanation": "A failed first breath is often just a poor head position, so reposition and try again before treating it as a foreign body. Your notes' MR SOPA starts the same way.",
    "generated": true,
    "notesRef": "s11#bag-valve-mask-bvm",
+   "slides": [
+    "MED 517"
+   ],
    "srcHash": "b7b740c0a509",
    "topic": "airway"
   },
@@ -979,6 +1369,9 @@
    "explanation": "A heavy smoker with frequent infections, a chronic cough, cyanosis and JVD fits chronic bronchitis. Your notes: COPD can lead to right heart failure and distended neck veins.",
    "generated": true,
    "notesRef": "s16#copd-chronic-obstructive-pulmonary-disease-tested",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "be9eb135c998",
    "topic": "respiratory"
   },
@@ -986,6 +1379,9 @@
    "explanation": "The superior and inferior vena cava carry blood from the body into the right atrium. The tricuspid valve is the way out, into the right ventricle.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 203"
+   ],
    "srcHash": "8ea05119b688",
    "topic": "cardiac"
   },
@@ -993,6 +1389,10 @@
    "explanation": "Hypoglycaemia isn't limited to diabetics: your notes list excessive alcohol among its triggers. It usually comes on fast, and hunger is an early sign, not a late one.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 311",
+    "MED 304"
+   ],
    "srcHash": "712d516c8fec",
    "topic": "diabetic"
   },
@@ -1000,6 +1400,9 @@
    "explanation": "Bleeding inside the brain raises pressure in the skull, causing headache, drowsiness, nausea, vomiting and brief loss of consciousness.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 306"
+   ],
    "srcHash": "15c471b12776",
    "topic": "neuro"
   },
@@ -1007,6 +1410,9 @@
    "explanation": "The pulmonary veins bring oxygen-rich blood back from the lungs to the left atrium, which then fills the left ventricle.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 203"
+   ],
    "srcHash": "ed99b81c4449",
    "topic": "cardiac"
   },
@@ -1028,6 +1434,9 @@
    "explanation": "Rule of nines: the front of each arm is 4.5%, so both make 9%, and the chest (upper front of the trunk) is 9%: 18% in all.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "70e3a89d3e17",
    "topic": "burns"
   },
@@ -1035,6 +1444,9 @@
    "explanation": "A partial-thickness (second-degree) burn looks red and mottled, often with blisters, and hurts. Pearly white or charred skin means a full-thickness burn.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "3519201f6e36",
    "topic": "burns"
   },
@@ -1042,6 +1454,10 @@
    "explanation": "Low blood sugar is a common, treatable cause of altered mental status, so check a hypocount. Your notes list altered mental state as a reason to measure.",
    "generated": true,
    "notesRef": "s15#hypocount-blood-glucose",
+   "slides": [
+    "MED 1007",
+    "MED 303"
+   ],
    "srcHash": "b4353ee26fb6",
    "topic": "neuro"
   },
@@ -1056,6 +1472,9 @@
    "explanation": "Bleeding and swelling inside the closed skull push up intracranial pressure, which squeezes the brain. That is the main danger after a blow to the head.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 406"
+   ],
    "srcHash": "6aa5247eadfa",
    "topic": "neuro"
   },
@@ -1063,6 +1482,10 @@
    "explanation": "Your notes: a normal heart rate is 60 to 100 bpm, bradycardia is under 60 and tachycardia is over 100.",
    "generated": true,
    "notesRef": "s11#heart-rate-levels",
+   "slides": [
+    "MED 507",
+    "MED 203"
+   ],
    "srcHash": "c3afd699b3e4",
    "topic": "assessment"
   },
@@ -1070,6 +1493,10 @@
    "explanation": "Childbirth brings a lot of blood and fluid that can splash, so you need full protection: gloves, gown, mask and eye protection.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1001",
+    "MED 309"
+   ],
    "srcHash": "316ad1a257ec",
    "topic": "ops"
   },
@@ -1077,6 +1504,10 @@
    "explanation": "A heart attack diagnosed before is an existing medical condition, so it is past medical history; your notes' P step asks \"What did the doctor say?\" Recurrence compares this episode with past ones.",
    "generated": true,
    "notesRef": "s02#history-of-chief-complaint-sample",
+   "slides": [
+    "MED 1003",
+    "56th EMT PAM"
+   ],
    "srcHash": "a2bd2293bfb0",
    "topic": "assessment"
   },
@@ -1084,6 +1515,10 @@
    "explanation": "Your notes open the airway with a modified jaw thrust when spinal injury is suspected, as it avoids tilting the head. Head tilt chin lift is only for patients with no spinal injury.",
    "generated": true,
    "notesRef": "s01#airway",
+   "slides": [
+    "MED 303",
+    "56th EMT PAM"
+   ],
    "srcHash": "e7662326a9d0",
    "topic": "airway"
   },
@@ -1091,6 +1526,10 @@
    "explanation": "AVPU runs Alert, Verbal, Pain, Unresponsive. Alert means eyes open, responding to your commands and able to communicate with you.",
    "generated": true,
    "notesRef": "s01#loc-avpu-scale",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001"
+   ],
    "srcHash": "f370c169c37f",
    "topic": "assessment"
   },
@@ -1098,6 +1537,10 @@
    "explanation": "In AVPU, V is Verbal: the patient responds only to a louder verbal stimulus. A is Alert, P is Pain and U is Unresponsive.",
    "generated": true,
    "notesRef": "s01#loc-avpu-scale",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001"
+   ],
    "srcHash": "78f0f1c1df65",
    "topic": "assessment"
   },
@@ -1105,6 +1548,10 @@
    "explanation": "Your notes do the rapid body survey in the primary survey, to find life or limb threatening injuries. Chief complaint, history taking and medical history make up the secondary survey.",
    "generated": true,
    "notesRef": "s01#rapid-body-survey",
+   "slides": [
+    "MED 1001",
+    "MED 1003"
+   ],
    "srcHash": "95b9b22e5691",
    "topic": "assessment"
   },
@@ -1113,6 +1560,10 @@
    "generated": true,
    "notesRef": "s01#investigation-vital-signs",
    "review": "The notes take vital signs (with skin colour and condition) inside the primary survey, so by the notes all four items belong to it and none fits \"except\".",
+   "slides": [
+    "MED 303",
+    "MED 1001"
+   ],
    "srcHash": "600f2257b281",
    "topic": "assessment"
   },
@@ -1120,6 +1571,9 @@
    "explanation": "An unstable patient can change quickly, so your notes reassess every 5 minutes. A stable patient is reassessed every 15 minutes.",
    "generated": true,
    "notesRef": "s01#decision-point",
+   "slides": [
+    "56th EMT PAM"
+   ],
    "srcHash": "f4d72037655a",
    "topic": "assessment"
   },
@@ -1127,6 +1581,9 @@
    "explanation": "Your notes reassess a stable patient every 15 minutes. Every 5 minutes is for an unstable patient, who can change quickly.",
    "generated": true,
    "notesRef": "s01#decision-point",
+   "slides": [
+    "56th EMT PAM"
+   ],
    "srcHash": "b64f79b816d2",
    "topic": "assessment"
   },
@@ -1134,6 +1591,10 @@
    "explanation": "The rapid body survey finds life and limb threats. The head-to-toe exam then looks for anything less obvious: your notes do it \"to see if I missed out anything during RBS\".",
    "generated": true,
    "notesRef": "s02#head-to-toe",
+   "slides": [
+    "MED 1005",
+    "56th EMT PAM"
+   ],
    "srcHash": "3f5ecc1c4029",
    "topic": "assessment"
   },
@@ -1141,6 +1602,10 @@
    "explanation": "Your head-to-toe neck step inspects for distended neck veins (JVD) and palpates for tracheal deviation, so you check for both.",
    "generated": true,
    "notesRef": "s06#step-4-neck",
+   "slides": [
+    "MED 1005",
+    "56th EMT PAM"
+   ],
    "srcHash": "7f29b86cccf0",
    "topic": "assessment"
   },
@@ -1148,6 +1613,9 @@
    "explanation": "Paradoxical motion is a chest sign, listed under your chest step. Your abdomen step checks for tenderness, guarding, distension, masses and penetrating injuries.",
    "generated": true,
    "notesRef": "s06#step-6-abdomen",
+   "slides": [
+    "56th EMT PAM"
+   ],
    "srcHash": "39c68a8b8116",
    "topic": "assessment"
   },
@@ -1155,6 +1623,10 @@
    "explanation": "Your lower-limb step checks distal pulses, capillary refill, and sensation and movement. Paradoxical motion is a chest sign of a flail segment.",
    "generated": true,
    "notesRef": "s06#step-8-lower-extremities",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1005"
+   ],
    "srcHash": "8cd828fb29a0",
    "topic": "assessment"
   },
@@ -1162,6 +1634,9 @@
    "explanation": "Your notes give normal adult breathing as 12 to 20 breaths a minute. Under 12 or over 20 counts as inadequate breathing.",
    "generated": true,
    "notesRef": "s16#normal-vs-inadequate-breathing",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "5ab8c07e5e33",
    "topic": "assessment"
   },
@@ -1169,6 +1644,10 @@
    "explanation": "Rescue scene evaluation (WEHM) is part of your primary survey, done before you approach the patient. Chief complaint, medical history and allergies are secondary survey history.",
    "generated": true,
    "notesRef": "s01#rescue-scene-evaluation",
+   "slides": [
+    "MED 1003",
+    "56th EMT PAM"
+   ],
    "srcHash": "6223ca872e49",
    "topic": "assessment"
   },
@@ -1176,6 +1655,9 @@
    "explanation": "Your notes ask whether the patient is compliant and when the last dose was taken, and say to bring the patient's medications to hospital, so all three apply.",
    "generated": true,
    "notesRef": "s02#history-of-chief-complaint-sample",
+   "slides": [
+    "MED 1003"
+   ],
    "srcHash": "52561d94e73a",
    "topic": "assessment"
   },
@@ -1183,6 +1665,10 @@
    "explanation": "Your notes' precipitating factor question asks what the patient was doing when the pain started. What makes it worse is an aggravating factor; a similar episode is recurrence.",
    "generated": true,
    "notesRef": "s04#p-precipitating-factor",
+   "slides": [
+    "MED 1003",
+    "56th EMT PAM"
+   ],
    "srcHash": "259be1d60cf7",
    "topic": "assessment"
   },
@@ -1190,6 +1676,9 @@
    "explanation": "Explain what you are doing, warn her before examining each part, and expose only what you need to see. Removing all her clothing is unnecessary and takes away her dignity.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 316"
+   ],
    "srcHash": "7eb1166fc407",
    "topic": "ops"
   },
@@ -1197,6 +1686,10 @@
    "explanation": "Your notes ask \"What makes it worse?\" for aggravating factors. What the patient was doing is the precipitating factor, and a similar episode is recurrence.",
    "generated": true,
    "notesRef": "s04#a-aggravating-factors",
+   "slides": [
+    "MED 1003",
+    "56th EMT PAM"
+   ],
    "srcHash": "ccf579de2c3c",
    "topic": "assessment"
   },
@@ -1204,6 +1697,9 @@
    "explanation": "The Golden Hour is the first, most critical hour after severe injury, counted from the moment of impact to effective treatment, not from when your treatment starts.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 411"
+   ],
    "srcHash": "1535e95112a1",
    "topic": "trauma"
   },
@@ -1211,6 +1707,10 @@
    "explanation": "Your notes' order is head, neck, chest, abdomen, pelvis, lower limbs, upper limbs, then back, so the lower limbs come before the upper limbs.",
    "generated": true,
    "notesRef": "s06",
+   "slides": [
+    "MED 1005",
+    "56th EMT PAM"
+   ],
    "srcHash": "f8e3dca7419e",
    "topic": "assessment"
   },
@@ -1218,6 +1718,9 @@
    "explanation": "A tight bandage presses on the eye and drives the object deeper. Leave the object in, steady it with gauze, cover it with a cup and secure the dressing without pressure.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 410"
+   ],
    "srcHash": "3a3be7185103",
    "topic": "trauma"
   },
@@ -1225,6 +1728,9 @@
    "explanation": "Leaning back runs blood down the throat, where it is swallowed or can block the airway. Your notes sit the patient up, head down, and pinch the nostrils (nasal alae).",
    "generated": true,
    "notesRef": "s12#oxymetazoline-hcl-nasal-spray-0-05-vasoconstrictor",
+   "slides": [
+    "MED 410"
+   ],
    "srcHash": "9069e241a4f2",
    "topic": "trauma"
   },
@@ -1232,6 +1738,9 @@
    "explanation": "Facial injuries can block the airway, bleed enough to cause shock, and come with cervical spine injury from the same force. The heart lies well away from the face.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 410"
+   ],
    "srcHash": "0a97a9f5f6eb",
    "topic": "trauma"
   },
@@ -1239,6 +1748,9 @@
    "explanation": "Lying face down presses on the injured chest and makes breathing harder. A pillow splint steadies the flail segment, and oxygen supports the patient.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 408"
+   ],
    "srcHash": "6d0436614e34",
    "topic": "trauma"
   },
@@ -1246,6 +1758,10 @@
    "explanation": "10% dextrose raises blood sugar, and your notes give it for hypoglycaemia, so it does nothing for a pneumothorax. Oxygen, a position of comfort and rapid transport do help.",
    "generated": true,
    "notesRef": "s12#10-dextrose-hypertonic-solution",
+   "slides": [
+    "MED 408",
+    "MED 1007"
+   ],
    "srcHash": "1509c2c59029",
    "topic": "trauma"
   },
@@ -1253,6 +1769,9 @@
    "explanation": "An open pneumothorax brings a sucking, bubbling wound, rapid laboured breathing and coughed-up blood (hemoptysis). Blood pressure tends to fall with shock, not rise.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 408"
+   ],
    "srcHash": "9eb6ed4e2a72",
    "topic": "trauma"
   },
@@ -1260,6 +1779,10 @@
    "explanation": "Stabilise the rod with bulky dressing, assist breathing with a BVM if needed and transport at once. Bent knees are a position for abdominal injuries, not a chest wound.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 408",
+    "MED 409"
+   ],
    "srcHash": "945dc00bc864",
    "topic": "trauma"
   },
@@ -1267,6 +1790,10 @@
    "explanation": "Your notes' ENSAPA starts by establishing a neutral position. If moving the head meets resistance or pain, stop and immobilise it as found: forcing it risks the spinal cord.",
    "generated": true,
    "notesRef": "s01#c-collar-application-ensapa",
+   "slides": [
+    "MED 509",
+    "56th EMT PAM"
+   ],
    "srcHash": "5424362b70ad",
    "topic": "trauma"
   },
@@ -1274,6 +1801,10 @@
    "explanation": "Eyes open to pain scores 2, inappropriate words 3 and withdrawing from pain 4: 2 + 3 + 4 = 9.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "ed9bd81d59d0",
    "topic": "assessment"
   },
@@ -1281,6 +1812,10 @@
    "explanation": "Eyes open to pain scores 2, confused 4 and withdrawing from pain 4: 2 + 4 + 4 = 10.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "2c26783cd063",
    "topic": "assessment"
   },
@@ -1288,14 +1823,23 @@
    "explanation": "Cyanosis and a breathing rate over 30 are signs of impending respiratory failure in your notes, and those patients get oxygen through a BVM.",
    "generated": true,
    "notesRef": "s11#bag-valve-mask-bvm",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1007",
+    "MED 1001"
+   ],
    "srcHash": "a15e85bbec7e",
    "topic": "respiratory"
   },
   "mt-b-q032": {
-   "explanation": "With SpO2 at 92%, a little under 95%, the bank picks a simple face mask (6 to 8 L/min). Your notes, though, count a rate over 30 as impending respiratory failure, which takes a BVM.",
+   "explanation": "For this quiz the answer is a simple face mask at 6 to 8 L/min, but the slides give a breathless patient without COPD high-flow oxygen and treat a breathing rate over 30 as unstable.",
    "generated": true,
    "notesRef": "s11#bag-valve-mask-bvm",
-   "review": "The notes list a respiratory rate over 30 as a sign of impending respiratory failure, which they treat with a BVM, so the bank's simple face mask conflicts with them.",
+   "review": "The notes list a respiratory rate over 30 as a sign of impending respiratory failure, which they treat with a BVM, so the bank's simple face mask conflicts with them. The official answer is a simple face mask, but MED 302 gives breathless patients without COPD high-flow oxygen and MED 1001 lists a rate over 30 as unstable.",
+   "slides": [
+    "MED 302",
+    "MED 1001"
+   ],
    "srcHash": "059cde5250b2",
    "topic": "respiratory"
   },
@@ -1303,6 +1847,10 @@
    "explanation": "Vomitus blocks the airway and can be inhaled, so clear it first: your notes use suction for liquids. An OPA (Guedel airway) goes in only once the airway is clear.",
    "generated": true,
    "notesRef": "s01#airway",
+   "slides": [
+    "MED 502",
+    "56th EMT PAM"
+   ],
    "srcHash": "80e4ac2fc319",
    "topic": "airway"
   },
@@ -1310,6 +1858,11 @@
    "explanation": "Your notes do head-to-toe at scene only for stable cases getting Entonox. An unconscious patient still needs a blood glucose check, high-flow oxygen and an airway.",
    "generated": true,
    "notesRef": "s02#head-to-toe",
+   "slides": [
+    "56th EMT PAM",
+    "MED 303",
+    "MED 302"
+   ],
    "srcHash": "a987b206939e",
    "topic": "assessment"
   },
@@ -1317,6 +1870,9 @@
    "explanation": "Level of consciousness reflects brain function most directly, so it is the best guide to how badly the brain is injured and whether it is getting worse.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 406"
+   ],
    "srcHash": "be8c21f437cf",
    "topic": "neuro"
   },
@@ -1324,6 +1880,9 @@
    "explanation": "Rising pressure in the skull pushes BP up to keep blood reaching the brain, and the pulse slows in response (Cushing's reflex). Your notes link a wide pulse pressure (over 60) to head injury.",
    "generated": true,
    "notesRef": "s15#blood-pressure",
+   "slides": [
+    "MED 406"
+   ],
    "srcHash": "459d36de1130",
    "topic": "neuro"
   },
@@ -1331,6 +1890,9 @@
    "explanation": "By the rule of nines each arm is 9%, and a thigh is about half of an 18% leg, so 9%: 9 + 9 + 9 = 27%.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "c9a395bf3872",
    "topic": "burns"
   },
@@ -1338,6 +1900,9 @@
    "explanation": "An object through the cheek can block the airway, and you can press on the bleeding from inside and outside the cheek, so it may be removed. Other impaled objects are stabilised in place.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 410"
+   ],
    "srcHash": "9a01e81d9f69",
    "topic": "trauma"
   },
@@ -1345,6 +1910,10 @@
    "explanation": "Your notes list muffled heart sounds, JVD and a narrowing pulse pressure for tamponade. Tracheal deviation is a sign of tension pneumothorax.",
    "generated": true,
    "notesRef": "s17#cardiac-tamponade-s-s-important-tested",
+   "slides": [
+    "MED 301",
+    "MED 408"
+   ],
    "srcHash": "0a172f1a6fc1",
    "topic": "cardiac"
   },
@@ -1352,6 +1921,9 @@
    "explanation": "Someone pulled from a burning basement who responds only to pain may have inhaled smoke and hot gases, which swell the airway. Airway and breathing come before shock, dressings and infection.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "c1dec18b0d84",
    "topic": "burns"
   },
@@ -1359,6 +1931,9 @@
    "explanation": "Your notes give a normal capillary refill time as under 2 seconds. Slower refill suggests poor circulation.",
    "generated": true,
    "notesRef": "s01#investigation-vital-signs",
+   "slides": [
+    "MED 315"
+   ],
    "srcHash": "7b41954ca1b3",
    "topic": "assessment"
   },
@@ -1366,6 +1941,9 @@
    "explanation": "The eyes move together, so covering both stops the injured eye moving with the good one. A loose dressing avoids pressing on the ruptured globe.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 410"
+   ],
    "srcHash": "3a54496c5668",
    "topic": "trauma"
   },
@@ -1373,6 +1951,10 @@
    "explanation": "Eyes open to voice scores 3, disorientated (confused) 4 and localising pain 5: 3 + 4 + 5 = 12.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "7cefda4c36f3",
    "topic": "assessment"
   },
@@ -1387,6 +1969,11 @@
    "explanation": "Your notes start bleeding control with direct pressure. On the neck, press carefully over the wound: a tourniquet or tight bandage would choke the airway and cut blood to the brain.",
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
+   "slides": [
+    "MED 416",
+    "MED 402",
+    "56th EMT PAM"
+   ],
    "srcHash": "671631c50824",
    "topic": "trauma"
   },
@@ -1394,6 +1981,10 @@
    "explanation": "A collar alone does not stop the head moving, so manual stabilisation continues until the patient is secured on a spinal board. Your notes say the buddy must not let go of the head grip.",
    "generated": true,
    "notesRef": "s01#delicate-spine",
+   "slides": [
+    "MED 509",
+    "MED 412"
+   ],
    "srcHash": "2647a19248c7",
    "topic": "trauma"
   },
@@ -1401,6 +1992,10 @@
    "explanation": "Neck pain after a road crash means possible spinal injury: your notes keep the head grip on and apply a C-collar. Never ask the patient to turn the neck.",
    "generated": true,
    "notesRef": "s01#delicate-spine",
+   "slides": [
+    "MED 412",
+    "MED 1005"
+   ],
    "srcHash": "032413d15149",
    "topic": "trauma"
   },
@@ -1408,6 +2003,10 @@
    "explanation": "Your notes arrest bleeding with direct pressure and elevation, then a dressing. A tourniquet is the last resort, not the first step for a forearm cut.",
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
+   "slides": [
+    "MED 416",
+    "MED 402"
+   ],
    "srcHash": "d99f2f6906f8",
    "topic": "trauma"
   },
@@ -1415,6 +2014,10 @@
    "explanation": "Never remove or push in an impaled knife: it may be plugging the bleeding. Pad around it with a doughnut ring so it cannot move, then bandage it in place.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 411",
+    "MED 408"
+   ],
    "srcHash": "e3fd4a65c886",
    "topic": "trauma"
   },
@@ -1422,6 +2025,10 @@
    "explanation": "A collar fits properly only with the head and body in a neutral line, which is easiest with the patient supine (face up). Your notes' ENSAPA starts by establishing a neutral position.",
    "generated": true,
    "notesRef": "s01#c-collar-application-ensapa",
+   "slides": [
+    "MED 509",
+    "56th EMT PAM"
+   ],
    "srcHash": "639d33035b9e",
    "topic": "trauma"
   },
@@ -1429,6 +2036,9 @@
    "explanation": "Never push protruding bone ends back in or press on them. A doughnut ring around the bone ends lets you bandage the wound without pressing on the bone.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "6affdc39d672",
    "topic": "trauma"
   },
@@ -1436,6 +2046,9 @@
    "explanation": "Opening the sterile pad right over the wound means it touches nothing else first, so the pad stays uncontaminated. That lowers infection risk but cannot guarantee no infection.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 514"
+   ],
    "srcHash": "7af0e24c09de",
    "topic": "trauma"
   },
@@ -1443,6 +2056,10 @@
    "explanation": "Forcing a broken forearm straight can tear vessels and nerves or push bone through the skin. Your notes check pulses before and after splinting and realign at most twice.",
    "generated": true,
    "notesRef": "s01#immobilization",
+   "slides": [
+    "56th EMT PAM",
+    "MED 416"
+   ],
    "srcHash": "b5f8c9ce64f7",
    "topic": "trauma"
   },
@@ -1450,6 +2067,10 @@
    "explanation": "Bleeding is the threat to the patient, so arrest it first; then look for the fingers. Your notes start with direct pressure and keep a tourniquet as the last resort.",
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
+   "slides": [
+    "56th EMT PAM",
+    "MED 402"
+   ],
    "srcHash": "c619e58451a4",
    "topic": "trauma"
   },
@@ -1457,6 +2078,9 @@
    "explanation": "Wrap the fingers in moist dressing, seal them in a clean bag, then put that bag in ice and water. Direct contact with ice or water damages the tissue.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 410"
+   ],
    "srcHash": "b4db2f916dbc",
    "topic": "trauma"
   },
@@ -1464,6 +2088,9 @@
    "explanation": "Pushing organs back risks infection and further injury. A moist dressing stops them drying out, and a plastic sheet over it keeps in moisture and warmth.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "3ea98ccbc93a",
    "topic": "trauma"
   },
@@ -1471,6 +2098,10 @@
    "explanation": "Heavy blood loss leaves less blood for the skin and muscles, so the patient turns pale and weak. Your skin check looks for cool, pale, clammy skin.",
    "generated": true,
    "notesRef": "s01#investigation-vital-signs",
+   "slides": [
+    "MED 402",
+    "MED 403"
+   ],
    "srcHash": "8e4bb9f607e4",
    "topic": "shock"
   },
@@ -1485,6 +2116,9 @@
    "explanation": "Your notes have the buddy hold a head grip while the C-collar goes on: it keeps the head neutral and leaves the neck free for the collar.",
    "generated": true,
    "notesRef": "s01#delicate-spine",
+   "slides": [
+    "MED 509"
+   ],
    "srcHash": "146e4a8e5a03",
    "topic": "trauma"
   },
@@ -1506,6 +2140,9 @@
    "explanation": "A fractured limb is painful, tender, swollen and often deformed, and moving it hurts, so full range of motion is not expected.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "fb776a364cb5",
    "topic": "trauma"
   },
@@ -1513,6 +2150,10 @@
    "explanation": "Over a joint, bone and tendon shield the artery, so your notes say avoid the joint area. Place the tourniquet at least 5 cm proximal to the wound, uncovered, with the time on it.",
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
+   "slides": [
+    "MED 402",
+    "56th EMT PAM"
+   ],
    "srcHash": "9752c9441c1a",
    "topic": "trauma"
   },
@@ -1520,6 +2161,10 @@
    "explanation": "Over a joint, bone and tendon shield the artery from a tourniquet, so your notes say avoid the joint area. Put it at least 5 cm proximal to the wound, visible, with the time written on it.",
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
+   "slides": [
+    "MED 402",
+    "56th EMT PAM"
+   ],
    "srcHash": "14b37f061a47",
    "topic": "trauma"
   },
@@ -1527,6 +2172,9 @@
    "explanation": "A laceration is a tear in the skin, so its edges are jagged and uneven. A clean cut with straight edges is an incision, and a scraped top layer is an abrasion.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "f9e9ebb9a41f",
    "topic": "trauma"
   },
@@ -1535,6 +2183,9 @@
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
    "review": "The notes' bleeding sequence (direct pressure, elevation, secondary dressing, then a C.A.T. tourniquet) has no pressure-point step, so by the notes the tourniquet comes next.",
+   "slides": [
+    "MED 402"
+   ],
    "srcHash": "391c3686acd3",
    "topic": "trauma"
   },
@@ -1542,6 +2193,9 @@
    "explanation": "Haemorrhage is loss of blood from the vessels, internally and/or externally, and a heavy one quickly leads to shock. Blood pooled in the tissues is a bruise or haematoma.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 402"
+   ],
    "srcHash": "24335895edf8",
    "topic": "trauma"
   },
@@ -1549,6 +2203,9 @@
    "explanation": "An incision is a clean cut from a sharp edge such as a knife or glass, so its edges are straight. Jagged, uneven edges mark a laceration; a scraped top layer is an abrasion.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "b4b0224003cf",
    "topic": "trauma"
   },
@@ -1556,14 +2213,20 @@
    "explanation": "Arteries carry blood under high pressure straight from the heart, so arterial bleeding spurts in time with the pulse and is bright red.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 203"
+   ],
    "srcHash": "f01d1c8f5c35",
    "topic": "trauma"
   },
   "mt-b-q070": {
-   "explanation": "The bank describes venous bleeding as oozing: veins carry dark red blood back to the heart under low pressure, so it wells up instead of spurting like an artery.",
+   "explanation": "Oozing is the answer for this quiz, but the slides differ: they teach that veins bleed dark red in a steady stream, and that oozing comes from capillaries.",
    "generated": true,
    "notesRef": null,
-   "review": "Venous bleeding is usually taught as a steady flow of dark red blood, with oozing kept for capillary bleeding, so \"constant slow flow\" fits at least as well as the key.",
+   "review": "Venous bleeding is usually taught as a steady flow of dark red blood, with oozing kept for capillary bleeding, so \"constant slow flow\" fits at least as well as the key. The official answer says venous bleeding oozes, but MED 203 says veins flow in a steady stream and capillaries ooze.",
+   "slides": [
+    "MED 203"
+   ],
    "srcHash": "19dac83c9969",
    "topic": "trauma"
   },
@@ -1578,6 +2241,10 @@
    "explanation": "A head grip holds the head still in line with the body; your notes use it to stabilise the head when spinal injury is possible. Turning the casualty and changing grips use other grips.",
    "generated": true,
    "notesRef": "s01#delicate-spine",
+   "slides": [
+    "MED 416",
+    "MED 509"
+   ],
    "srcHash": "61d92f828869",
    "topic": "trauma"
   },
@@ -1585,6 +2252,9 @@
    "explanation": "The bank uses the spinal sternal grip to keep a sitting casualty's head and spine in line. The head grip stabilises the head and the sternum grip is for changing grips.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 407"
+   ],
    "srcHash": "ac4a06c74644",
    "topic": "trauma"
   },
@@ -1599,6 +2269,10 @@
    "explanation": "Your notes say the rapid body survey must take less than 30 seconds: it is a quick sweep for life or limb threatening injuries, not a full exam.",
    "generated": true,
    "notesRef": "s01#rapid-body-survey",
+   "slides": [
+    "MED 1001",
+    "56th EMT PAM"
+   ],
    "srcHash": "16e5e47b28ad",
    "topic": "assessment"
   },
@@ -1613,6 +2287,9 @@
    "explanation": "In a continuous seizure the patient cannot breathe effectively, so oxygen falls (hypoxia) and breathing may stop (apnoea), which can be fatal.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 305"
+   ],
    "srcHash": "ac76f9a264bb",
    "topic": "neuro"
   },
@@ -1620,6 +2297,9 @@
    "explanation": "Seizures start in the brain, and head trauma, infection and bleeding in the brain can all trigger them. A pneumothorax is air in the chest that collapses a lung.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 305"
+   ],
    "srcHash": "32a61de0936e",
    "topic": "neuro"
   },
@@ -1627,6 +2307,10 @@
    "explanation": "The GCS scores eye opening (the visual response), best verbal response and best motor response. Respiratory rate is a vital sign, not part of the score.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "ec31437fe9e7",
    "topic": "assessment"
   },
@@ -1634,6 +2318,10 @@
    "explanation": "The RBS is a fast head-to-back sweep for life or limb threats, and your notes give it under 30 seconds. From approaching the patient to finishing the RBS takes 3 minutes at most.",
    "generated": true,
    "notesRef": "s01#rapid-body-survey",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001"
+   ],
    "srcHash": "921e4bac5376",
    "topic": "assessment"
   },
@@ -1641,6 +2329,10 @@
    "explanation": "Your notes' breathing check (NTUCP) looks for accessory muscle use and cyanosis, and restlessness shows a brain short of oxygen. A fat embolism can cause hypoxia but is not a sign of it.",
    "generated": true,
    "notesRef": "s01#breathing",
+   "slides": [
+    "MED 204",
+    "56th EMT PAM"
+   ],
    "srcHash": "da4ed73e35dd",
    "topic": "respiratory"
   },
@@ -1655,6 +2347,10 @@
    "explanation": "The brachial artery in the upper arm supplies the forearm and wrist, so pressing it against the bone slows bleeding from the wrist.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 402",
+    "MED 203"
+   ],
    "srcHash": "86e9ff7e1449",
    "topic": "trauma"
   },
@@ -1662,13 +2358,20 @@
    "explanation": "The femoral artery supplies the leg, so pressing it in the groin slows bleeding from the thigh. The popliteal point behind the knee is too far down for a thigh wound.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 402",
+    "MED 203"
+   ],
    "srcHash": "7e1e15a954ed",
    "topic": "trauma"
   },
   "mt-b-q085": {
-   "explanation": "A haematoma is a pocket of pooled blood under the skin, often a raised swelling. A contusion (bruise) is blood seeping into the tissues, seen as discolouration.",
+   "explanation": "A haematoma is a closed wound: ruptured arteries bleed heavily under unbroken skin, causing massive swelling. A contusion has minimal bleeding and swelling, though both are commonly called bruises.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "d707c752b347",
    "topic": "trauma"
   },
@@ -1676,6 +2379,9 @@
    "explanation": "A third-degree burn destroys every skin layer and its nerves, so it is painless, leathery or charred, and heals only with scarring. A large one can cause shock and hypotension.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "97b6cf26306f",
    "topic": "burns"
   },
@@ -1683,6 +2389,9 @@
    "explanation": "Full-thickness burns over the whole body are the deepest and most extensive possible, so they are the most serious. Burns around the mouth and nose are serious too, as they threaten the airway.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "c686a5e9a281",
    "topic": "burns"
   },
@@ -1690,6 +2399,9 @@
    "explanation": "A spinal cord injury can upset the nerve control of blood vessels, leaving a persistent erection (priapism), so in a male patient it can point to spinal injury.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 407"
+   ],
    "srcHash": "e8230d19705c",
    "topic": "trauma"
   },
@@ -1705,6 +2417,9 @@
    "explanation": "Fat from the marrow of a broken long bone, such as the femur, can enter the bloodstream and block vessels in the lungs: a fat embolism.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "e439a6d59885",
    "topic": "trauma"
   },
@@ -1712,6 +2427,10 @@
    "explanation": "Bruising behind the ear (Battle's sign) and around the eyes (raccoon eyes) are the classic signs of a base of skull fracture. Your head and face check looks for both.",
    "generated": true,
    "notesRef": "s06#step-3-head-and-face",
+   "slides": [
+    "MED 406",
+    "56th EMT PAM"
+   ],
    "srcHash": "ddde2c46fa60",
    "topic": "trauma"
   },
@@ -1726,6 +2445,11 @@
    "explanation": "Your notes list breathlessness and pallor among the signs of CCF, and a failing heart can also cause chest pain. Fever points to an infection instead.",
    "generated": true,
    "notesRef": "s05#5-congestive-cardiac-failure-ccf-stay-treat",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM",
+    "MED 301"
+   ],
    "srcHash": "cb9671200209",
    "topic": "cardiac"
   },
@@ -1733,6 +2457,9 @@
    "explanation": "The damaged heart cannot pump enough, so BP falls, and the body compensates with a fast pulse and breathing. Your notes list pale cold skin, rapid shallow breathing and falling BP.",
    "generated": true,
    "notesRef": "s17#cardiogenic-shock",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "b0c05ce14575",
    "topic": "shock"
   },
@@ -1740,6 +2467,9 @@
    "explanation": "A TIA is a brief loss of blood flow to part of the brain, so its signs are neurological, like numbness, giddiness and one-sided paralysis, and they soon pass. Constipation is not one.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 306"
+   ],
    "srcHash": "2c6d61c0b22c",
    "topic": "neuro"
   },
@@ -1754,6 +2484,10 @@
    "explanation": "Diabetes mellitus is a lack of insulin, or the body not responding to it, so sugar cannot get into the cells and builds up in the blood.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 304",
+    "MED 207"
+   ],
    "srcHash": "93248deb71e3",
    "topic": "diabetic"
   },
@@ -1761,6 +2495,9 @@
    "explanation": "Frequent urination, increased thirst and increased appetite together are the classic signs of high blood sugar. Your notes list low-sugar signs such as AMS, nervousness, tachycardia and cold clammy skin.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 304"
+   ],
    "srcHash": "c561698663d7",
    "topic": "diabetic"
   },
@@ -1769,6 +2506,11 @@
    "generated": true,
    "notesRef": "s05#1-altered-mental-state-load-go",
    "review": "The notes' Altered Mental State protocol lists insulin shock and treats it with IV normal saline, so by the notes saline is part of this patient's care.",
+   "slides": [
+    "MED 1007",
+    "MED 304",
+    "MED 303"
+   ],
    "srcHash": "5745a4ec97a7",
    "topic": "diabetic"
   },
@@ -1776,6 +2518,10 @@
    "explanation": "Your notes call over 10 mmol/L hyperglycaemia, and 32.5 is far higher, so 10% dextrose would only add sugar. Saline replaces the fluid lost through heavy urination.",
    "generated": true,
    "notesRef": "s15#hypocount-blood-glucose",
+   "slides": [
+    "MED 1007",
+    "MED 304"
+   ],
    "srcHash": "2db76602e76f",
    "topic": "diabetic"
   },
@@ -1783,6 +2529,9 @@
    "explanation": "Your notes list insulin overdose, missed meals, too much exercise, alcohol and vomiting as causes of low sugar. Eating more carbohydrate raises blood sugar instead.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 304"
+   ],
    "srcHash": "b048aa9ec8fe",
    "topic": "diabetic"
   },
@@ -1790,6 +2539,10 @@
    "explanation": "Allergic reactions show in the skin (hives, itching) and the gut (nausea, vomiting) and can tighten the airway. Chest pain points to the heart instead.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1007",
+    "MED 308"
+   ],
    "srcHash": "5498f464d595",
    "topic": "shock"
   },
@@ -1797,6 +2550,9 @@
    "explanation": "An allergic reaction is triggered by an antigen, the foreign substance the immune system reacts to; a medication is only one possible antigen. Antibodies are what the body makes in response.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 308"
+   ],
    "srcHash": "a66c5d93cf63",
    "topic": "shock"
   },
@@ -1805,6 +2561,10 @@
    "generated": true,
    "notesRef": "s15#hypocount-blood-glucose",
    "review": "The notes check a hypocount on all patients (A.B.E.H.) and list giddiness, which this patient has, as a reason to measure, so by the notes the glucose check is part of care, not the exception.",
+   "slides": [
+    "MED 1007",
+    "MED 308"
+   ],
    "srcHash": "d9b35e809662",
    "topic": "shock"
   },
@@ -1812,6 +2572,9 @@
    "explanation": "All three fit: your notes give salbutamol for anaphylaxis with wheezing and saline for signs of shock, and cardiac monitoring tracks the heart as the reaction pulls BP down.",
    "generated": true,
    "notesRef": "s12#salbutamol-albuterol-short-acting-beta-agonist-saba",
+   "slides": [
+    "MED 308"
+   ],
    "srcHash": "bcf949f5e483",
    "topic": "shock"
   },
@@ -1819,6 +2582,10 @@
    "explanation": "Hollow organs are tubes or sacs that carry or hold contents, like the intestines, stomach and bladder. The liver and kidneys are solid organs, and so is the brain.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 314",
+    "MED 409"
+   ],
    "srcHash": "546d1ae13175",
    "topic": "trauma"
   },
@@ -1826,14 +2593,23 @@
    "explanation": "Solid organs such as the liver, spleen and kidneys are dense and full of blood, so they bleed heavily when injured. The stomach and oesophagus are hollow, and the lungs are air-filled.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 314",
+    "MED 409"
+   ],
    "srcHash": "c0d87e4f23bd",
    "topic": "trauma"
   },
   "mt-b-q108": {
-   "explanation": "Heat stroke is a cooling emergency: rapid cooling, high-flow oxygen and IV saline treat it, and blood sugar is not the problem. Your notes, though, check a hypocount on altered mental state.",
+   "explanation": "Glucose monitoring is the exception for this quiz, and the heat stroke slides omit it. Other slides differ: the PAM checks a hypocount on all patients, the protocols deck only if unconscious or in altered mental state.",
    "generated": true,
    "notesRef": "s15#hypocount-blood-glucose",
-   "review": "The notes check a hypocount on all patients (A.B.E.H.) and on any altered mental state, which heat stroke brings, so by the notes the glucose check is part of care, not the exception.",
+   "review": "The notes check a hypocount on all patients (A.B.E.H.) and on any altered mental state, which heat stroke brings, so by the notes the glucose check is part of care, not the exception. The official answer excludes glucose checks, but the 56th EMT PAM does a hypocount on all patients and MED 1007 only if unconscious or in altered mental state.",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1007",
+    "MED 307"
+   ],
    "srcHash": "9b8560db05e2",
    "topic": "shock"
   },
@@ -1841,6 +2617,10 @@
    "explanation": "Entonox gas expands in trapped air, a risk with the air pockets of COPD lungs and facial fractures, and it dulls consciousness, clouding a head injury. Asthma is not a contraindication.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1007",
+    "MED 609"
+   ],
    "srcHash": "f6cef87953d1",
    "topic": "drugs"
   },
@@ -1848,6 +2628,9 @@
    "explanation": "Your notes' AEIOU-TIPS list for altered mental state includes trauma, overdose and insulin shock (hypoglycaemia). Antibiotics are not among the causes.",
    "generated": true,
    "notesRef": "s05#1-altered-mental-state-load-go",
+   "slides": [
+    "MED 303"
+   ],
    "srcHash": "0273638f558c",
    "topic": "neuro"
   },
@@ -1855,6 +2638,9 @@
    "explanation": "A small facial cut with no other injury threatens neither life nor limb, so the boy is stable. A 5 m fall, a tension pneumothorax and an evisceration are all unstable.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1002"
+   ],
    "srcHash": "dcfb1f8a16d7",
    "topic": "assessment"
   },
@@ -1862,6 +2648,9 @@
    "explanation": "Your notes measure the OPA from the tip of the earlobe to the corner of the mouth, so it reaches the back of the throat without going too deep.",
    "generated": true,
    "notesRef": "s01#airway",
+   "slides": [
+    "56th EMT PAM"
+   ],
    "srcHash": "5f18b2dd3d83",
    "topic": "airway"
   },
@@ -1869,6 +2658,9 @@
    "explanation": "In dry drowning, water touching the larynx makes it clamp shut (laryngospasm), so little water reaches the lungs, but no air does either.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 415"
+   ],
    "srcHash": "97041f6de1b6",
    "topic": "respiratory"
   },
@@ -1876,6 +2668,9 @@
    "explanation": "Your notes limit each suction to 10 seconds, as suction also takes away oxygen. They also measure the catheter, pre-oxygenate and suction in a circular motion.",
    "generated": true,
    "notesRef": "s13#lsu-portable-suction-unit",
+   "slides": [
+    "MED 502"
+   ],
    "srcHash": "454cbba1e2ae",
    "topic": "airway"
   },
@@ -1883,6 +2678,9 @@
    "explanation": "Nasal cannula runs at 2 to 4 L/min for about 24 to 45% oxygen. 6 to 8 L/min is the simple face mask.",
    "generated": true,
    "notesRef": "s11#oxygen-masks",
+   "slides": [
+    "MED 502"
+   ],
    "srcHash": "c1f13f0d7ea2",
    "topic": "respiratory"
   },
@@ -1890,13 +2688,22 @@
    "explanation": "Your notes run a non-rebreather mask at 10 to 15 L/min for 90 to 100% oxygen. 6 to 8 L/min is the simple face mask, and 2 to 4 L/min the nasal cannula.",
    "generated": true,
    "notesRef": "s11#oxygen-masks",
+   "slides": [
+    "MED 502",
+    "MED 1001"
+   ],
    "srcHash": "27969fb84bfd",
    "topic": "respiratory"
   },
   "mt-b-q117": {
-   "explanation": "A simple face mask runs at 6 to 8 L/min. The bank gives it 25 to 70% oxygen; your notes put it at 40 to 60%.",
+   "explanation": "For this quiz a simple face mask gives 25 to 70% oxygen at 6 to 8 L/min. The slides differ: MED 501 says 40 to 60%, as your notes do, and MED 502 says 35 to 70%.",
    "generated": true,
    "notesRef": "s11#oxygen-masks",
+   "review": "The official answer says 25 to 70%, but MED 501 gives the simple face mask 40 to 60% and MED 502 gives 35 to 70%.",
+   "slides": [
+    "MED 501",
+    "MED 502"
+   ],
    "srcHash": "ee100871cdd0",
    "topic": "respiratory"
   },
@@ -1904,6 +2711,9 @@
    "explanation": "Broken ribs hurt, the loose segment moves in as the chest rises (paradoxical breathing), and breathing becomes a struggle, so all three fit. Your chest check looks for paradoxical motion.",
    "generated": true,
    "notesRef": "s06#step-5-chest",
+   "slides": [
+    "MED 408"
+   ],
    "srcHash": "e82b7e65ab02",
    "topic": "trauma"
   },
@@ -1911,6 +2721,10 @@
    "explanation": "Your notes give 10% dextrose for hypoglycaemia, not injury. Bent knees ease the abdomen, nothing by mouth prepares for surgery, and vital signs every 5 minutes suit an unstable patient.",
    "generated": true,
    "notesRef": "s12#10-dextrose-hypertonic-solution",
+   "slides": [
+    "MED 409",
+    "MED 1007"
+   ],
    "srcHash": "f735f7b30db0",
    "topic": "trauma"
   },
@@ -1918,13 +2732,21 @@
    "explanation": "A bulky dressing steadies the flail segment, and slow deep breaths keep air moving despite the pain. Your notes give all trauma patients high-flow oxygen, so all three apply.",
    "generated": true,
    "notesRef": "s11#oxygen-guidelines",
+   "slides": [
+    "MED 408",
+    "MED 1001"
+   ],
    "srcHash": "452571b1d795",
    "topic": "trauma"
   },
   "mt-b-q121": {
-   "explanation": "A three-sided occlusive dressing, taped after the patient breathes out, stops air being sucked in but lets it escape. Your notes give all trauma patients high-flow oxygen, so all three apply.",
+   "explanation": "Seal the wound with an occlusive dressing taped on 3 sides, adding the 4th tape after the patient breathes out or coughs hard. High-flow oxygen and a position of comfort also apply, so all three are right.",
    "generated": true,
    "notesRef": "s11#oxygen-guidelines",
+   "slides": [
+    "MED 408",
+    "MED 1001"
+   ],
    "srcHash": "fae165b08906",
    "topic": "trauma"
   },
@@ -1932,6 +2754,10 @@
    "explanation": "Air sucked through the chest wound bubbles, the collapsing lung makes breathing rapid and shallow, and falling oxygen brings cyanosis. Your chest check looks for a sucking chest wound.",
    "generated": true,
    "notesRef": "s06#step-5-chest",
+   "slides": [
+    "MED 408",
+    "56th EMT PAM"
+   ],
    "srcHash": "5cf7e48e8a3c",
    "topic": "trauma"
   },
@@ -1939,6 +2765,9 @@
    "explanation": "A burn's severity depends on how deep it goes and how much of the body it covers, so depth and extent are judged together. The percentage burned measures extent only.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "a3500e6d1f31",
    "topic": "burns"
   },
@@ -1946,6 +2775,9 @@
    "explanation": "Your notes use an IV to replace fluid and as a lifeline for emergency drugs, and an IV line can also carry blood products, so all three apply.",
    "generated": true,
    "notesRef": "s18#why-iv",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "2089ebe79903",
    "topic": "iv"
   },
@@ -1953,6 +2785,10 @@
    "explanation": "Gagging means the patient will not tolerate the OPA and may vomit, so ease it out, outward and slightly down along its curve. Your notes allow one more try at the airway recheck.",
    "generated": true,
    "notesRef": "s01#airway-recheck",
+   "slides": [
+    "MED 502",
+    "56th EMT PAM"
+   ],
    "srcHash": "a94f1a013cf4",
    "topic": "airway"
   },
@@ -1960,6 +2796,9 @@
    "explanation": "Your notes define infiltration as fluid leaking into the tissue, from a dislodged cannula or a vein punctured through. Foreign proteins cause a pyrogenic reaction; irritating fluid causes thrombophlebitis.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "71120d848eb2",
    "topic": "iv"
   },
@@ -1967,6 +2806,9 @@
    "explanation": "Your notes put circulatory overload down to too much fluid given too fast, bringing distended neck veins, crackles and breathlessness.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "f5093abb4f5b",
    "topic": "iv"
   },
@@ -1974,6 +2816,9 @@
    "explanation": "Your notes: the needle shears off the catheter tip when it is pulled back and re-inserted. Never re-insert the needle; use a new one.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "665faee95dc9",
    "topic": "iv"
   },
@@ -1981,6 +2826,9 @@
    "explanation": "Your notes: a pyrogenic reaction is fever from foreign proteins (infection), with chills, backache and headache. Leaking fluid is infiltration, and too much fluid is circulatory overload.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "53da15adbef2",
    "topic": "iv"
   },
@@ -1988,6 +2836,9 @@
    "explanation": "Your notes: thrombophlebitis is a vein inflamed by a clot, from an IV left at one site too long or an irritating fluid. It shows as pain, redness and a bulging vein.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "f09a15b856b0",
    "topic": "iv"
   },
@@ -1995,6 +2846,9 @@
    "explanation": "A stroke can stop a patient guarding their own airway or feeling a weak limb, so care covers all three: keep the airway open, give high-flow oxygen to the injured brain, and protect the paralysed limbs.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 306"
+   ],
    "srcHash": "d752e6e561e7",
    "topic": "neuro"
   },
@@ -2002,6 +2856,9 @@
    "explanation": "An air embolism is air getting into the vein. Your notes say as little as 20 cc can cause collapse, so never let the bag run dry.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "03cd7fc82f0b",
    "topic": "iv"
   },
@@ -2009,6 +2866,9 @@
    "explanation": "Abdominal injury can cause vomiting, pain that worsens with any movement, and difficulty breathing, because moving the diaphragm over injured organs hurts.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 409"
+   ],
    "srcHash": "3ef42236637a",
    "topic": "trauma"
   },
@@ -2016,6 +2876,9 @@
    "explanation": "Your notes check that the solution is the correct fluid, in date, sealed and free of leaks, sediment or discolouration, and that the admin set is in date. The brand doesn't matter.",
    "generated": true,
    "notesRef": "s18#preparing-the-iv-line",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "106d2f8133b2",
    "topic": "iv"
   },
@@ -2023,6 +2886,9 @@
    "explanation": "Pericarditis, inflammation of the sac around the heart, is not an IV complication. Your notes' list includes infiltration, circulatory overload and thrombophlebitis.",
    "generated": true,
    "notesRef": "s18#complications",
+   "slides": [
+    "MED 503"
+   ],
    "srcHash": "e41635d78fc4",
    "topic": "iv"
   },
@@ -2030,6 +2896,10 @@
    "explanation": "Your notes' rescue scene evaluation is W.E.H.M.: witness, environment, hazards and mechanism of injury. Surveys, head-to-toe and history come later, with the patient.",
    "generated": true,
    "notesRef": "s01#rescue-scene-evaluation",
+   "slides": [
+    "MED 1001",
+    "56th EMT PAM"
+   ],
    "srcHash": "f004ca25467a",
    "topic": "assessment"
   },
@@ -2037,6 +2907,9 @@
    "explanation": "BVM breaths given too hard or too fast can push air down the oesophagus into the stomach. The swollen stomach pushes up the diaphragm, making breathing harder, and can make the patient vomit.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 502"
+   ],
    "srcHash": "298e7015ab35",
    "topic": "airway"
   },
@@ -2044,6 +2917,9 @@
    "explanation": "Cooling stops the burning, but burned skin loses heat fast, so long soaking risks hypothermia, especially with large burns. The bank caps cooling with water at 10 minutes.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "e410d8563f6c",
    "topic": "burns"
   },
@@ -2051,6 +2927,9 @@
    "explanation": "Your notes place the mask with its apex over the nose and hold it with the C-E clamp. The base sits on the lower lip and chin, never on the bridge of the nose.",
    "generated": true,
    "notesRef": "s11#bag-valve-mask-bvm",
+   "slides": [
+    "MED 502"
+   ],
    "srcHash": "0999e1f77e5a",
    "topic": "airway"
   },
@@ -2058,6 +2937,9 @@
    "explanation": "High sugar pulls water out through the kidneys: frequent urination, dehydration and weight loss. Cool, clammy skin is on your notes' list for low sugar.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 304"
+   ],
    "srcHash": "aa9b95dde513",
    "topic": "diabetic"
   },
@@ -2065,6 +2947,9 @@
    "explanation": "The mother delivers on her back or semi-sitting, with knees bent and legs apart, never face down. Preparing the maternity and Entonox kits and giving oxygen all help the paramedic.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 309"
+   ],
    "srcHash": "af69cded5702",
    "topic": "ops"
   },
@@ -2072,6 +2957,9 @@
    "explanation": "Rule of nines: the whole arm is 9%, the front of the chest and abdomen 18%, and the front of one leg 9%: 36% in all.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 405"
+   ],
    "srcHash": "ae6f9316241f",
    "topic": "burns"
   },
@@ -2079,6 +2967,9 @@
    "explanation": "The bank ties the broken leg to the good one with five bandages: above and below the break, across the knees, over the hips and a figure of eight at the ankles. Your notes check pulses before and after.",
    "generated": true,
    "notesRef": "s01#immobilization",
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "a4ae4a4e4fd6",
    "topic": "trauma"
   },
@@ -2086,6 +2977,9 @@
    "explanation": "Tie the broken leg to the good one with the bank's five bandages: above and below the break, across the knees, over the hips and a figure of eight at the ankles. Your notes knot a swathe opposite the fracture site.",
    "generated": true,
    "notesRef": "s01#immobilization",
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "38d5955df195",
    "topic": "trauma"
   },
@@ -2093,6 +2987,9 @@
    "explanation": "For a thigh fracture the bank ties the leg to the good one with five bandages: above and below the break, across the knees, over the hips and a figure of eight at the ankles. Your notes check pulses before and after.",
    "generated": true,
    "notesRef": "s01#immobilization",
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "6dd610d6e596",
    "topic": "trauma"
   },
@@ -2100,6 +2997,9 @@
    "explanation": "A haematoma is the only closed injury here: a blunt blow breaks vessels and blood collects under unbroken skin. Abrasions, lacerations and incisions all break the skin.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 401"
+   ],
    "srcHash": "851490da63fd",
    "topic": "trauma"
   },
@@ -2107,6 +3007,9 @@
    "explanation": "His BP is still normal (136/86) while his pulse races at 130 and his skin is pale, cool and clammy: the body is holding BP up by compensating. In decompensated shock BP falls.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 403"
+   ],
    "srcHash": "e5943601b536",
    "topic": "shock"
   },
@@ -2115,14 +3018,22 @@
    "generated": true,
    "notesRef": "s12#10-dextrose-hypertonic-solution",
    "review": "The notes give all trauma and unconscious patients high-flow oxygen, so by the notes oxygen by nasal cannula is not part of his care either.",
+   "slides": [
+    "MED 1007",
+    "MED 1001"
+   ],
    "srcHash": "b7c9e3310b12",
    "topic": "trauma"
   },
   "mt-b-q149": {
-   "explanation": "2 ml salbutamol (10 mg) with 2 ml saline is the bank's dose and your notes' adult one. Your notes, though, give under-16s of 10 kg or more 5 mg (1 ml) with 3 ml saline.",
+   "explanation": "For this quiz the dose is 10 mg salbutamol (2 ml) with 2 ml saline, but the slides give a child over 10 kg, aged 16 or under, 5 mg (1 ml) with 3 ml saline.",
    "generated": true,
    "notesRef": "s12#salbutamol-albuterol-short-acting-beta-agonist-saba",
-   "review": "The notes give under-16s of 10 kg or more 5 mg salbutamol in 3 ml saline, so by the notes this 14-year-old should not get the 10 mg adult dose.",
+   "review": "The notes give under-16s of 10 kg or more 5 mg salbutamol in 3 ml saline, so by the notes this 14-year-old should not get the 10 mg adult dose. The official answer gives 10 mg in 2 ml saline, but MED 1007 gives a child over 10 kg, aged 16 or under, 1 ml Ventolin (5 mg) with 3 ml saline.",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "251f7a54b472",
    "topic": "respiratory"
   },
@@ -2130,6 +3041,10 @@
    "explanation": "Your asthma protocol runs the nebuliser mask at 6 to 8 L/min, enough flow to turn the salbutamol into a mist. 2 to 4 L/min is a nasal cannula; 10 to 15 L/min is the NRM.",
    "generated": true,
    "notesRef": "s05#4-asthma-copd-in-respiratory-distress-stay-treat",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "f3e2c4c029c6",
    "topic": "respiratory"
   },
@@ -2137,6 +3052,10 @@
    "explanation": "Salbutamol is nebulised, so your asthma protocol gives it through a nebuliser mask. The other masks only deliver oxygen.",
    "generated": true,
    "notesRef": "s05#4-asthma-copd-in-respiratory-distress-stay-treat",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "7b4927799e79",
    "topic": "respiratory"
   },
@@ -2144,6 +3063,10 @@
    "explanation": "Salbutamol opens the airways in asthma or COPD, and your notes rule it out without that history; her squeezing chest pain is cardiac. The bank treats it with aspirin, GTN, oxygen and an IV line.",
    "generated": true,
    "notesRef": "s12#salbutamol-albuterol-short-acting-beta-agonist-saba",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1007"
+   ],
    "srcHash": "a62a818ffb50",
    "topic": "cardiac"
   },
@@ -2151,14 +3074,23 @@
    "explanation": "GTN widens blood vessels, so BP can drop: your notes list hypotension as a side effect and rule GTN out when SBP is under 90. Check BP before each spray.",
    "generated": true,
    "notesRef": "s12#gtn-glyceryl-trinitrate-nitroglycerine-trinitroglycerine-vasodilator",
+   "slides": [
+    "MED 605",
+    "MED 1007"
+   ],
    "srcHash": "7c54e839eba1",
    "topic": "drugs"
   },
   "mt-b-q154": {
-   "explanation": "The bank's maximum is four 0.4 mg sprays, 1.6 mg, which your notes give as the EMS dose. Your notes, though, limit an EMT to one spray (0.4 mg).",
+   "explanation": "For this quiz the maximum is four 0.4 mg sprays, 1.6 mg, which is the paramedic limit. The slides differ for an EMT, who may give only one 0.4 mg spray to a patient already on GTN.",
    "generated": true,
    "notesRef": "s12#gtn-glyceryl-trinitrate-nitroglycerine-trinitroglycerine-vasodilator",
-   "review": "The notes limit an EMT to one 0.4 mg GTN spray and give 1.6 mg only as the EMS dose, so by the notes an EMT's maximum is 0.4 mg.",
+   "review": "The notes limit an EMT to one 0.4 mg GTN spray and give 1.6 mg only as the EMS dose, so by the notes an EMT's maximum is 0.4 mg. The official answer says 1.6 mg, but MED 1007 caps an EMT at one 0.4 mg spray and gives 1.6 mg as the paramedic maximum.",
+   "slides": [
+    "MED 1007",
+    "MED 605",
+    "56th EMT PAM"
+   ],
    "srcHash": "a126f64e6f84",
    "topic": "drugs"
   },
@@ -2166,13 +3098,22 @@
    "explanation": "Your notes' aspirin contraindications include asthma, bleeding disorders and current anticoagulant use. Antidepressants are not among them.",
    "generated": true,
    "notesRef": "s12#aspirin-acetylsalicylic-acid-antiplatelets-nsaids",
+   "slides": [
+    "MED 1007"
+   ],
    "srcHash": "c65a7a1fa5c2",
    "topic": "drugs"
   },
   "mt-b-q156": {
-   "explanation": "Unconscious at 1.8 mmol/L, she can't swallow sugar, so it goes IV: your notes give 10% dextrose by bolus for hypoglycaemia with altered consciousness. Saline alone won't raise her sugar.",
+   "explanation": "For this quiz the answer is IV 10% dextrose, 100 ml then another 100 ml, as she is unconscious at 1.8 mmol/L. The slides differ: they give a 200 ml bolus first, then 100 ml if her sugar is still low.",
    "generated": true,
    "notesRef": "s12#10-dextrose-hypertonic-solution",
+   "review": "The official answer says 100 ml then 100 ml of D10, but MED 304 and MED 1007 say a 200 ml bolus, then 100 ml (max 300 ml).",
+   "slides": [
+    "MED 1007",
+    "MED 304",
+    "MED 313"
+   ],
    "srcHash": "013e7b7901be",
    "topic": "diabetic"
   },
@@ -2180,6 +3121,9 @@
    "explanation": "Your notes' causes of low sugar are insulin overdose, delayed or missed meals, too much exercise, too much alcohol and vomiting. Overeating raises blood sugar instead.",
    "generated": true,
    "notesRef": "s05#3-diabetic-emergency-hypoglycemia-4-mmol-l-stay-treat",
+   "slides": [
+    "MED 304"
+   ],
    "srcHash": "abb2050d0b20",
    "topic": "diabetic"
   },
@@ -2187,6 +3131,10 @@
    "explanation": "Spinal care needs a fall or injury, which your notes ask witnesses about; she was found unconscious after days of poor appetite. An OPA, watching for vomit and dextrose at maintenance rate all fit.",
    "generated": true,
    "notesRef": "s01#delicate-spine",
+   "slides": [
+    "MED 303",
+    "MED 1007"
+   ],
    "srcHash": "84893ef60105",
    "topic": "diabetic"
   },
@@ -2201,6 +3149,9 @@
    "explanation": "A severe deceleration crash can cause hidden internal injuries, so treat the casualty as unstable even if they look well. A simple nosebleed, a minor facial cut and 37.1 °C are stable.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1002"
+   ],
    "srcHash": "97bdea396386",
    "topic": "assessment"
   },
@@ -2208,6 +3159,10 @@
    "explanation": "Your notes call over 10 mmol/L hyperglycaemia, and hers is 28.8. Low sugar (under 4) brings cool, clammy skin; hers is warm and dry.",
    "generated": true,
    "notesRef": "s15#hypocount-blood-glucose",
+   "slides": [
+    "MED 304",
+    "MED 1007"
+   ],
    "srcHash": "bb215443a821",
    "topic": "diabetic"
   },
@@ -2215,6 +3170,10 @@
    "explanation": "Eyes opening to pain scores E2, confused speech V4, and withdrawing from pain M4, so E2 V4 M4, a total of 10 on your notes' GCS tables.",
    "generated": true,
    "notesRef": "s03",
+   "slides": [
+    "56th EMT PAM",
+    "MED 306"
+   ],
    "srcHash": "7782ee34ed92",
    "topic": "assessment"
   },
@@ -2222,6 +3181,11 @@
    "explanation": "Your notes' Altered Mental State protocol runs saline at maintenance rate when SBP is 90 or more, and hers is 132. Saline replaces fluid lost to high sugar; dextrose would add sugar.",
    "generated": true,
    "notesRef": "s05#1-altered-mental-state-load-go",
+   "slides": [
+    "MED 304",
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "3c1ccb4bf973",
    "topic": "diabetic"
   },
@@ -2230,6 +3194,9 @@
    "generated": true,
    "notesRef": "s12#paramedic-drugs-reference-only",
    "review": "The notes list aspirin under paramedic drugs and limit an EMT to GTN, salbutamol, oral glucose and the patient's own EpiPen, so by the notes an EMT gives none.",
+   "slides": [
+    "MED 1007"
+   ],
    "srcHash": "f76a8c99da6f",
    "topic": "drugs"
   },
@@ -2237,6 +3204,10 @@
    "explanation": "Crackles, swollen legs and a heart history point to heart failure, and your CCF protocol gives GTN 0.4 mg when SBP is 90 or more (his is 172), for a patient already on GTN.",
    "generated": true,
    "notesRef": "s05#5-congestive-cardiac-failure-ccf-stay-treat",
+   "slides": [
+    "MED 1007",
+    "MED 605"
+   ],
    "srcHash": "47b03ddd12a9",
    "topic": "cardiac"
   },
@@ -2244,6 +3215,10 @@
    "explanation": "Breathlessness with crackles, leg swelling for over a week, heart disease and high BP point to heart failure. Your notes list crackles and pedal edema under congestive cardiac failure.",
    "generated": true,
    "notesRef": "s05#5-congestive-cardiac-failure-ccf-stay-treat",
+   "slides": [
+    "MED 1007",
+    "MED 301"
+   ],
    "srcHash": "cbcb80e370d1",
    "topic": "cardiac"
   },
@@ -2251,6 +3226,11 @@
    "explanation": "Breathless with a rate of 32, he is unstable, and your notes reassess unstable patients every 5 minutes. Stable patients are checked every 15 minutes.",
    "generated": true,
    "notesRef": "s01#decision-point",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1007",
+    "MED 302"
+   ],
    "srcHash": "ba1dad7346d3",
    "topic": "assessment"
   },
@@ -2258,6 +3238,9 @@
    "explanation": "Your notes' vital signs are GCS, severity scale, temperature, respiratory rate, skin, SpO2, pulse, BP and capillary refill. ECG and blood glucose are investigations, not vital signs.",
    "generated": true,
    "notesRef": "s01#investigation-vital-signs",
+   "slides": [
+    "56th EMT PAM"
+   ],
    "srcHash": "9ce91fa3fe04",
    "topic": "assessment"
   },
@@ -2266,6 +3249,11 @@
    "generated": true,
    "notesRef": "s01#delicate-spine",
    "review": "The notes give all trauma patients high-flow oxygen, so spinal immobilisation with high-flow oxygen also fits this patient.",
+   "slides": [
+    "MED 413",
+    "MED 404",
+    "MED 1001"
+   ],
    "srcHash": "7c5f0281b9db",
    "topic": "trauma"
   },
@@ -2273,13 +3261,20 @@
    "explanation": "Low BP, a fast pulse and pale, cool, sweaty skin after a fall with an unstable hip and open fracture mean blood loss. Your notes' closest protocol, Arresting Haemorrhage, starts on signs of hypotension.",
    "generated": true,
    "notesRef": "s05#2-arresting-haemorrhage-load-go",
+   "slides": [
+    "MED 1007"
+   ],
    "srcHash": "a392f74d5130",
    "topic": "shock"
   },
   "mt-b-q171": {
-   "explanation": "BP 82/58 with a fast pulse is shock from blood loss, so fluid goes in fast. Your notes' rule for SBP under 90 is a saline bolus of up to 500 ml (Altered Mental State protocol); dextrose is for low sugar.",
+   "explanation": "A 500 ml saline bolus is the answer for this quiz. The slides' paramedic protocol differs: in adult trauma it gives 200 ml boluses only when SBP is below 80, and keep-vein-open rate from 80 upwards, as here.",
    "generated": true,
    "notesRef": "s05#1-altered-mental-state-load-go",
+   "review": "The official answer gives a 500 ml bolus, but MED 1007's EMS protocol runs adult trauma saline at KVO rate at SBP 80 or above, with 200 ml boluses below 80.",
+   "slides": [
+    "MED 1007"
+   ],
    "srcHash": "275fce2aa443",
    "topic": "shock"
   },
@@ -2287,6 +3282,11 @@
    "explanation": "With the airway open, your notes insert an OPA in a patient who responds only to pain or not at all, to keep it open. Oxygen, glucose and cardiac checks come after.",
    "generated": true,
    "notesRef": "s01#airway",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001",
+    "MED 303"
+   ],
    "srcHash": "e4e4b01da3e8",
    "topic": "airway"
   },
@@ -2294,6 +3294,10 @@
    "explanation": "Nail beds show colour through thin tissue, so pallor and cyanosis show there whatever the skin tone. Your notes look for cyanosis at the lips, nail beds and ear lobes.",
    "generated": true,
    "notesRef": "s16#normal-vs-inadequate-breathing",
+   "slides": [
+    "MED 1001",
+    "MED 302"
+   ],
    "srcHash": "f0fb5a721fa9",
    "topic": "assessment"
   },
@@ -2301,6 +3305,10 @@
    "explanation": "Vomit must come out before anything goes in: turn her on her side so it drains, then clear the rest. Your notes clear the airway before inserting an OPA; oxygen and an IV come later.",
    "generated": true,
    "notesRef": "s01#airway",
+   "slides": [
+    "MED 410",
+    "MED 303"
+   ],
    "srcHash": "8f09b2c896c6",
    "topic": "airway"
   },
@@ -2316,6 +3324,10 @@
    "generated": true,
    "notesRef": "s12#drug-lists-patient-s-own-medications",
    "review": "The notes list nifedipine only for hypertension and chronic stable angina, and it is not used for arrhythmias, so arrhythmias also fits the question.",
+   "slides": [
+    "EMS Drugs",
+    "MED 605"
+   ],
    "srcHash": "b65113f4e0dc",
    "topic": "drugs"
   },
@@ -2323,6 +3335,11 @@
    "explanation": "He is alert with a pulse, so oxygen comes first: your notes give chest pain patients high-flow oxygen and never withhold it. An AED is for arrest, and GTN needs his own prescription.",
    "generated": true,
    "notesRef": "s17#managing-chest-pain",
+   "slides": [
+    "MED 301",
+    "MED 505",
+    "MED 1007"
+   ],
    "srcHash": "9e35017837c7",
    "topic": "cardiac"
   },
@@ -2344,6 +3361,10 @@
    "explanation": "Cardiac pain is classically a heavy, crushing weight, like a ton of bricks; your notes describe dull, heavy or squeezing pressure. A toothache-like pain can be cardiac too, but is less typical.",
    "generated": true,
    "notesRef": "s05#6-chest-pain-stay-treat",
+   "slides": [
+    "MED 1007",
+    "MED 301"
+   ],
    "srcHash": "928c7058049a",
    "topic": "cardiac"
   },
@@ -2351,6 +3372,9 @@
    "explanation": "The pulmonary artery carries deoxygenated blood from the heart to the lungs, and the pulmonary veins bring oxygenated blood back. Elsewhere it's the other way round.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 203"
+   ],
    "srcHash": "ef471986a84c",
    "topic": "cardiac"
   },
@@ -2358,6 +3382,11 @@
    "explanation": "Plaque is fatty build-up in the vessel lining, as in your notes' atherosclerosis, not part of the blood. Platelets, thrombin and fibrin work together to form a clot.",
    "generated": true,
    "notesRef": "s17#heart-disease-basics",
+   "slides": [
+    "MED 301",
+    "MED 203",
+    "EMS Drugs"
+   ],
    "srcHash": "a5dd597595e6",
    "topic": "cardiac"
   },
@@ -2365,6 +3394,10 @@
    "explanation": "Vomiting with diarrhoea and cramping involves the stomach and the bowel together, pointing to acute gastroenteritis, here likely set off by dairy. Reflux and ulcers cause burning upper pain.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 313",
+    "MED 314"
+   ],
    "srcHash": "1c700457b281",
    "topic": "assessment"
   },
@@ -2372,6 +3405,9 @@
    "explanation": "Pitting edema in both legs with good pulses and warm skin is fluid backing up from a failing heart; your notes list ankle edema in right heart failure. A clot (DVT) usually swells one leg.",
    "generated": true,
    "notesRef": "s17#heart-failure",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "dd8a3e503c78",
    "topic": "cardiac"
   },
@@ -2379,6 +3415,9 @@
    "explanation": "Your notes: air collects in the chest and the lung collapses, with no trauma involved. Primary cases happen in people without lung disease, so it isn't only seen in COPD.",
    "generated": true,
    "notesRef": "s16#spontaneous-pneumothorax-not-tested",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "3c6b11a61f20",
    "topic": "respiratory"
   },
@@ -2386,6 +3425,11 @@
    "explanation": "A patient who isn't breathing needs breaths pushed in with oxygen: your notes give rescue breaths by BVM when there's a pulse but no breathing. An OPA holds the airway open, and intubation secures it.",
    "generated": true,
    "notesRef": "s11#bag-valve-mask-bvm",
+   "slides": [
+    "MED 302",
+    "MED 502",
+    "56th EMT PAM"
+   ],
    "srcHash": "3186680164c3",
    "topic": "airway"
   },
@@ -2393,6 +3437,10 @@
    "explanation": "Give the oxygen and watch closely: your notes put COPD, which includes emphysema, on a nasal cannula, and say hypoxic drive builds over about 30 minutes, not at once.",
    "generated": true,
    "notesRef": "s11#hypoxic-drive-why-copd-gets-nasal-cannula",
+   "slides": [
+    "MED 1001",
+    "MED 302"
+   ],
    "srcHash": "9d52afe7bfac",
    "topic": "respiratory"
   },
@@ -2400,6 +3448,10 @@
    "explanation": "In heat stroke the body's cooling fails and core temperature climbs very high, affecting the brain. Your notes call a temperature rise from outside heat hyperthermia.",
    "generated": true,
    "notesRef": "s15#temperature",
+   "slides": [
+    "MED 307",
+    "MED 416"
+   ],
    "srcHash": "4abe32c31a4c",
    "topic": "shock"
   },
@@ -2407,6 +3459,10 @@
    "explanation": "Severe abdominal pain makes patients guard: they lie still, often curled with knees drawn up, to relax the abdominal muscles and protect the sore area.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 314",
+    "MED 1003"
+   ],
    "srcHash": "2df15d080aca",
    "topic": "assessment"
   },
@@ -2421,6 +3477,11 @@
    "explanation": "Shock from likely internal bleeding needs a hospital fast, and your notes say starting an IV must not delay transport, so the saline runs in the ambulance. Oxygen and a position of comfort go with it.",
    "generated": true,
    "notesRef": "s18#why-iv",
+   "slides": [
+    "MED 503",
+    "MED 314",
+    "MED 1007"
+   ],
    "srcHash": "0b964a4e96a4",
    "topic": "shock"
   },
@@ -2428,6 +3489,9 @@
    "explanation": "Sudden one-sided lower abdominal pain, light abnormal bleeding and shock in a woman of child-bearing age suggest a ruptured ectopic pregnancy. Appendicitis doesn't explain the bleeding or shock.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 314"
+   ],
    "srcHash": "d29c5bedf52e",
    "topic": "assessment"
   },
@@ -2442,6 +3506,9 @@
    "explanation": "Pain on exertion that eases within minutes of rest, in the same pattern as last week, is stable angina. Your notes: angina comes from exertion and generally goes away after rest.",
    "generated": true,
    "notesRef": "s17#angina-pectoris-must-know-s-s-by-heart",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "3460997e67e7",
    "topic": "cardiac"
   },
@@ -2449,6 +3516,11 @@
    "explanation": "The strip shows ST elevation in II, III and aVF, a heart attack, but her SBP is 89 and your notes rule out GTN under 90. The bank gives nasal cannula oxygen, aspirin, transport and 500 ml saline at maintenance rate.",
    "generated": true,
    "notesRef": "s05#6-chest-pain-stay-treat",
+   "slides": [
+    "MED 605",
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "7bc1013e017c",
    "topic": "cardiac"
   },
@@ -2463,6 +3535,11 @@
    "explanation": "The ST elevation in II, III and aVF means an infarct, yet she has no chest pain, only tiredness and dizziness: a silent AMI. Your notes warn AMI can show up as something unexpected.",
    "generated": true,
    "notesRef": "s17#acute-myocardial-infarction-ami",
+   "slides": [
+    "MED 304",
+    "56th EMT PAM",
+    "MED 1007"
+   ],
    "srcHash": "5359239eb903",
    "topic": "cardiac"
   },
@@ -2470,6 +3547,9 @@
    "explanation": "Your notes: when the left side can't pump enough blood to the body, fluid backs into the lungs as pulmonary edema. That backward failure is the patient's water in the lungs.",
    "generated": true,
    "notesRef": "s17#heart-failure",
+   "slides": [
+    "MED 301"
+   ],
    "srcHash": "9d87212116d2",
    "topic": "cardiac"
   },
@@ -2477,6 +3557,10 @@
    "explanation": "Your notes: right heart failure often follows left heart failure, or comes from chronic lung disease such as COPD. The left side usually fails first.",
    "generated": true,
    "notesRef": "s17#heart-failure",
+   "slides": [
+    "MED 301",
+    "MED 302"
+   ],
    "srcHash": "ebf0a68df5ae",
    "topic": "cardiac"
   },
@@ -2491,6 +3575,11 @@
    "explanation": "Oxygen comes first: her SpO2 is 92%, and your notes put a mask on below 95%. With heart disease and no lung history her wheeze is likely cardiac, so no salbutamol, and she's allergic to aspirin.",
    "generated": true,
    "notesRef": "s11#oxygen-guidelines",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1007",
+    "Linear EMT Protocol"
+   ],
    "srcHash": "1d80fc8bb576",
    "topic": "respiratory"
   },
@@ -2498,6 +3587,11 @@
    "explanation": "Wheezing in an older patient with heart disease, high BP, a fast irregular pulse and no lung history points to fluid in the lungs. Your notes list wheezing among the signs of pulmonary edema.",
    "generated": true,
    "notesRef": "s16#pulmonary-edema",
+   "slides": [
+    "MED 301",
+    "MED 302",
+    "MED 1007"
+   ],
    "srcHash": "4d4f3b0042a2",
    "topic": "respiratory"
   },
@@ -2505,6 +3599,10 @@
    "explanation": "In asthma the airway muscles tighten and narrow the bronchioles, so the chest feels tight. Your notes give salbutamol for signs of this bronchoconstriction, such as wheezing.",
    "generated": true,
    "notesRef": "s12#salbutamol-albuterol-short-acting-beta-agonist-saba",
+   "slides": [
+    "MED 302",
+    "MED 1007"
+   ],
    "srcHash": "b2f565320593",
    "topic": "respiratory"
   },
@@ -2528,6 +3626,10 @@
    "generated": true,
    "notesRef": "s11#bag-valve-mask-bvm",
    "review": "This reason (positive-pressure ventilation, a BVM) contradicts the official Q207 first action, a simple face mask; check both.",
+   "slides": [
+    "MED 502",
+    "MED 1007"
+   ],
    "srcHash": "5881e8ee092d",
    "topic": "respiratory"
   },
@@ -2535,6 +3637,10 @@
    "explanation": "Widespread hives suggest a severe allergic reaction, in which chemicals such as histamine widen the blood vessels and make them leak, so BP falls. The skin is usually flushed and the pulse fast.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 403",
+    "MED 308"
+   ],
    "srcHash": "33fccbe550b5",
    "topic": "shock"
   },
@@ -2542,6 +3648,10 @@
    "explanation": "Ventolin (salbutamol) acts on beta 2 receptors, which your notes say dilate the bronchioles and relax airway muscle, easing the wheeze. Alpha and beta 1 act on the vessels and heart.",
    "generated": true,
    "notesRef": "s12#types-of-receptors",
+   "slides": [
+    "EMS Drugs",
+    "MED 604"
+   ],
    "srcHash": "0c944fb210ef",
    "topic": "drugs"
   },
@@ -2556,6 +3666,10 @@
    "explanation": "Stridor, hives, low BP and confusion mean anaphylaxis with failing breathing: support breaths with the BVM and give his own EpiPen, which your notes allow. The IV can wait so it doesn't delay transport.",
    "generated": true,
    "notesRef": "s12#epipen-contains-epinephrine-patient-s-own-only",
+   "slides": [
+    "MED 308",
+    "MED 503"
+   ],
    "srcHash": "3a15db40c05c",
    "topic": "shock"
   },
@@ -2563,6 +3677,10 @@
    "explanation": "Your notes: epinephrine acts on alpha and beta 1 receptors, raising BP and heart rate. Its beta 2 effect also opens the airways, so together they reverse anaphylaxis.",
    "generated": true,
    "notesRef": "s12#epipen-contains-epinephrine-patient-s-own-only",
+   "slides": [
+    "MED 604",
+    "MED 1007"
+   ],
    "srcHash": "be08407c92ef",
    "topic": "drugs"
   },
@@ -2577,6 +3695,10 @@
    "explanation": "Unstable patients can change quickly, so your notes reassess their vital signs every 5 minutes. Stable patients are checked every 15 minutes.",
    "generated": true,
    "notesRef": "s01#decision-point",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1007"
+   ],
    "srcHash": "107dd6eaa71f",
    "topic": "assessment"
   },
@@ -2584,6 +3706,11 @@
    "explanation": "Obvious respiratory distress needs the most oxygen a mask can give: your notes' non-rebreather runs at 10 to 15 L/min for 90 to 100%. A simple or nebuliser mask gives 40 to 60%.",
    "generated": true,
    "notesRef": "s11#oxygen-masks",
+   "slides": [
+    "MED 302",
+    "MED 313",
+    "MED 502"
+   ],
    "srcHash": "aba2f385081a",
    "topic": "respiratory"
   },
@@ -2598,6 +3725,10 @@
    "explanation": "Your asthma protocol nebulises 2 ml salbutamol with 2 ml saline through a nebuliser mask at 6 to 8 L/min. The other masks deliver oxygen only.",
    "generated": true,
    "notesRef": "s05#4-asthma-copd-in-respiratory-distress-stay-treat",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "99ca80d41bb8",
    "topic": "respiratory"
   },
@@ -2605,6 +3736,9 @@
    "explanation": "Your notes list nail polish and an injured finger among things that spoil SpO2 readings, and the probe must face the right way for its light to pass through the fingertip.",
    "generated": true,
    "notesRef": "s11#factors-that-affect-spo2-reading",
+   "slides": [
+    "MED 1004"
+   ],
    "srcHash": "10c062bb6ca5",
    "topic": "assessment"
   },
@@ -2612,6 +3746,9 @@
    "explanation": "Fingertips are thin and well supplied with blood, so the probe's light passes through easily, and they're quick to reach. Crews usually clip it on the index finger.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1004"
+   ],
    "srcHash": "91e0d3a53e77",
    "topic": "assessment"
   },
@@ -2619,6 +3756,9 @@
    "explanation": "Your airborne donning order puts the N95 mask first, goggles before the gown and outer gloves last, matching mask, goggles, gown, gloves. Clean hands come before it all.",
    "generated": true,
    "notesRef": "s14#airborne-precautions-e-g-sars-mers-covid-19",
+   "slides": [
+    "MED 514"
+   ],
    "srcHash": "4b9f0ec234a8",
    "topic": "ops"
   },
@@ -2626,6 +3766,9 @@
    "explanation": "BP, pulse, breathing rate, SpO2, temperature, GCS and severity scale are all on your notes' vital signs list. ECG, blood sugar, blood type and BMI are not vital signs.",
    "generated": true,
    "notesRef": "s01#investigation-vital-signs",
+   "slides": [
+    "56th EMT PAM"
+   ],
    "srcHash": "96760680810e",
    "topic": "assessment"
   },
@@ -2644,9 +3787,14 @@
    "topic": "ops"
   },
   "mt-b-q225": {
-   "explanation": "The bank lets EMTs start all three. Your notes let an EMT give a patient's own EpiPen for anaphylaxis, run chest pain as its own protocol, and list stroke as a cause under Altered Mental State.",
+   "explanation": "For this quiz the answer is all three. The slides differ: their six EMT protocols include chest pain, but anaphylaxis is an EMS protocol where an EMT gives only salbutamol, and stroke has no protocol of its own.",
    "generated": true,
    "notesRef": "s12#epipen-contains-epinephrine-patient-s-own-only",
+   "review": "The official answer says EMTs can start all three, but MED 1007's EMT list has only chest pain; anaphylaxis is an EMS protocol (EMT salbutamol only) and stroke has no protocol.",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM"
+   ],
    "srcHash": "d0ad95bd6151",
    "topic": "ops"
   },
@@ -2654,6 +3802,11 @@
    "explanation": "Equipment must be clean and working before the next call, so it's checked at every change of duty. Your station routine checks the defibrillator, LSU and spinal boards and keeps equipment clean.",
    "generated": true,
    "notesRef": "s02#station-routine",
+   "slides": [
+    "MED 511",
+    "56th EMT PAM",
+    "MED 514"
+   ],
    "srcHash": "5f4f9d44eccc",
    "topic": "ops"
   },
@@ -2662,6 +3815,9 @@
    "generated": true,
    "notesRef": null,
    "review": "Four 0.25 g tablets in 500 ml also makes 2 g per litre, the same solution as four 0.5 g tablets in 1,000 ml.",
+   "slides": [
+    "MED 514"
+   ],
    "srcHash": "67505dd79ec5",
    "topic": "ops"
   },
@@ -2669,6 +3825,9 @@
    "explanation": "Anything stained with blood or body fluid can carry infection, so it goes in the biohazard bag. Needles go straight into a sharps box, never bent or binned.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 514"
+   ],
    "srcHash": "87a793c9e88f",
    "topic": "ops"
   },
@@ -2676,6 +3835,9 @@
    "explanation": "Confidentiality covers every channel: tell no unauthorised person, post nothing on social media, and don't discuss patients where others can overhear.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 316"
+   ],
    "srcHash": "fa5c0bf92c7a",
    "topic": "ops"
   },
@@ -2683,6 +3845,9 @@
    "explanation": "Your notes list five ways to take a temperature. The tympanic (ear) thermometer is quick, clean and reads close to core temperature, so crews use it most.",
    "generated": true,
    "notesRef": "s15#temperature",
+   "slides": [
+    "MED 511"
+   ],
    "srcHash": "d4196378e737",
    "topic": "assessment"
   },
@@ -2690,6 +3855,9 @@
    "explanation": "Icy water cools the mouth and gives a falsely low oral reading, so wait after any cold or hot drink. Explaining, getting consent and recording the reading are all correct.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 1004"
+   ],
    "srcHash": "24c375748eda",
    "topic": "assessment"
   },
@@ -2697,6 +3865,9 @@
    "explanation": "The bank puts pyrexia at 37.0 to 38.0 °C. Your notes put pyrexia (fever) at 37.5 to 38.4 °C, with 36.5 to 37.4 °C normal and over 38.5 °C hyperpyrexia.",
    "generated": true,
    "notesRef": "s15#temperature",
+   "slides": [
+    "MED 307"
+   ],
    "srcHash": "a3860cd94739",
    "topic": "assessment"
   },
@@ -2704,6 +3875,10 @@
    "explanation": "Your notes take temperature in every set of vital signs, and each case could involve fever: a febrile fit in a toddler, infection after diarrhoea, or infection behind a diabetic's weakness.",
    "generated": true,
    "notesRef": "s01#investigation-vital-signs",
+   "slides": [
+    "MED 307",
+    "56th EMT PAM"
+   ],
    "srcHash": "52477e0f41da",
    "topic": "assessment"
   },
@@ -2711,6 +3886,10 @@
    "explanation": "Your notes have the crew don latex gloves and a face mask when preparing for a call, the minimum for a feverish patient. A hazmat suit is for chemical agents.",
    "generated": true,
    "notesRef": "s01#preparation",
+   "slides": [
+    "56th EMT PAM",
+    "MED 514"
+   ],
    "srcHash": "65f1d77cd26d",
    "topic": "ops"
   },
@@ -2739,6 +3918,10 @@
    "explanation": "Your notes call SCDF or police help for special incidents, such as combative, aggressive or bariatric patients. A locked door with a smell of decay needs them too; an NG tube is routine care.",
    "generated": true,
    "notesRef": "s01#approach-patient",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001"
+   ],
    "srcHash": "07f0cee40f72",
    "topic": "ops"
   },
@@ -2746,6 +3929,11 @@
    "explanation": "In the bank's ACR layout, event surrounding records what happened and the abnormal findings, while later management goes in its own treatment section.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 507",
+    "56th EMT PAM",
+    "MED 1006"
+   ],
    "srcHash": "c004b06169d2",
    "topic": "ops"
   },
@@ -2753,6 +3941,9 @@
    "explanation": "Going down a slope, the patient goes feet first so the head stays higher than the feet. Head-down tilting is uncomfortable and can raise pressure in the head.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 512"
+   ],
    "srcHash": "464c033ebc58",
    "topic": "ops"
   },
@@ -2760,6 +3951,9 @@
    "explanation": "Face the stretcher squarely at the curb and lift the two front wheels up first, then raise the back wheels, so the sitting patient stays steady and sees what's coming.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 512"
+   ],
    "srcHash": "b699ead0071e",
    "topic": "ops"
   },
@@ -2767,6 +3961,10 @@
    "explanation": "Log-roll him onto the PVC canvas, lift it together and lay him supine: the canvas spreads his weight and protects your backs. Your notes transfer patients to the stretcher with a canvas.",
    "generated": true,
    "notesRef": "s02#transfer-transportation-stable-p3-patient-only",
+   "slides": [
+    "MED 513",
+    "56th EMT PAM"
+   ],
    "srcHash": "b46949182131",
    "topic": "ops"
   },
@@ -2774,6 +3972,10 @@
    "explanation": "All three keep the patient safe: limbs inside the stretcher, straps fastened firmly, and a warning before you change its position. Your notes fasten all 3 restrainers with the side cot up.",
    "generated": true,
    "notesRef": "s02#transfer-transportation-stable-p3-patient-only",
+   "slides": [
+    "56th EMT PAM",
+    "MED 513"
+   ],
    "srcHash": "5f60041df68a",
    "topic": "ops"
   },
@@ -2781,6 +3983,9 @@
    "explanation": "Airborne diseases such as SARS, MERS and COVID-19 need full PPE: your notes' airborne set is an N95 mask, goggles, cap, gown, shoe covers and two pairs of gloves.",
    "generated": true,
    "notesRef": "s14#airborne-precautions-e-g-sars-mers-covid-19",
+   "slides": [
+    "MED 514"
+   ],
    "srcHash": "340ad3bfa4da",
    "topic": "ops"
   },
@@ -2788,6 +3993,9 @@
    "explanation": "Raising an injured limb lets fluid drain away from it, which reduces swelling and the pain that comes with it. A splint, not elevation, keeps the bone ends aligned.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 404"
+   ],
    "srcHash": "44cb66bcd331",
    "topic": "trauma"
   },
@@ -2802,6 +4010,9 @@
    "explanation": "All three are good practice: seek permission and protect modesty, arrive with urgency and introduce yourself professionally, and mind your words and manner in public.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 316"
+   ],
    "srcHash": "5236adcd5658",
    "topic": "ops"
   },
@@ -2830,6 +4041,9 @@
    "explanation": "Difficulty breathing can quickly become life-threatening, and your notes treat a short-of-breath patient as unstable. A paper cut, toothache or checkup ride is not an emergency.",
    "generated": true,
    "notesRef": "s16#managing-a-dyspnoeic-sob-patient",
+   "slides": [
+    "MED 302"
+   ],
    "srcHash": "f7d08aa4e37d",
    "topic": "assessment"
   },
@@ -2844,6 +4058,11 @@
    "explanation": "Bradycardia is treated with IV atropine, which isn't an EMT drug: your notes limit an EMT to GTN, salbutamol, oral glucose and the patient's own EpiPen.",
    "generated": true,
    "notesRef": "s12#emt-drugs-must-know",
+   "slides": [
+    "MED 1007",
+    "56th EMT PAM",
+    "Linear EMT Protocol"
+   ],
    "srcHash": "678a4d0b7f38",
    "topic": "ops"
   },
@@ -2851,6 +4070,9 @@
    "explanation": "Chatting or commenting while you examine injuries is unprofessional and can upset the patient. Explaining procedures, keeping urgency and avoiding provocation are your duties.",
    "generated": true,
    "notesRef": null,
+   "slides": [
+    "MED 316"
+   ],
    "srcHash": "563d12abaafc",
    "topic": "ops"
   },
@@ -2858,6 +4080,10 @@
    "explanation": "Your notes call for SCDF or police assistance with combative or aggressive patients, and a drunk man with a broken bottle who won't cooperate is a danger to the crew.",
    "generated": true,
    "notesRef": "s01#approach-patient",
+   "slides": [
+    "56th EMT PAM",
+    "MED 1001"
+   ],
    "srcHash": "1b0a38aaf460",
    "topic": "ops"
   },

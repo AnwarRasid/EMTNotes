@@ -88,6 +88,13 @@ describe('overrides', () => {
   test('accepts a valid entry', () => { expect(ok(OverridesDocSchema, doc(entry()))).toBe(true); });
   test('rejects an unknown topic', () => { expect(ok(OverridesDocSchema, doc(entry({ topic: 'cardio' })))).toBe(false); });
   test('rejects an empty explanation', () => { expect(ok(OverridesDocSchema, doc(entry({ explanation: '' })))).toBe(false); });
+  test('accepts the course sources an explanation was checked against', () => {
+    expect(ok(OverridesDocSchema, doc(entry({ slides: ['MED 805', 'MED 1001', 'EMS Drugs', '56th EMT PAM'] })))).toBe(true);
+  });
+  test('rejects a source that is not a course deck or document', () => {
+    expect(ok(OverridesDocSchema, doc(entry({ slides: ['MED805'] })))).toBe(false);
+    expect(ok(OverridesDocSchema, doc(entry({ slides: ['Wikipedia'] })))).toBe(false);
+  });
 });
 
 describe('notes doc', () => {

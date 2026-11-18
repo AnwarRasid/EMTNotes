@@ -19,7 +19,7 @@ function makeQ(id: string, bank: BankId, number: number, topic: Topic, options =
     stem: `Stem of ${id}`,
     options: options.map(o => ({ id: o, text: `Option ${o} of ${id}` })),
     answer: 'b', image: null, topic,
-    explanation: null, notesRef: null, generated: true, review: [],
+    explanation: null, notesRef: null, generated: true, slides: [], review: [],
   };
 }
 
